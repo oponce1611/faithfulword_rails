@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 // require_tree .
-//= bootstrap
-//= teher.min
-//= custom
-//= masonry.pkgd
+//= require bootstrap
+//= require teher.min
+//= require custom
+//= require masonry.pkgd

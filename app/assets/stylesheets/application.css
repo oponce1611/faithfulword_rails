@@ -12,6 +12,6 @@
  *
  * require_tree .
  * require_self
- *= bootstrap
- *= custom
+ *= require bootstrap
+ *= require custom
  */
