@@ -60,7 +60,7 @@ body {
 
 @font-face{
   font-family: "Gotham";
-  src:url('<%= asset_path('fonts/Gotham-Medium.otf') %>') format('opentype');
+  src: url(asset-path('fonts/Gotham-Medium.otf')) format('opentype');
 }
 @font-face{
   font-family: "GothamIta";
