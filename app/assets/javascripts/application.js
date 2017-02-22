@@ -17,4 +17,4 @@
 //= require bootstrap
 //= require tether.min
 //= require custom
-//= require masonry
+//= require masonry.pkgd
