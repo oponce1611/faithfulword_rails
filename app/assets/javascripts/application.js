@@ -15,6 +15,6 @@
 //= require turbolinks
 // require_tree .
 //= require bootstrap
-//= require teher.min
+//= require teher
 //= require custom
-//= require masonry.pkgd
+//= require masonry
