@@ -15,6 +15,6 @@
 //= require turbolinks
 // require_tree .
 //= require bootstrap
-//= require teher
+//= require tether
 //= require custom
 //= require masonry
