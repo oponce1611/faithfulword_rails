@@ -36,9 +36,3 @@
     position: relative;
     display: inline-block;
 }
-.pixel-overlay:before {
-    background-image: url("../assets/pattern/black-fly-screen.png");
-    background-repeat: repeat;
-		width: 100%;
-		height: 100%;
-}
