@@ -1,5 +1,5 @@
 class DoctrinalstatementController < ApplicationController
     def show
-        render 'welcome/index'
+        render 'doctrinalstatement/show'
     end
 end
