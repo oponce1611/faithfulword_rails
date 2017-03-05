@@ -10,9 +10,10 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-toggleable-xl navbar-light">
-        <a class="shadow navbar-brand mr-auto" href="https://faithfulword.herokuapp.com/">
-            <%= image_tag "FWBC-LOGO-OFFICIAL.svg", height: '61', class: "d-inline-block align-top", alt: "Faithful Word Baptist Church" %>
-        </a>
+        <%= link_to root_path, class: "shadow navbar-brand mr-auto" do %>
+          <%= image_tag "FWBC-LOGO-OFFICIAL.svg", height: '61',class: "d-inline-block align-top", alt: "Faithful Word Baptist Church" %>
+        <% end %>
+        
         <ul class="nav navbar-nav ">
           <li class="nav-item">
             <%= link_to "Preaching", preaching_path, class: "btn btn-outline-primary text-uppercase" %>
