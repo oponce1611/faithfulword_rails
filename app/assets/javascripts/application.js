@@ -16,5 +16,5 @@
 // require_tree .
 //= require bootstrap
 //= require tether.min
-//= require custom
 //= require masonry.pkgd
+//= require custom
