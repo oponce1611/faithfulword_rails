@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/churchdirectory' => 'pages#churchdirectory'
   get '/doctrinalstatement' => 'pages#doctrinalstatement'
   get '/events' => 'pages#events'
-  get '/location' => 'location#location'
+  get '/location' => 'pages#location'
   get '/malawi' => 'pages#malawi'
   get '/ourpastor' => 'pages#ourpastor'
   get '/preaching' => 'preaching#show'
