@@ -18,7 +18,7 @@ body {
 
 @font-face{
   font-family: "Gotham-Thin";
-  src: url('fonts/Gotham-Thin.otf') format('opentype');
+  src: font-url('Gotham-Thin.otf') format('opentype');
 }
 
 @font-face{
@@ -60,7 +60,7 @@ body {
 
 @font-face{
   font-family: "Gotham";
-  src: url('fonts/Gotham-Medium.otf') format('opentype');
+  src: font-url('Gotham-Medium.otf') format('opentype');
 }
 @font-face{
   font-family: "GothamIta";
@@ -69,7 +69,7 @@ body {
 
 @font-face{
   font-family: "Gotham-Bold";
-  src: url('fonts/Gotham-Bold.otf') format('opentype');
+  src: font-url('Gotham-Bold.otf') format('opentype');
 }
 
 @font-face{
@@ -3911,6 +3911,7 @@ tbody.collapse.show {
 .nav-link {
   display: block;
   padding: 0.5em 1em;
+  font-family: Gotham-Bold;
 }
 
 .nav-link:focus, .nav-link:hover {
