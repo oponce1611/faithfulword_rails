@@ -1,57 +1,57 @@
 class PagesController < ApplicationController
   def audiobible
-    render "audiobible"
+    render "audiobible.html.erb"
   end
   
   def biblememory
-    render "biblememory"
+    render "biblememory.html.erb"
   end
   
   def churchdirectory
-    render "churchdirectory"
+    render "churchdirectory.html.erb"
   end
   
   def doctrinalstatement
-    render "doctrinalstatement"
+    render "doctrinalstatement.html.erb"
   end
   
   def events
-    render "events"
+    render "events.html.erb"
   end
   
   def location
-    render "location"
+    render "location.html.erb"
   end
   
   def malawi
-    render "malawi"
+    render "malawi.html.erb"
   end
   
   def ourpastor
-    render "ourpastor"
+    render "ourpastor.html.erb"
   end
   
   def privacypolicy
-    render "privacypolicy"
+    render "privacypolicy.html.erb"
   end
   
   def psalms
-    render "psalms"
+    render "psalms.html.erb"
   end
   
   def radio
-    render "radio"
+    render "radio.html.erb"
   end
   
   def service
-    render "service"
+    render "service.html.erb"
   end
   
   def soulwinning
-    render "soulwinning"
+    render "soulwinning.html.erb"
   end
   
   def termsandconditions
-    render "termsandconditions"
+    render "termsandconditions.html.erb"
   end
 end
