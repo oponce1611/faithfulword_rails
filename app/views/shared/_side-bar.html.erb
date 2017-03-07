@@ -6,7 +6,7 @@
         <%= link_to "Foreign Languages", "", class: "nav-link text-uppercase disabled" %>
     </li>
     <li class="nav-item">
-        <%= link_to "Church Directory", churchdirectory_path, class: "nav-link text-uppercase" %>
+        <%= link_to "Church Directory", churchdirectory_path, class: "nav-link text-uppercase #{"active" if @activate == "doctrinalstatement"}" %>
     </li>
     <li class="nav-item">
         <%= link_to "Pictures", "https://get.google.com/albumarchive/117089279522537034856", class: "nav-link text-uppercase", target: "_blank" %>
@@ -18,10 +18,10 @@
         <%= link_to "Hymns", "", class: "nav-link text-uppercase disabled" %>
     </li>
     <li class="nav-item">
-        <%= link_to "Psalms", psalms_path, class: "nav-link text-uppercase" %>
+        <%= link_to "Psalms", psalms_path, class: "nav-link text-uppercase #{"active" if @activate == "psalms"}" %>
     </li>
     <li class="nav-item">
-        <%= link_to "Radio", radio_path, class: "nav-link text-uppercase" %>
+        <%= link_to "Radio", radio_path, class: "nav-link text-uppercase #{"active" if @activate == "radio"}" %>
     </li>
     <li class="nav-item">
         <%= link_to "Audio Bible", audiobible_path, class: "nav-link text-uppercase  d-inline-block" %><span class="badge badge-warning d-inline-block">NEW</span>
@@ -30,7 +30,7 @@
         <%= link_to "Botswana", "http://www.fwbcbotswana.com", class: "nav-link text-uppercase", target: "_blank" %>
     </li>
     <li class="nav-item">
-        <%= link_to "Malawi", malawi_path, class: "nav-link text-uppercase" %>
+        <%= link_to "Malawi", malawi_path, class: "nav-link text-uppercase #{"active" if @activate == "malawi"}" %>
     </li>
     <li class="nav-item">
         <%= link_to "Donate", "http://www.truebornsons.com/donate-to-fwbc", class: "nav-link text-uppercase", target: "_blank" %>
