@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
   
   def doctrinalstatement
-    @page = 1
+    @page = "one"
     render "doctrinalstatement.html.erb"
   end
   
