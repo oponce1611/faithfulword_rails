@@ -2,7 +2,7 @@
 <html>
   <head>
     <%= csrf_meta_tags %>
-    <title><%= yield(:title) %> | Faithful Word Baptist Church - Tempe, AZ</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag 'application' %>
   </head>
 

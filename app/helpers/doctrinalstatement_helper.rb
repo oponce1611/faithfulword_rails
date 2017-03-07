@@ -1,2 +1,0 @@
-module DoctrinalstatementHelper
-end
