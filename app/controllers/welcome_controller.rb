@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    activate == "home"
+    @activate == "home"
   end
 end
