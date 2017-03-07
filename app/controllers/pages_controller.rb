@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def audiobible
+    @activate = "audiobible"
     render "audiobible.html.erb"
   end
   

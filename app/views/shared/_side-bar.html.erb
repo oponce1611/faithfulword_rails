@@ -6,7 +6,7 @@
         <%= link_to "Foreign Languages", "", class: "nav-link text-uppercase disabled" %>
     </li>
     <li class="nav-item">
-        <%= link_to "Church Directory", churchdirectory_path, class: "nav-link text-uppercase #{"active" if @activate == "doctrinalstatement"}" %>
+        <%= link_to "Church Directory", churchdirectory_path, class: "nav-link text-uppercase #{"active" if @activate == "churchdirectory"}" %>
     </li>
     <li class="nav-item">
         <%= link_to "Pictures", "https://get.google.com/albumarchive/117089279522537034856", class: "nav-link text-uppercase", target: "_blank" %>
@@ -24,7 +24,7 @@
         <%= link_to "Radio", radio_path, class: "nav-link text-uppercase #{"active" if @activate == "radio"}" %>
     </li>
     <li class="nav-item">
-        <%= link_to audiobible_path, class: "nav-link text-uppercase  d-inline-block" do %>
+        <%= link_to audiobible_path, class: "nav-link text-uppercase  d-inline-block #{"active" if @activate == "audiobible"}" do %>
              Audio Bible <span class="badge badge-warning d-inline-block">NEW</span>
         <% end %>
     </li>
