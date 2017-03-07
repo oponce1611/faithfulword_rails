@@ -1,6 +1,6 @@
 <ul class="nav flex-column nav-pills">
     <li class="nav-item">
-        <%= link_to "Doctrinal Statement", doctrinalstatement_path, class: "nav-link text-uppercase #{active}" %>
+        <%= link_to "Doctrinal Statement", doctrinalstatement_path, class: "nav-link text-uppercase #{print "activate" if activate == "doctrinalstatement"}" %>
     </li>
     <li class="nav-item">
         <%= link_to "Foreign Languages", "", class: "nav-link text-uppercase disabled" %>

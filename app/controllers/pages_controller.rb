@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   end
   
   def doctrinalstatement
+    activate = "doctrinalstatement"
     render "doctrinalstatement.html.erb"
   end
   
