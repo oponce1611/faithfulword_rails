@@ -24,7 +24,9 @@
         <%= link_to "Radio", radio_path, class: "nav-link text-uppercase #{"active" if @activate == "radio"}" %>
     </li>
     <li class="nav-item">
-        <%= link_to "Audio Bible", audiobible_path, class: "nav-link text-uppercase  d-inline-block" %><span class="badge badge-warning d-inline-block">NEW</span>
+        <%= link_to audiobible_path, class: "nav-link text-uppercase  d-inline-block" do %>
+             Audio Bible <span class="badge badge-warning d-inline-block">NEW</span>
+        <% end %>
     </li>
     <li class="nav-item">
         <%= link_to "Botswana", "http://www.fwbcbotswana.com", class: "nav-link text-uppercase", target: "_blank" %>
