@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def audiobible
-    active = "active"
     render "audiobible.html.erb"
   end
   
@@ -9,12 +8,10 @@ class PagesController < ApplicationController
   end
   
   def churchdirectory
-    active = "active"
     render "churchdirectory.html.erb"
   end
   
   def doctrinalstatement
-    active = "active"
     render "doctrinalstatement.html.erb"
   end
   
@@ -27,7 +24,6 @@ class PagesController < ApplicationController
   end
   
   def malawi
-    active = "active"
     render "malawi.html.erb"
   end
   
@@ -36,17 +32,14 @@ class PagesController < ApplicationController
   end
   
   def privacypolicy
-    active = "active"
     render "privacypolicy.html.erb"
   end
   
   def psalms
-    active = "active"
     render "psalms.html.erb"
   end
   
   def radio
-    active = "active"
     render "radio.html.erb"
   end
   
@@ -59,7 +52,6 @@ class PagesController < ApplicationController
   end
   
   def termsandconditions
-    active = "active"
     render "termsandconditions.html.erb"
   end
 end
