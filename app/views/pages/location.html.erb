@@ -23,15 +23,29 @@
 			<div id="map"></div>
 				<script>
 					function initMap() {
-						var uluru = {lat: 33.391656, lng: -111.977686};
+						var church = {lat: 33.391656, lng: -111.977686};
 						var map = new google.maps.Map(document.getElementById('map'), {
-							zoom: 4,
-							center: uluru
+							zoom: 14,
+							scrollwheel: false,
+							clickableIcons: false,
+							disableDefaultUI: true,
+							fullscreenControl: true,
+							zoomControl: true,
+							center: church
 						});
+						var contentString = '<h1>Faithful Word Baptist Church</h1>';
+
+		        var infowindow = new google.maps.InfoWindow({
+		          content: contentString
+		        });
 						var marker = new google.maps.Marker({
-							position: uluru,
-							map: map
+							position: church,
+							map: map,
+							title: "Faithful Word Baptist Church"
 						});
+						marker.addListener('click', function() {
+          	infowindow.open(map, marker);
+        		});
 					}
 				</script>
 		</div>
