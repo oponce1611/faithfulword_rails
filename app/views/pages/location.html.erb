@@ -1,20 +1,42 @@
+<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
 <% provide(:title, "Location") %>
 <%= render "shared/banner" %>
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h1>Location</h1>
-            <p>
-                <strong>2741 W Southern Ave, Suite #14<br>Tempe, AZ 85282</strong>
-            </p>
-            <p>
-                We are located on the SE corner of Southern Avenue and 48th Street.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1887.6681236558893!2d-111.97639689405797!3d33.391467365671794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb0f20c5618b67bb0!2sFaithful+Word+Baptist+Church!5e0!3m2!1sen!2sus!4v1487271768838" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col">
+				<h1>Location</h1>
+				<p>
+					<strong>2741 W Southern Ave, Suite #14<br>Tempe, AZ 85282</strong>
+				</p>
+				<p>
+					We are located on the SE corner of Southern Avenue and 48th Street.
+				</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container">
+			<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+		</div>
+	</div>
 </div>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaTSuk8jRY3cgBUM_Zp5-OtC97sjw0kXs&callback=initMap">
+</script>
