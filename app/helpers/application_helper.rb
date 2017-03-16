@@ -9,4 +9,10 @@ module ApplicationHelper
     end
   end
   
+  def active(path)
+    if request.env['PATH_INFO'] == path
+      "active"
+    end
+  end
+  
 end

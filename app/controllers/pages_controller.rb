@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def audiobible
-    @activate = "audiobible"
     render "audiobible.html.erb"
   end
   
@@ -9,12 +8,10 @@ class PagesController < ApplicationController
   end
   
   def churchdirectory
-    @activate = "churchdirectory"
     render "churchdirectory.html.erb"
   end
   
   def doctrinalstatement
-    @activate = "doctrinalstatement"
     render "doctrinalstatement.html.erb"
   end
   
@@ -27,7 +24,6 @@ class PagesController < ApplicationController
   end
   
   def malawi
-    @activate = "malawi"
     render "malawi.html.erb"
   end
   
@@ -40,12 +36,10 @@ class PagesController < ApplicationController
   end
   
   def psalms
-    @activate = "psalms"
     render "psalms.html.erb"
   end
   
   def radio
-    @activate = "radio"
     render "radio.html.erb"
   end
   
