@@ -1,0 +1,61 @@
+<% provide(:title, "Events") %>
+<%= render "shared/banner" %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Events at Faithful Word Baptist Church</h1>
+      <p>
+        Please note: <span class="badge badge-primary">All</span> activities are <span class="badge badge-primary">always</span> free of charge, including food, prizes, supplies, etc. Please feel free to invite family and friends to any church-sponsored activity!
+      </p>
+      <p>Upcoming 2017 Events</p>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New Event</button>
+      <div id="container-event">
+        <%= render @events %>
+      </div>
+      <%= form_for @event, remote: true do |f| %>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group row">
+                  <div class="col-2 col-form-label text-right">
+                    <%= f.label :title %>
+                  </div>
+                  <div class="col-10">
+                    <%= f.text_field :title, class: "form-control event-title", type: "text", placeholder: "Title of Event", autofocus: true %>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-2 col-form-label text-right">
+                    <%= f.label :date %>
+                  </div>
+                  <div class="col-10">
+                    <%= f.date_field :date, class: "form-control event-date", type: "date" %>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-2 col-form-label text-right">
+                    <%= f.label :location %>
+                  </div>
+                  <div class="col-10">
+                    <%= f.text_field :location, class: "form-control event-location", type: "text", placeholder: "Location of Event" %>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <%= f.submit "Create", class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

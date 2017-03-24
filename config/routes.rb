@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root 'welcome#index'
+  
+  resources :events, except: [:new, :edit, :show]
   get '/audiobible' => 'pages#audiobible'
   get '/biblememory' => 'pages#biblememory'
   get '/churchdirectory' => 'pages#churchdirectory'
   get '/doctrinalstatement' => 'pages#doctrinalstatement'
-  get '/events' => 'pages#events'
   get '/location' => 'pages#location'
   get '/malawi' => 'pages#malawi'
   get '/ourpastor' => 'pages#ourpastor'
