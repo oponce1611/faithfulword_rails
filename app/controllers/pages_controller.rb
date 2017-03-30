@@ -31,8 +31,8 @@ class PagesController < ApplicationController
     render "ourpastor.html.erb"
   end
   
-  def privacypolicy
-    render "privacypolicy.html.erb"
+  def privacyandterms
+    render "privacyandterms.html.erb"
   end
   
   def psalms

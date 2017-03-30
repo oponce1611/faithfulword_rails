@@ -6,32 +6,19 @@ class EventsController < ApplicationController
   
   def create
     @event = Event.new(event_params)
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
-        format.js
-        redirect_to events_path
-      else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-        format.js
-      end
+    if @event.save
+      redirect_to events_path
+    else
+      format.html { render :new }
     end
   end
   
   def update
     @event = Event.find(params[:id])
-    respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { render :show, status: :ok, location: @event }
-        format.js
-      else
-        format.html { render :edit }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-        format.js
-      end
+    if @event.update(event_params)
+      redirect_to events_path
+    else
+      format.html { render :edit }
     end
   end
 

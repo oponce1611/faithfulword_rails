@@ -1,0 +1,77 @@
+#slider-header {
+  color: white;
+  position: absolute;
+  bottom: 30%;
+  left: 1%;
+  right: 1%;
+  z-index: 1;
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( 0 1px 3px rgba(0,0,0,0.12) );
+            filter: drop-shadow( 0 1px 2px rgba(0,0,0,0.24) );
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.shadow:hover {
+  -webkit-filter: drop-shadow( 0 14px 28px rgba(0,0,0,0.25) );
+          filter: drop-shadow( 0 10px 10px rgba(0,0,0,0.22) );
+}
+#banner-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 37px;
+  z-index: 0;
+}
+#list-sw {
+  padding-bottom: 37px;
+}
+#events-pad {
+  padding-bottom: 20px;
+}
+.grid-item { width: 220px; }
+.grid-item--width2 { width: 400px; }
+
+.text-silent {
+  font-family: Gotham-BoldIta;
+  color: white;
+  font-size: 90%;
+  opacity: 0.7;
+}
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.btn-outline-white {
+  font-family: Gotham-Light;
+  color: #ddd;
+  background-image: none;
+  background-color: transparent;
+  border-color: #ddd;
+}
+
+.btn-outline-white:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn-outline-white:active, .btn-outline-info.active,
+.show > .btn-outline-info.dropdown-toggle {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}

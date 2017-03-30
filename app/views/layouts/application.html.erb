@@ -5,13 +5,27 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= render 'application/favicon' %>
     <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
   </head>
   <body>
-    <% current_uri = request.env['PATH_INFO'] %>
-    <%= current_uri %>
-    <%= render 'layouts/navigation' %>
+    <div class="bg-inverse py-2">
+      <div class="container">
+        <div class="d-flex justify-content-end">
+          <span class="text-white mr-auto text-silent align-middle">Faithful Word Baptist Church - Tempe, AZ</span>
+          <%= link_to "https://www.youtube.com/user/sanderson1611/", class: "pr-1", target: "_blank" do %>
+            <%= image_tag "YOUTUBE.svg", height: '23' %>
+          <% end %>
+          <%= link_to "https://www.facebook.com/Faithful-Word-Baptist-Church-183465927963/", class: "pr-1", target: "_blank" do %>
+            <%= image_tag "FACEBOOK.svg", height: '23' %>
+          <% end %>
+          <%= link_to "https://www.truebornsons.com/donate-to-fwbc/", class: "btn btn-outline-white btn-sm", target: "_blank" do %>
+            DONATE &rsaquo;
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <%= render 'shared/navigation' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
-    <%= javascript_include_tag 'application' %>
   </body>
 </html>

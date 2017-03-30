@@ -1,100 +1,108 @@
 <% provide(:title, "Soul-Winning") %>
 <%= render "shared/banner" %>
 <div class="container">
-    <h1>Soul Winning at Faithful Word Baptist Church</h1>
-    <blockquote class="blockquote">
-        <p class="mb-0">“The fruit of the righteous is a tree of life; and he that winneth souls is wise.”</p>
-        <footer class="blockquote-footer">Proverbs 11:30 <cite title="Source Title">KJV</cite></footer>
-    </blockquote>
-    <div class="row">
-        <div class="col-6">
-            <div id="list-sw" class="">
-                <ul class="list-group">
-                    <li class="list-group-item active">
-                        <strong class="display-4">Official Soul-Winning Times</strong>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Wednesday (Pastor Anderson) 
-                        <span class="badge badge-default badge-pill">5:15 PM</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Saturday (Domonique Davis)
-                        <span class="badge badge-default badge-pill">10:30 AM</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Sunday (Scott Brooke)
-                        <span class="badge badge-default badge-pill">10:30 AM</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="list-sw" class="">
-                <ul class="list-group">
-                    <li class="list-group-item active">
-                        <strong class="display-4">Regional Soul-Winning Groups</strong>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Monday (Tyler Baker) 
-                        <span class="badge badge-default badge-pill">6:30 PM TEMPE</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Tuesday (Jonathan Shelley)
-                        <span class="badge badge-default badge-pill">6:00 AM TEMPE</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Sunday (Shawn Fairchild)
-                        <span class="badge badge-default badge-pill">2:30 AM GILBERT</span>
-                    <li class="list-group-item justify-content-between">
-                        Sunday (Mike Matteson)
-                        <span class="badge badge-default badge-pill">2:30 AM PHOENIX</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="list-sw" class="">
-                <ul class="list-group">
-                    <li class="list-group-item active">
-                        <strong class="display-4">North Phoenix Soul-Winning</strong>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Monday (Charlie Jeffrey) 
-                        <span class="badge badge-default badge-pill">6:00 PM</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Thursday (Jonathan Shelley)
-                        <span class="badge badge-default badge-pill">5:15 PM</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Sunday (Rick Martinez)
-                        <span class="badge badge-default badge-pill">2:15 PM</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BXMA4xOS5BY" frameborder="0" allowfullscreen></iframe>
-        </div>
+  <h1>Soul Winning at Faithful Word Baptist Church</h1>
+  <blockquote class="blockquote">
+    <p class="mb-0">“The fruit of the righteous is a tree of life; and he that winneth souls is wise.”</p>
+    <footer class="blockquote-footer">Proverbs 11:30 <cite title="Source Title">KJV</cite></footer>
+  </blockquote>
+  <div class="row">
+    <div class="col-4">
+      <div id="list-sw" class="">
+        <ul class="list-group">
+          <li class="list-group-item active">
+            <strong class="display-4">Official<br>Soul-Winning Times</strong>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.wednesday? %>">
+            <span class="my-0">Wednesday <span class="small">-Pastor Anderson</span></span>
+            <span class="badge badge-default badge-pill">5:15 PM</span>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.saturday? %>">
+            <span class="my-0">Saturday <span class="small">-Domonique Davis</span></span>
+            <span class="badge badge-default badge-pill">10:30 AM</span>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+            <span class="my-0">Sunday <span class="small">-Scott Brooke</span></span>
+            <span class="badge badge-default badge-pill">10:30 AM</span>
+          </li>
+        </ul>
+      </div>
     </div>
-    <h1>Small Town Soul-Winning Program</h1>
-    <p>
-        Our church spends several hours a week out soul-winning in the greater Phoenix area. In fact, we have official soul-winning times that meet every day of the week in order to make it convenient for people to work soul-winning into their schedule. We are in the process of eventually knocking every door in our county. However, many small towns, or "villages" as the Bible calls them, scattered across Arizona and across America have never had a soul-winning Baptist church in their town. How will these people hear the Gospel? Many people live and die in small towns with no Gospel-preaching church. How shall they hear without a preacher?
-    </p>
-    <p>
-        Every 3 months, our church spends a Saturday knocking every single door in a small town in Arizona preaching the gospel to everyone who will listen. So far we have knocked every door in Gila Bend, Miami, Cordes Lakes, Congress, Strawberry, Kearny, Hayden, Winkelman, Mammoth, Dudleyville, Black Canyon City, and Peach Springs, and have had many, many people saved. Eventually our church will reach every small town in Arizona with the Gospel.
-    </p>
-    <p>
-        In addition, our church holds soul-winning marathons in other states to help get people involved in soul-winning who do not attend a church with an agressive soul-winning program. These events are attended by anywhere from 60-150 people. So far, we have held soul-winning marathons in Detroit, Washington DC, Portland, Atlanta, Los Angeles, Boston, Fort Worth, and San Antonio, and we have marathons plannes for Jacksonville and Minneapolis. The goal is to eventually have a soul-winning marathon in each of the 50 states.
-    </p>
-    <blockquote class="blockquote">
-        <p class="mb-0">“And he said unto them, Let us go into the next towns, that I may preach there also: for therefore came I forth.”</p>
-        <footer class="blockquote-footer">Mark 1:38 <cite title="Source Title">KJV</cite></footer>
-    </blockquote>
-    <blockquote class="blockquote">
-        <p class="mb-0">“And daily in the temple, and in every house, they ceased not to teach and preach Jesus Christ.”</p>
-        <footer class="blockquote-footer">Acts 5:42 <cite title="Source Title">KJV</cite></footer>
-    </blockquote>
-    <blockquote class="blockquote">
-        <p class="mb-0">“And he said unto them, Go ye into all the world, and preach the gospel to every creature.”</p>
-        <footer class="blockquote-footer">Mark 16:15 <cite title="Source Title">KJV</cite></footer>
-    </blockquote>
+    <div class="col-4">
+      <div id="list-sw" class="">
+        <ul class="list-group">
+          <li class="list-group-item active">
+            <strong class="display-4">Regional<br>Soul-Winning Groups</strong>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.monday? %>">
+            <span class="my-0">Monday <span class="small">-Tyler Baker</span></span>
+            <span>
+              <span class="badge badge-default badge-pill mr-1">6:30 PM</span><span class="badge badge-default badge-pill">TEMPE</span>
+            </span>
+            
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.tuesday? %>">
+            <span class="my-0">Tuesday <span class="small">-Jonathan Shelley</span></span>
+            <span>
+              <span class="badge badge-default badge-pill mr-1">6:00 PM</span><span class="badge badge-default badge-pill">TEMPE</span>
+            </span>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+            <span class="my-0">Sunday <span class="small">-Shawn Fairchild</span></span>
+            <span>
+              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-default badge-pill">GILBERT</span>
+            </span>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+            <span class="my-0">Sunday <span class="small">-Mike Matteson</span></span>
+            <span>
+              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-default badge-pill">PHOENIX</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-4">
+      <div id="list-sw" class="">
+        <ul class="list-group">
+          <li class="list-group-item active">
+            <strong class="display-4">North Phoenix<br>Soul-Winning</strong>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.monday? %>">
+            <span class="my-0">Monday <span class="small">-Charlie Jeffrey</span></span>
+            <span class="badge badge-default badge-pill">6:00 PM</span>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.thursday? %>">
+            <span class="my-0">Thursday <span class="small">-Jonathan Shelley</span></span>
+            <span class="badge badge-default badge-pill">5:15 PM</span>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+            <span class="my-0">Sunday <span class="small">-Rick Martinez</span></span>
+            <span class="badge badge-default badge-pill">2:15 PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <h1>Small Town Soul-Winning Program</h1>
+  <p>
+    Our church spends several hours a week out soul-winning in the greater Phoenix area. In fact, we have official soul-winning times that meet every day of the week in order to make it convenient for people to work soul-winning into their schedule. We are in the process of eventually knocking every door in our county. However, many small towns, or "villages" as the Bible calls them, scattered across Arizona and across America have never had a soul-winning Baptist church in their town. How will these people hear the Gospel? Many people live and die in small towns with no Gospel-preaching church. How shall they hear without a preacher?
+  </p>
+  <p>
+    Every 3 months, our church spends a Saturday knocking every single door in a small town in Arizona preaching the gospel to everyone who will listen. So far we have knocked every door in Gila Bend, Miami, Cordes Lakes, Congress, Strawberry, Kearny, Hayden, Winkelman, Mammoth, Dudleyville, Black Canyon City, and Peach Springs, and have had many, many people saved. Eventually our church will reach every small town in Arizona with the Gospel.
+  </p>
+  <p>
+    In addition, our church holds soul-winning marathons in other states to help get people involved in soul-winning who do not attend a church with an agressive soul-winning program. These events are attended by anywhere from 60-150 people. So far, we have held soul-winning marathons in Detroit, Washington DC, Portland, Atlanta, Los Angeles, Boston, Fort Worth, and San Antonio, and we have marathons plannes for Jacksonville and Minneapolis. The goal is to eventually have a soul-winning marathon in each of the 50 states.
+  </p>
+  <blockquote class="blockquote">
+    <p class="mb-0">“And he said unto them, Let us go into the next towns, that I may preach there also: for therefore came I forth.”</p>
+    <footer class="blockquote-footer">Mark 1:38 <cite title="Source Title">KJV</cite></footer>
+  </blockquote>
+  <blockquote class="blockquote">
+    <p class="mb-0">“And daily in the temple, and in every house, they ceased not to teach and preach Jesus Christ.”</p>
+    <footer class="blockquote-footer">Acts 5:42 <cite title="Source Title">KJV</cite></footer>
+  </blockquote>
+  <blockquote class="blockquote">
+    <p class="mb-0">“And he said unto them, Go ye into all the world, and preach the gospel to every creature.”</p>
+    <footer class="blockquote-footer">Mark 16:15 <cite title="Source Title">KJV</cite></footer>
+  </blockquote>
 </div>

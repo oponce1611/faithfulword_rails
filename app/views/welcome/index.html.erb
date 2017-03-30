@@ -1,69 +1,78 @@
-<div class="pb-4">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active ">
-                <%= image_tag "hard-preaching.jpg", alt: "First slide", class: "d-block img-fluid" %>
-                <div class="carousel-caption d-none d-md-block">
-                    <!--<h1 id="" class="text-center text-uppercase display-1 shadow">hard preaching</h1>-->
-                </div>
-            </div>
-            <div class="carousel-item">
-                <%= image_tag "hymns.jpg", alt: "Second slide", class: "d-block img-fluid" %>
-                <div class="carousel-caption d-none d-md-block">
-                    <!--<h1 id="slider-header" class="text-center text-uppercase display-1 shadow">hymns</h1>-->
-                </div>
-            </div>
-            <div class="carousel-item">
-                <%= image_tag "congregation.jpg", alt: "Third slide", class: "d-block img-fluid" %>
-                <div class="carousel-caption d-none d-md-block">
-                    <!--<h1 id="slider-header" class="text-center text-uppercase display-1 shadow">king james</h1>-->
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
 <div class="container">
-    <div class="row">
-        <div class="col-3">
-            <%= render "shared/side-bar" %>
+<div class="pb-4">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active ">
+        <%= image_tag "hard-preaching.jpg", alt: "First slide", class: "d-block img-fluid rounded" %>
+        <div class="carousel-caption d-none d-md-block">
+          <!--<h1 id="" class="text-center text-uppercase display-1 shadow">hard preaching</h1>-->
         </div>
-        <div class="col-9">
-            <h1>Welcome to the website of<br>Faithful Word Baptist Church!</h1>
-            <p>Over 13 million mp3 sermons have been downloaded from this site!</p>
-            <p>We are a local New Testament church reaching the Phoenix area with the Gospel of Jesus Christ. Don't expect anything contemporary or liberal. We are an
-            <span class="badge badge-pill badge-success">old-fashioned</span>
-            <span class="badge badge-pill badge-success">independent</span>
-            <span class="badge badge-pill badge-success">fundamental</span>
-            <span class="badge badge-pill badge-success">King James Bible only</span>
-            <span class="badge badge-pill badge-success">soul-winning</span>
-            <span class="badge badge-pill badge-success">Baptist</span>
-            church.</p>
-            <p>Faithful Word Baptist Church is a young, family-integrated church. We would love to get to know you personally at one of our services!</p>
-            <p><span class="badge badge-warning">NEW</span> Pastor Anderson's materials have now been translated into over 115 languages!</p>
-            <p><span class="badge badge-warning">NEW</span> Check out this recent video of Pastor Anderson preaching in a public school outside of Georgetown, Guyana</p>
-            <div class="text-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Kdxyk7seCSI" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="text-center">
-                <a class="btn btn-primary btn-lg text-center" href="https://www.truebornsons.com/donate-to-fwbc/" role="button">DONATE NOW &rsaquo;</a>
-            </div>
-            <blockquote class="blockquote">
-                <p class="mb-0">“Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers.”</p>
-                <footer class="blockquote-footer">Titus 1:9 <cite title="Source Title">KJV</cite></footer>
-            </blockquote>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "hymns.jpg", alt: "Second slide", class: "d-block img-fluid rounded" %>
+        <div class="carousel-caption d-none d-md-block">
+          <!--<h1 id="slider-header" class="text-center text-uppercase display-1 shadow">hymns</h1>-->
         </div>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "congregation.jpg", alt: "Third slide", class: "d-block img-fluid rounded" %>
+        <div class="carousel-caption d-none d-md-block">
+          <!--<h1 id="slider-header" class="text-center text-uppercase display-1 shadow">king james</h1>-->
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
+
+  <div class="row">
+    <div class="col-3">
+      <%= render "shared/side-bar" %>
+    </div>
+    <div class="col-9">
+      <h1>Welcome to the website of<br>Faithful Word Baptist Church!</h1>
+      <p>Over 13 million mp3 sermons have been downloaded from this site!</p>
+      <p>We are a local New Testament church reaching the Phoenix area with the Gospel of Jesus Christ. Don't expect anything contemporary or liberal. We are an
+      <span class="badge badge-pill badge-success" data-toggle="tooltip" data-placement="top" title="Tooltip on top">old-fashioned</span>
+      <span class="badge badge-pill badge-success">independent</span>
+      <span class="badge badge-pill badge-success">fundamental</span>
+      <span class="badge badge-pill badge-success">King James Bible only</span>
+      <span class="badge badge-pill badge-success">soul-winning</span>
+      <span class="badge badge-pill badge-success">Baptist</span>
+      church.</p>
+      <p>Faithful Word Baptist Church is a young, family-integrated church. We would love to get to know you personally at one of our services!</p>
+      <p><span class="badge badge-warning">NEW</span> Pastor Anderson's materials have now been translated into over 115 languages!</p>
+      <p><span class="badge badge-warning">NEW</span> Check out this recent video of Pastor Anderson preaching in a public school outside of Georgetown, Guyana</p>
+      <div class="video-container mb-4">
+        <iframe id="ytplayer" type="text/html"
+            width="720" height="405"
+            src="https://www.youtube.com/embed/fSqU7qqu6eM?enablejsapi=1"
+            frameborder="0"
+            style="border: solid 4px #0275d8"
+            allowfullscreen>
+        </iframe>
+      </div>
+      <blockquote class="blockquote">
+        <p class="mb-0">“Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers.”</p>
+        <footer class="blockquote-footer">Titus 1:9 <cite title="Source Title">KJV</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>

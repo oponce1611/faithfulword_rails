@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/malawi' => 'pages#malawi'
   get '/ourpastor' => 'pages#ourpastor'
   get '/preaching' => 'preaching#show'
-  get '/privacypolicy' => 'pages#privacypolicy'
+  get '/privacyandterms' => 'pages#privacyandterms'
   get '/psalms' => 'pages#psalms'
   get '/radio' => 'pages#radio'
   get '/service' => 'pages#service'
