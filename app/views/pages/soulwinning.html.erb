@@ -13,17 +13,17 @@
           <li class="list-group-item active">
             <strong class="display-4">Official<br>Soul-Winning Times</strong>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.wednesday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.wednesday? %>">
             <span class="my-0">Wednesday <span class="small">-Pastor Anderson</span></span>
             <span class="badge badge-default badge-pill">5:15 PM</span>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.saturday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.saturday? %>">
             <span class="my-0">Saturday <span class="small">-Domonique Davis</span></span>
             <span class="badge badge-default badge-pill">10:30 AM</span>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
             <span class="my-0">Sunday <span class="small">-Scott Brooke</span></span>
-            <span class="badge badge-default badge-pill">10:30 AM</span>
+            <span class="badge badge-default badge-pill">1:30 AM</span>
           </li>
         </ul>
       </div>
@@ -34,28 +34,34 @@
           <li class="list-group-item active">
             <strong class="display-4">Regional<br>Soul-Winning Groups</strong>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.monday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.monday? %>">
             <span class="my-0">Monday <span class="small">-Tyler Baker</span></span>
             <span>
-              <span class="badge badge-default badge-pill mr-1">6:30 PM</span><span class="badge badge-default badge-pill">TEMPE</span>
+              <span class="badge badge-default badge-pill mr-1">6:30 PM</span><span class="badge badge-primary badge-pill">Tempe</span>
             </span>
             
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.tuesday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.tuesday? %>">
             <span class="my-0">Tuesday <span class="small">-Jonathan Shelley</span></span>
             <span>
-              <span class="badge badge-default badge-pill mr-1">6:00 PM</span><span class="badge badge-default badge-pill">TEMPE</span>
+              <span class="badge badge-default badge-pill mr-1">6:00 PM</span><span class="badge badge-primary badge-pill">Tempe</span>
             </span>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.tuesday? %>">
+            <span class="my-0">Saturday <span class="small">-John & Jesse McPhaill</span></span>
+            <span>
+              <span class="badge badge-default badge-pill mr-1">4:45 PM</span><span class="badge badge-primary badge-pill">Phoenix</span>
+            </span>
+          </li>
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
             <span class="my-0">Sunday <span class="small">-Shawn Fairchild</span></span>
             <span>
-              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-default badge-pill">GILBERT</span>
+              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-primary badge-pill">Gilbert</span>
             </span>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
             <span class="my-0">Sunday <span class="small">-Mike Matteson</span></span>
             <span>
-              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-default badge-pill">PHOENIX</span>
+              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-primary badge-pill">Phoenix</span>
             </span>
           </li>
         </ul>
@@ -67,15 +73,15 @@
           <li class="list-group-item active">
             <strong class="display-4">North Phoenix<br>Soul-Winning</strong>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.monday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.monday? %>">
             <span class="my-0">Monday <span class="small">-Charlie Jeffrey</span></span>
             <span class="badge badge-default badge-pill">6:00 PM</span>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.thursday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.thursday? %>">
             <span class="my-0">Thursday <span class="small">-Jonathan Shelley</span></span>
             <span class="badge badge-default badge-pill">5:15 PM</span>
           </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.now.sunday? %>">
+          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
             <span class="my-0">Sunday <span class="small">-Rick Martinez</span></span>
             <span class="badge badge-default badge-pill">2:15 PM</span>
           </li>

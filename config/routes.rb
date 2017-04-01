@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :foreignlanguages, :controller => 'foreign_languages'
+  resources :charges
+  resources :translations
+
   root 'welcome#index'
   
   resources :events, except: [:new, :edit, :show]

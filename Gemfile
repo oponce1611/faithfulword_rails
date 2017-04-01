@@ -12,8 +12,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks', '~> 2.1'
 gem 'jbuilder', '~> 2.5'
-
+gem 'masonry-rails', '~> 0.2.4'
+gem 'best_in_place', '~> 3.1'
+gem 'stripe'
+gem 'friendly_id', '~> 5.1'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'

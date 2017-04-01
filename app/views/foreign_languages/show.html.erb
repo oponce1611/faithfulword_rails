@@ -1,0 +1,12 @@
+<% image_size = 370 %>
+<div class="container">
+  <h1><%= @tongue.tongue %></h1>
+  <% @tongue.translations.each do |translation|%>
+    <div class="card", style="width: <%= image_size + 2 %>px">
+      <%= image_tag "MARCHING-TO-ZION.jpg", class: "card-img-top", style: "width: #{image_size}px" %>
+      <div class="card-block">
+        <h4 class="card-title"><%= link_to translation.title, translation_path(translation), class: "card-link" %></h4>
+      </div>
+    </div>
+  <% end %>
+</div>

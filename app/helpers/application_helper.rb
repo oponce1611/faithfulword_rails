@@ -11,7 +11,7 @@ module ApplicationHelper
   
   def active(path)
     if request.env['PATH_INFO'] == path
-      "active"
+      true
     end
   end
   

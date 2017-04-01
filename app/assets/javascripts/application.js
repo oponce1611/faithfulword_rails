@@ -12,9 +12,32 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require best_in_place
 //= require turbolinks
-// require_tree .
 //= require bootstrap
+//= require masonry/jquery.masonry
 //= require tether.min
-//= require masonry.pkgd
 //= require custom
+//= require_tree .
+
+$(function(){
+
+  $('#masonry-grid').masonry({
+    itemSelector: '.grid-item',
+    isFitWidth: true,
+  });
+  
+  jQuery(".best_in_place").best_in_place();
+  
+  
+  $(document).ready(function() {
+    $("#txtDate").keyup(function(){
+      if ($(this).val().length == 2){
+        $(this).val($(this).val() + "/");
+      }
+      else if ($(this).val().length == 5){
+        $(this).val($(this).val() + "/");
+      }
+    });
+  });
+});

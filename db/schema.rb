@@ -10,12 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321200559) do
+ActiveRecord::Schema.define(version: 20170331231509) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "location"
     t.date   "date"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "tongue"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "translations", force: :cascade do |t|
+    t.string   "title"
+    t.string   "video_id"
+    t.text     "body"
+    t.date     "published"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "language_id"
+    t.index ["language_id"], name: "index_translations_on_language_id"
   end
 
   create_table "users", force: :cascade do |t|

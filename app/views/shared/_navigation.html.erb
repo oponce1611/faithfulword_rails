@@ -1,30 +1,17 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-white py-2">
+<nav class="navbar navbar-toggleable-md bg-white py-2">
   <div class="container">
     <%= link_to root_path, class: "navbar-brand mr-auto" do %>
       <%= image_tag "FWBC-LOGO-OFFICIAL-BLUE.svg", height: '60', alt: "Faithful Word Baptist Church" %>
     <% end %>
-    <ul class="navbar-nav ">
-      <li class="nav-item">
-        <%= link_to "Preaching", preaching_path, class: "nav-link text-uppercase text-primary" %>
+    <div class="navbar-nav ">
+        <%= link_to "Preaching", preaching_path, class: "nav-custom #{"nav-custom-active" if active("/preaching")}" %>
+        <%= link_to "Soul Winning", soulwinning_path, class: "nav-custom #{"nav-custom-active" if active("/soulwinning")}" %>
+        <%= link_to "Our Pastor", ourpastor_path, class: "nav-custom #{"nav-custom-active" if active("/ourpastor")}" %>
+        <%= link_to "Service", service_path, class: "nav-custom #{"nav-custom-active" if active("/service")}" %>
+        <%= link_to "Location", location_path, class: "nav-custom #{"nav-custom-active" if active("/location")}" %>
+        <%= link_to "Bible Memory", biblememory_path, class: "nav-custom #{"nav-custom-active" if active("/biblememory")}" %>
+        <%= link_to "Events", events_path, class: "nav-custom #{"nav-custom-active" if active("/events")}" %>
       </li>
-      <li class="nav-item">
-        <%= link_to "Soul Winning", soulwinning_path, class: "nav-link text-uppercase text-primary" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Our Pastor", ourpastor_path, class: "nav-link text-uppercase text-primary" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Service", service_path, class: "nav-link text-uppercase text-primary" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Location", location_path, class: "nav-link text-uppercase text-primary" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Bible Memory", biblememory_path, class: "nav-link text-uppercase text-primary" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Events", events_path, class: "nav-link text-uppercase text-primary" %>
-      </li>
-    </ul>
+    </div>
   </div>
 </nav>

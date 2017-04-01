@@ -20,7 +20,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding-bottom: 37px;
+  padding-bottom: 20px;
   z-index: 0;
 }
 #list-sw {
@@ -29,8 +29,24 @@
 #events-pad {
   padding-bottom: 20px;
 }
-.grid-item { width: 220px; }
-.grid-item--width2 { width: 400px; }
+
+#masonry-grid {
+  margin: 0 auto;
+}
+.grid-item {
+  width: 220px;
+  margin: 20px;
+}
+
+#masonry-chapter {
+  margin: 0 0;
+}
+.chapter-item {
+  margin: 1px;
+}
+
+
+.centered { margin: 0 auto; }
 
 .text-silent {
   font-family: Gotham-BoldIta;
@@ -75,3 +91,82 @@
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
+
+.btn-outline-gold {
+  color: #CFB53B;
+  background-color: transparent;
+  background-image: none;
+  border-color: #CFB53B;
+}
+
+.btn-outline-gold:hover {
+  color: #fff;
+  background-color: #CFB53B;
+  border-color: #CFB53B;
+}
+
+.btn-outline-gold:focus, .btn-outline-primary.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+}
+
+.btn-outline-gold.disabled, .btn-outline-primary:disabled {
+  color: #0275d8;
+  background-color: transparent;
+}
+
+.btn-outline-gold:active, .btn-outline-gold.active,
+.show > .btn-outline-gold.dropdown-toggle {
+  color: #fff;
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+}
+
+.btn-gold {
+  color: #fff;
+  background: #ffdc73;
+  border-color: #ffdc73;
+}
+
+.btn-gold:hover {
+  color: #fff;
+  background: #ffcf40;
+  border-color: #ffcf40;
+}
+
+.btn-gold:focus, .btn-gold.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+}
+
+.btn-gold.disabled, .btn-primary:gold {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.btn-gold:active, .btn-gold.active,
+.show > .btn-gold.dropdown-toggle {
+  color: #fff;
+  background-color: #CFB53B;
+  background-image: none;
+  border-color: #CFB53B;
+}
+
+.nav-custom{
+  text-transform: uppercase !important;
+  color: #0275d8;
+  display: block;
+  border-bottom: 3px solid transparent;
+  padding: 0px 0px 0px 0px !important;
+  margin: 0.5em 1em;
+}
+
+.nav-custom-active{
+  border-bottom: 3px solid #0275d8;
+  padding: 0px 0px 0px 0px !important;
+}
+
+.nav-custom:focus, .nav-custom:hover {
+  text-decoration: none;
+}
+
