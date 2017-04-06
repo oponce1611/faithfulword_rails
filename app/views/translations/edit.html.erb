@@ -1,5 +1,5 @@
 <div class="container">
-	<%= form_for @translation, :method => :put do |f| %>
+	<%= form_for @translation, :method => :put, url: update_translation_path(@translation) do |f| %>
 		<div class="form-group">
 				<h3><%= f.label :title %></h3>
 				<div class="row">
@@ -29,7 +29,7 @@
 		</div>
 		<div class="form-group">
 				<h3><%= f.label :body %></h3>
-				<%= f.text_area :body, class: "form-control", type: "text", placeholder: "Location of Event", rows: 20 %>
+				<%= f.text_area :body, class: "form-control", type: "text", placeholder: "Body", rows: 20 %>
 		</div>
 		<%= f.submit "Update", class: "btn btn-primary" %>
 	<% end %>

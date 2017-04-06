@@ -4,7 +4,7 @@
       <%= image_tag "FWBC-LOGO-OFFICIAL-BLUE.svg", height: '60', alt: "Faithful Word Baptist Church" %>
     <% end %>
     <div class="navbar-nav ">
-        <%= link_to "Preaching", preaching_path, class: "nav-custom #{"nav-custom-active" if active("/preaching")}" %>
+        
         <%= link_to "Soul Winning", soulwinning_path, class: "nav-custom #{"nav-custom-active" if active("/soulwinning")}" %>
         <%= link_to "Our Pastor", ourpastor_path, class: "nav-custom #{"nav-custom-active" if active("/ourpastor")}" %>
         <%= link_to "Service", service_path, class: "nav-custom #{"nav-custom-active" if active("/service")}" %>
@@ -15,3 +15,28 @@
     </div>
   </div>
 </nav>
+<div class="container">
+  <div class="bar mb-2">
+    <div class="bar-side">
+      <%= link_to "Preaching", preaching_path, class: "top-btn" %>
+    </div>
+    <div class="bar-side">
+      <%= link_to "Soul Winning", soulwinning_path, class: "top-btn" %>
+    </div>
+    <div class="bar-side">
+      <%= link_to "Our Pastor", ourpastor_path, class: "top-btn" %>
+    </div>
+    <div class="bar-side">
+      <%= link_to "Service Times", service_path, class: "top-btn" %>
+    </div>
+    <div class="bar-side">
+      <%= link_to "Location", location_path, class: "top-btn" %>
+    </div>
+    <div class="bar-side">
+      <%= link_to "Bible Memory", biblememory_path, class: "top-btn" %>
+    </div>
+    <div class="bar-side">
+      <%= link_to "Events", events_path, class: "top-btn" %>
+    </div>
+  </div>
+</div>

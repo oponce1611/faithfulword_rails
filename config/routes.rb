@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   resources :foreignlanguages, :controller => 'foreign_languages'
+  get 'foreignlanguages/:foreignlanguage_id/:id' => 'translations#show', as: "translation"
+  get 'foreignlanguages/:foreignlanguage_id/:id/edit' => 'translations#edit', as: "edit_translation"
+  resources :translations, only: [:create, :destroy] do
+    member do
+      put :update, as: 'update'
+    end
+  end
   resources :charges
-  resources :translations
+  
 
   root 'welcome#index'
   

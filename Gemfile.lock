@@ -60,6 +60,8 @@ GEM
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.17)
+    friendly_id (5.2.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     http-cookie (1.0.3)
@@ -195,6 +197,7 @@ DEPENDENCIES
   best_in_place (~> 3.1)
   byebug
   coffee-rails (~> 4.2)
+  friendly_id (~> 5.1)
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks (~> 2.1)

@@ -17,7 +17,7 @@
           </div>
           <ul class="list-group list-group-flush">
             <% tongue.translations.each do |translation| %>
-              <li class="list-group-item"><%= link_to translation.title, translation_path(translation), class: "card-link" %></li>
+              <li class="list-group-item"><%= link_to translation.title, translation_path(tongue, translation), class: "card-link" %></li>
             <% end %>
           </ul>
         </div>

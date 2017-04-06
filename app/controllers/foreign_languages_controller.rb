@@ -5,7 +5,8 @@ class ForeignLanguagesController < ApplicationController
   end
   
   def show
-    @tongue = Language.find(params[:id])
+    @tongue = Language.friendly.find(params[:id])
+    @translation = Language.friendly.find(params[:id]).translations.new
   end
   
   def create
@@ -20,7 +21,7 @@ class ForeignLanguagesController < ApplicationController
   end
   
   def update
-    @tongue = Language.find(params[:id])
+    @tongue = Language.friendly.find(params[:id])
     if @tongue.update(tongue_params)
       redirect_to foreignlanguages_paths
     else
@@ -29,7 +30,7 @@ class ForeignLanguagesController < ApplicationController
   end
   
   def destroy
-    @tongue = Language.find(params[:id])
+    @tongue = Language.friendly.find(params[:id])
     @tongue.destroy
     redirect_to foreignlanguages_path
   end
