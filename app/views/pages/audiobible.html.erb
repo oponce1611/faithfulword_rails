@@ -1,351 +1,349 @@
 <% provide(:title, "Audio Bible") %>
 <%= render "shared/banner" %>
 <div class="container">
-    <div class="row">
-        <div class="col-3">
-            <%= render "shared/side-bar" %>
+  <div class="d-flex flex-nowrap">
+    <%= render "shared/side-bar" %>
+    <div class="c">
+      <h1>Audio Bible <span class="badge badge-warning">NEW</span></h1>
+        <p>This is a work in progress. Check back for more chapters of the Bible being constantly added!</p>
+        <div class="pb-4">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 4%">4%</div>
         </div>
-        <div class="col-9">
-            <h1>Audio Bible <span class="badge badge-warning">NEW</span></h1>
-              <p>This is a work in progress. Check back for more chapters of the Bible being constantly added!</p>
-              <div class="pb-4">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 4%">4%</div>
-                </div>
-              </div>
-              <div class="">
-                <div id="masonry-grid" class="centered">
-                  
-                  <div class="grid-item card">
-                    <h3 class="card-header">Matthew</h3>
-                    <div class="card-block">
-                      <h5 class="card-title">Chapters:</h5>
-                      <div class="d-flex align-content-start flex-wrap">
-                        <a href="http://www.faithfulwordbaptist.org/40_matthew01.mp3" class="btn btn-primary btn-sm m-1">1</a>
-                        <a href="http://www.faithfulwordbaptist.org/40_matthew02.mp3" class="btn btn-primary btn-sm m-1">2</a>
-                        <a href="http://www.faithfulwordbaptist.org/40_matthew03.mp3" class="btn btn-primary btn-sm m-1">3</a>
-                        <a href="http://www.faithfulwordbaptist.org/40_matthew04.mp3" class="btn btn-primary btn-sm m-1">4</a>
-                      </div>
-                    </div>
-                    <div class="card-footer text-center text-muted">
-                      4/27
-                    </div>
-                  </div>
-
-                  <div class="grid-item list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john01.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 1</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john02.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 2</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john03.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 3</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john04.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 4</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john05.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 5</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john06.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 6</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john07.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 7</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john08.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 8</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john09.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 9</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john10.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 10</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john11.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 11</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john12.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 12</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john13.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 13</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john14.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 14</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john15.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 15</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john16.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 16</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john17.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 17</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john18.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 18</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john19.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 19</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john20.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 20</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/43_john20.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">John 21</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="grid-item list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Thessalonians</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/52_1thess1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Thessalonians 1</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/52_1thess2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Thessalonians 2</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/52_1thess4.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Thessalonians 4</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/52_1thess5.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Thessalonians 5</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="grid-item list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 Thessalonians</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/53_2thess1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 Thessalonians 1</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="grid-item list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Titus</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/56_titus1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Titus 1</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/56_titus2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Titus 2</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/56_titus3.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Titus 3</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="grid-item list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Philemon </h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/57_philemon.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Philemon 1</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="list-group grid-item">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">James</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/59_james1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">James 1</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="list-group grid-item">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Peter</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/60_1peter1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Peter 1</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/60_1peter2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Peter 2</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/60_1peter3.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Peter 3</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/60_1peter5.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 Peter 5</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="list-group grid-item">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 Peter</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/61_2peter1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 Peter 1</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/61_2peter2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 Peter 2</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="list-group grid-item">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 John</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/62_1john1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 John 1</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/62_1john2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 John 2</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/62_1john3.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 John 3</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/62_1john4.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 John 4</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/62_1john5.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">1 John 5</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="list-group grid-item">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 John</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/63_2john.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">2 John 1</h5>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="list-group grid-item">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Jude</h5>
-                      </div>
-                    </a>
-                    <a href="http://www.faithfulwordbaptist.org/65_jude.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Jude 1</h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <blockquote class="blockquote">
-                <p class="mb-0">“For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.”</p>
-                <footer class="blockquote-footer">Hebrews 4:12 <cite title="Source Title">KJV</cite></footer>
-              </blockquote>
         </div>
+        <div class="">
+        <div id="masonry-grid" class="centered">
+          
+          <div class="grid-item card">
+          <h3 class="card-header">Matthew</h3>
+          <div class="card-block">
+            <h5 class="card-title">Chapters:</h5>
+            <div class="d-flex align-content-start flex-wrap">
+            <a href="http://www.faithfulwordbaptist.org/40_matthew01.mp3" class="btn btn-primary btn-sm m-1">1</a>
+            <a href="http://www.faithfulwordbaptist.org/40_matthew02.mp3" class="btn btn-primary btn-sm m-1">2</a>
+            <a href="http://www.faithfulwordbaptist.org/40_matthew03.mp3" class="btn btn-primary btn-sm m-1">3</a>
+            <a href="http://www.faithfulwordbaptist.org/40_matthew04.mp3" class="btn btn-primary btn-sm m-1">4</a>
+            </div>
+          </div>
+          <div class="card-footer text-center text-muted">
+            4/27
+          </div>
+          </div>
+
+          <div class="grid-item list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john01.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 1</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john02.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 2</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john03.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 3</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john04.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 4</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john05.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 5</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john06.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 6</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john07.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 7</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john08.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 8</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john09.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 9</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john10.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 10</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john11.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 11</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john12.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 12</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john13.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 13</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john14.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 14</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john15.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 15</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john16.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 16</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john17.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 17</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john18.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 18</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john19.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 19</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john20.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 20</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/43_john20.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">John 21</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="grid-item list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Thessalonians</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/52_1thess1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Thessalonians 1</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/52_1thess2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Thessalonians 2</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/52_1thess4.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Thessalonians 4</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/52_1thess5.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Thessalonians 5</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="grid-item list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 Thessalonians</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/53_2thess1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 Thessalonians 1</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="grid-item list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Titus</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/56_titus1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Titus 1</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/56_titus2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Titus 2</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/56_titus3.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Titus 3</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="grid-item list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Philemon </h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/57_philemon.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Philemon 1</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="list-group grid-item">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">James</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/59_james1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">James 1</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="list-group grid-item">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Peter</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/60_1peter1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Peter 1</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/60_1peter2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Peter 2</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/60_1peter3.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Peter 3</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/60_1peter5.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 Peter 5</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="list-group grid-item">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 Peter</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/61_2peter1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 Peter 1</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/61_2peter2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 Peter 2</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="list-group grid-item">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 John</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/62_1john1.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 John 1</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/62_1john2.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 John 2</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/62_1john3.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 John 3</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/62_1john4.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 John 4</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/62_1john5.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1 John 5</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="list-group grid-item">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 John</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/63_2john.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2 John 1</h5>
+            </div>
+          </a>
+          </div>
+
+          <div class="list-group grid-item">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Jude</h5>
+            </div>
+          </a>
+          <a href="http://www.faithfulwordbaptist.org/65_jude.mp3" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Jude 1</h5>
+            </div>
+          </a>
+          </div>
+        </div>
+        </div>
+
+        <blockquote class="blockquote">
+        <p class="mb-0">“For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.”</p>
+        <footer class="blockquote-footer">Hebrews 4:12 <cite title="Source Title">KJV</cite></footer>
+        </blockquote>
     </div>
+  </div>
 </div>

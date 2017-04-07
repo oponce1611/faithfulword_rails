@@ -1,39 +1,35 @@
-<div class="container" style="background-color: white;">
- <!--
- <div id="carouselExampleIndicators" class="carousel slide mx-0" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active ">
-        <%= image_tag "hard-preaching.jpg", alt: "First slide", class: "d-block img-fluid" %>
-        <div class="carousel-caption d-none d-md-block">
-          <!--<h1 id="" class="text-center text-uppercase display-1 shadow">hard preaching</h1>
+<div class="container">
+  <div class="banner-border my-3">
+    <div id="carouselExampleIndicators" class="carousel banner-img slide mx-0" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active ">
+          <%= image_tag "hard-preaching.jpg", alt: "First slide", class: "d-block img-fluid" %>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "hymns.jpg", alt: "Second slide", class: "d-block img-fluid" %>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "congregation.jpg", alt: "Third slide", class: "d-block img-fluid" %>
         </div>
       </div>
-      <div class="carousel-item">
-        <%= image_tag "hymns.jpg", alt: "Second slide", class: "d-block img-fluid" %>
-        <div class="carousel-caption d-none d-md-block">
-          <!--<h1 id="slider-header" class="text-center text-uppercase display-1 shadow">hymns</h1>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag "congregation.jpg", alt: "Third slide", class: "d-block img-fluid" %>
-      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>-->
-
-  <div class="row">
-    <div class="col-3">
-      <%= render "shared/side-bar" %>
-    </div>
-    <div class="col-9">
-      <h1>Welcome to the website of<br>Faithful Word Baptist Church!</h1>
+  </div>
+  <div class="d-flex flex-nowrap">
+    <%= render "shared/side-bar" %>
+    <div class="c">
+      <h3>Welcome to the website of Faithful Word Baptist Church!</h3>
       <p>Over 13 million mp3 sermons have been downloaded from this site!</p>
       <p>We are a local New Testament church reaching the Phoenix area with the Gospel of Jesus Christ. Don't expect anything contemporary or liberal. We are an
       <span class="badge badge-pill badge-success" data-toggle="tooltip" data-placement="top" title="Tooltip on top">old-fashioned</span>
@@ -47,8 +43,8 @@
       <p><%= image_tag 'new_sml_27x13.gif', style:"margin-right: 5px;" %>Pastor Anderson's materials have now been translated into over 115 languages!</p>
       <p><%= image_tag 'new_sml_27x13.gif', style:"margin-right: 5px;" %>Check out Pastor Anderson's new documentary "Burn That Way After All:"</p>
       <div class="video-container mb-4">
-        <iframe id="ytplayer" type="text/html"
-            width="720" height="405"
+        <iframe id="" type="text/html"
+            width="480" height="322"
             src="https://www.youtube.com/embed/fSqU7qqu6eM?enablejsapi=1"
             frameborder="0"
             style="border: solid 4px #0275d8"

@@ -1,10 +1,8 @@
-<%#= render 'shared/banner' %>
+<%= render 'shared/banner' %>
 <div class="container">
-  <div class="row">
-    <div class="col-3">
-      <%= render 'shared/side-bar' %>
-    </div>
-    <div class="col-9">
+  <div class="d-flex flex-nowrap">
+    <%= render 'shared/side-bar' %>
+    <div class="c">
       <h1>Foreign Languages</h1>
       <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal">New Tongue</button>
       <% @tongues.each do |tongue| %>

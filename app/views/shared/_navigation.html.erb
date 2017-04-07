@@ -3,20 +3,10 @@
     <%= link_to root_path, class: "navbar-brand mr-auto" do %>
       <%= image_tag "FWBC-LOGO-OFFICIAL-BLUE.svg", height: '60', alt: "Faithful Word Baptist Church" %>
     <% end %>
-    <div class="navbar-nav ">
-        
-        <%= link_to "Soul Winning", soulwinning_path, class: "nav-custom #{"nav-custom-active" if active("/soulwinning")}" %>
-        <%= link_to "Our Pastor", ourpastor_path, class: "nav-custom #{"nav-custom-active" if active("/ourpastor")}" %>
-        <%= link_to "Service", service_path, class: "nav-custom #{"nav-custom-active" if active("/service")}" %>
-        <%= link_to "Location", location_path, class: "nav-custom #{"nav-custom-active" if active("/location")}" %>
-        <%= link_to "Bible Memory", biblememory_path, class: "nav-custom #{"nav-custom-active" if active("/biblememory")}" %>
-        <%= link_to "Events", events_path, class: "nav-custom #{"nav-custom-active" if active("/events")}" %>
-      </li>
-    </div>
   </div>
 </nav>
 <div class="container">
-  <div class="bar mb-2">
+  <div class="bar">
     <div class="bar-side">
       <%= link_to "Preaching", preaching_path, class: "top-btn" %>
     </div>
