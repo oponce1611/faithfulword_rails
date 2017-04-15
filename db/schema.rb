@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401200059) do
+ActiveRecord::Schema.define(version: 20170412182039) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -35,7 +35,26 @@ ActiveRecord::Schema.define(version: 20170401200059) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "slug"
+    t.string   "flag"
     t.index ["slug"], name: "index_languages_on_slug", unique: true
+  end
+
+  create_table "sermons", force: :cascade do |t|
+    t.string   "title"
+    t.string   "preacher"
+    t.datetime "datetime"
+    t.text     "mp3"
+    t.text     "ytube_id"
+    t.text     "scloud"
+    t.boolean  "fire_hard"
+    t.string   "location"
+    t.text     "transcript"
+    t.string   "format"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "slug"
+    t.integer  "dl_count",   default: 0
+    t.index ["slug"], name: "index_sermons_on_slug", unique: true
   end
 
   create_table "translations", force: :cascade do |t|

@@ -37,6 +37,6 @@ class ForeignLanguagesController < ApplicationController
   
   private
   def tongue_params
-    params.require(:language).permit(:tongue)
+    params.require(:language).permit(:tongue, :flag)
   end
 end

@@ -1,0 +1,54 @@
+<% provide(:title, "Preaching") %>
+<%= render "shared/banner" %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h4>Sermons from Faithful Word Baptist Church</h4>
+      <p>
+        Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.
+      </p>
+      <div class="mb-2">
+        <a class="sky-btn" href="https://www.truebornsons.com/donate-to-fwbc/" role="button">DONATE NOW &rsaquo;</a>
+      </div>
+
+      <div class="mb-2">
+      <% @years.reverse.each do |year|  %>
+        <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn" %>
+      <% end %>
+      </div>
+      
+      <table class="box-table-a">
+        <colgroup>
+          <col width='13%'>
+          <col width='55%'>
+          <col width="22%">
+          <col width="10%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Sermon Title</th>
+            <th>Preacher</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render :partial => 'sermon', :collection => @sermons %>
+        </tbody>
+      </table>
+      <br>
+      <h4>More great preaching:</h4>
+      <a href="http://www.hardpreaching.com/" target="_blank">hardpreaching.com</a>
+      <h4>Other Links</h4>
+      <a href="http://www.kjvprophecy.com/" target="_blank">KJV Prophecy</a><br>
+      <a href="http://www.repentanceblacklist.com/" target="_blank">The Repentance Blackslist</a><br>
+      <a href="http://www.truebornsons.com/" target="_blank">The True Born Sons Of Liberty</a><br>
+      <a href="http://www.wordoftruthbaptist.org/" target="_blank">Word of Truth Baptist Church</a><br>
+      <a href="http://www.veritybaptist.com/" target="_blank">Verity Baptist Church</a><br>
+      <a href="http://stedfastbaptistkjv.org/" target="_blank">Stedfast Baptist Church</a><br>
+      <a href="http://www.afterthetribulation.com/" target="_blank">After the Tribulation - Film</a><br>
+      <a href="http://www.teachallnations.net/">Teach All Nations</a><br>
+      <a href="http://www3.clustrmaps.com/counter/maps.php?url=http://faithfulwordbaptist.org/page5.html" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com';" /></a>
+    </div>
+  </div>
+</div>

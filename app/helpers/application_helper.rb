@@ -1,5 +1,4 @@
 module ApplicationHelper
-  
   def full_title(page_title = '')
     base_title = "Faithful Word Baptist Church - Tempe, AZ"
     if page_title.empty?
@@ -9,10 +8,14 @@ module ApplicationHelper
     end
   end
   
-  def active(path)
-    if request.env['PATH_INFO'] == path
-      true
-    end
+  def ytube_embed(id, x, y)
+    content_tag(:iframe,
+                '',
+                :src => "https://www.youtube.com/embed/#{id}?enablejsapi=1",
+                :id => "ytplayer",
+                :width => x,
+                :height => y,
+                :frameborder => 0,
+                :style => "border: solid 4px #0275d8")
   end
-  
 end

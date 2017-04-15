@@ -1,56 +1,56 @@
 <style>
-	 #map {
-		height: 400px;
-		width: 100%;
-	 }
+   #map {
+    height: 400px;
+    width: 100%;
+   }
 </style>
 <% provide(:title, "Location") %>
 <%= render "shared/banner" %>
 <div class="container">
-	<div class="row">
-		<div class="col">
-				<h1>Location</h1>
-				<p>
-					<strong>2741 W Southern Ave, Suite #14<br>Tempe, AZ 85282</strong>
-				</p>
-				<p>
-					We are located on the SE corner of Southern Avenue and 48th Street.
-				</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="container">
-			<div id="map"></div>
-				<script>
-					function initMap() {
-						var church = {lat: 33.391656, lng: -111.977686};
-						var map = new google.maps.Map(document.getElementById('map'), {
-							zoom: 14,
-							scrollwheel: false,
-							clickableIcons: false,
-							disableDefaultUI: true,
-							fullscreenControl: true,
-							zoomControl: true,
-							center: church
-						});
-						var contentString = '<h1>Faithful Word Baptist Church</h1>';
+  <div class="row">
+    <div class="col">
+        <h4>Location</h4>
+        <p>
+          <strong>2741 W Southern Ave, Suite #14<br>Tempe, AZ 85282</strong>
+        </p>
+        <p>
+          We are located on the SE corner of Southern Avenue and 48th Street.
+        </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div id="map"></div>
+        <script>
+          function initMap() {
+            var church = {lat: 33.391656, lng: -111.977686};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              scrollwheel: false,
+              clickableIcons: false,
+              disableDefaultUI: true,
+              fullscreenControl: true,
+              zoomControl: true,
+              center: church
+            });
+            var contentString = '<h1>Faithful Word Baptist Church</h1>';
 
-		        var infowindow = new google.maps.InfoWindow({
-		          content: contentString
-		        });
-						var marker = new google.maps.Marker({
-							position: church,
-							map: map,
-							title: "Faithful Word Baptist Church"
-						});
-						marker.addListener('click', function() {
-          	infowindow.open(map, marker);
-        		});
-					}
-				</script>
-		</div>
-	</div>
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+            var marker = new google.maps.Marker({
+              position: church,
+              map: map,
+              title: "Faithful Word Baptist Church"
+            });
+            marker.addListener('click', function() {
+      infowindow.open(map, marker);
+        });
+          }
+        </script>
+    </div>
+  </div>
 </div>
 <script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaTSuk8jRY3cgBUM_Zp5-OtC97sjw0kXs&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaTSuk8jRY3cgBUM_Zp5-OtC97sjw0kXs&callback=initMap">
 </script>

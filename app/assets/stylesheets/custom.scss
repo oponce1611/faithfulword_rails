@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+margin: 0px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FF0000;
+}
+
 #slider-header {
   color: white;
   position: absolute;
@@ -5,17 +26,6 @@
   left: 1%;
   right: 1%;
   z-index: 1;
-}
-
-.shadow {
-    -webkit-filter: drop-shadow( 0 1px 3px rgba(0,0,0,0.12) );
-            filter: drop-shadow( 0 1px 2px rgba(0,0,0,0.24) );
-            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.shadow:hover {
-  -webkit-filter: drop-shadow( 0 14px 28px rgba(0,0,0,0.25) );
-          filter: drop-shadow( 0 10px 10px rgba(0,0,0,0.22) );
 }
 
 .banner-img {
@@ -40,6 +50,22 @@
   padding-bottom: 20px;
 }
 
+/*--------------------
+  BIBLE VERSE STYLING
+----------------------*/
+.verse p {
+  font-weight: bold;
+  color: #a10004;
+  
+}
+
+.verse small {;
+  color: #a10004;
+  text-transform: uppercase;
+}
+/*--------
+  MASONRY
+----------*/
 #masonry-grid {
   margin: 0 auto;
 }
@@ -59,9 +85,12 @@
 .centered { margin: 0 auto; }
 
 .text-silent {
-  font-family: Gotham-BoldIta;
+  font-family: Arial;
   color: white;
-  font-size: 90%;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   opacity: 0.7;
 }
 
@@ -81,118 +110,9 @@
   height:100%;
 }*/
 
-.btn-outline-white {
-  font-family: Gotham-Light;
-  color: #ddd;
-  background-image: none;
-  background-color: transparent;
-  border-color: #ddd;
-}
-
-.btn-outline-white:hover {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
-}
-
-.btn-outline-white:active, .btn-outline-info.active,
-.show > .btn-outline-info.dropdown-toggle {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-}
-
-.btn-outline-gold {
-  color: #CFB53B;
-  background-color: transparent;
-  background-image: none;
-  border-color: #CFB53B;
-}
-
-.btn-outline-gold:hover {
-  color: #fff;
-  background-color: #CFB53B;
-  border-color: #CFB53B;
-}
-
-.btn-outline-gold:focus, .btn-outline-primary.focus {
-  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
-          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
-}
-
-.btn-outline-gold.disabled, .btn-outline-primary:disabled {
-  color: #0275d8;
-  background-color: transparent;
-}
-
-.btn-outline-gold:active, .btn-outline-gold.active,
-.show > .btn-outline-gold.dropdown-toggle {
-  color: #fff;
-  background-color: #D4AF37;
-  border-color: #D4AF37;
-}
-
-.btn-gold {
-  color: #fff;
-  background: #ffdc73;
-  border-color: #ffdc73;
-}
-
-.btn-gold:hover {
-  color: #fff;
-  background: #ffcf40;
-  border-color: #ffcf40;
-}
-
-.btn-gold:focus, .btn-gold.focus {
-  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
-          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
-}
-
-.btn-gold.disabled, .btn-primary:gold {
-  background-color: #0275d8;
-  border-color: #0275d8;
-}
-
-.btn-gold:active, .btn-gold.active,
-.show > .btn-gold.dropdown-toggle {
-  color: #fff;
-  background-color: #CFB53B;
-  background-image: none;
-  border-color: #CFB53B;
-}
-
-.nav-custom{
-  text-transform: uppercase !important;
-  color: #0275d8;
-  display: block;
-  border-bottom: 3px solid transparent;
-  padding: 0px 0px 0px 0px !important;
-  margin: 0.5em 1em;
-}
-
-.nav-custom-active{
-  border-bottom: 3px solid #0275d8;
-  padding: 0px 0px 0px 0px !important;
-}
-
-.nav-custom:focus, .nav-custom:hover {
-  text-decoration: none;
-}
-
-.form-value-cover {
-  padding: 0.5rem 0.75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.25;
-  color: #464a4c;
-  text-align: center;
-  background-color: #eceeef;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-}
-
+/*---------
+  BUTTONS
+-----------*/
 .top-btn {
   color: blue;
   font-size: 17px;
@@ -224,6 +144,59 @@
   padding-left: 9px;
 }
 
+.yellow-btn {
+  color: #994800;
+  font-size: 10px;
+  line-height: 10px;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#fff9c1, #fed81c);
+  border: 1px solid #ecc101;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin: 0px;
+}
+
+.yellow-btn:focus {
+  text-decoration: none;
+}
+
+.yellow-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#ffeb81, #fffbda);
+}
+
+.sky-btn {
+  color: #039;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#f8fafd, #bed0ee);
+  border: 1px solid #a0b1dc;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin: 0px;
+}
+
+.sky-btn:hover {
+  background: linear-gradient(#f8fafd, #a0b1dc);
+}
+
+.sky-btn:focus {
+  text-decoration: none;
+}
+
+.sky-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#c3d0e9, #ecf1fa);
+}
+ /* ------------------
+ GREY NAVBAR
+   ------------------   */
 .bar {
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex; 
@@ -245,32 +218,17 @@
   margin: 0px;
 } 
 */
-a {
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  text-align: left;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-margin: 0px;
-}
 
-a:hover {
-  text-decoration: none;
-  color: #FF0000;
-}
-
+/* ------------------
+  SIDE COLUMN
+   ------------------   */
 
 .browse-side-column {
   border: 1px solid #999;
   border-radius: 5px;
   background-color: #eaeaea;
   width: 190px;
-  padding-top:6px;
+  padding-top: 6px;
   padding-bottom: 6px;
 }
 
@@ -335,4 +293,101 @@ ul {
 
 li {
   display: flex;
+}
+
+/* ------------------
+ PREACHING SHOW PAGE
+   ------------------   */
+#right-border {
+  border-right: 1px solid #999;
+}
+
+#sermon-downloads-heading {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+#sermon-downloads-number {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+
+/* ------------------
+ STYLING FOR PREACHING TABLE 
+   ------------------   */
+
+.box-table-a {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.box-table-a thead
+{
+  color: #039;
+  border: 1px solid #b9c9fe; 
+  border-top: 4px solid #aabcfe;
+}
+
+.box-table-a th {
+  font-size: 13px;
+  font-weight: bold;
+  background: #b9c9fe;
+  padding: 3px 8px;
+}
+
+.box-table-a td
+{
+  color: #669;
+  background: #e8edff; 
+  border: 1px solid #b9c9fe; 
+  padding: 3px 8px;
+}
+
+.box-table-a tr:hover td
+{
+  background: #d0dafd;
+  color: #339;
+}
+
+/*-----------------
+  SOULWINNING PAGE
+--------------------*/
+.soulwinning-table {
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 1px 9px 9px 9px;
+}
+
+.soulwinning-body {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 9px;
+}
+
+.soulwinning-body.active {
+  border: 2px solid #03c;
+}
+
+
+.soulwinning-date {
+  color: #03c;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 5px;
+}
+
+.soulwinning-time {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
 }

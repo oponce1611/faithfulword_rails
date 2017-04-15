@@ -1,28 +1,19 @@
-<% provide(:title, "Preaching") %>
-<%= render "shared/banner" %>
+<%= render 'shared/banner' %>
 <div class="container">
   <div class="row">
-    <div class="col">
-      <h1>Sermons from Faithful Word Baptist Church</h1>
-      <p>
-        Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.
-      </p>
-      <div class="pb-4">
-        <a class="btn btn-primary btn-lg text-center" href="https://www.truebornsons.com/donate-to-fwbc/" role="button">DONATE NOW &rsaquo;</a>
-      </div>
-      <h1 class="display-1">WORK IN PROGRESS</h1>
-      <h4>More great preaching:</h4>
-      <a href="http://www.hardpreaching.com/" target="_blank">hardpreaching.com</a>
-      <h4>Other Links</h4>
-      <a href="http://www.kjvprophecy.com/" target="_blank">KJV Prophecy</a><br>
-      <a href="http://www.repentanceblacklist.com/" target="_blank">The Repentance Blackslist</a><br>
-      <a href="http://www.truebornsons.com/" target="_blank">The True Born Sons Of Liberty</a><br>
-      <a href="http://www.wordoftruthbaptist.org/" target="_blank">Word of Truth Baptist Church</a><br>
-      <a href="http://www.veritybaptist.com/" target="_blank">Verity Baptist Church</a><br>
-      <a href="http://stedfastbaptistkjv.org/" target="_blank">Stedfast Baptist Church</a><br>
-      <a href="http://www.afterthetribulation.com/" target="_blank">After the Tribulation - Film</a><br>
-      <a href="http://www.teachallnations.net/">Teach All Nations</a><br>
-      <a href="http://www3.clustrmaps.com/counter/maps.php?url=http://faithfulwordbaptist.org/page5.html" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com';" /></a>
+    <div id="right-border" class="col-9 pr-5">
+      <h4><%= @sermon.title %></h4>
+      <p><%= @sermon.datetime.strftime("%A %B %d, %Y %l:%M %p %Z") %></p>
+      <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
+      <%= ytube_embed(@sermon.ytube_id, 720, 405) %><br>
+      <%= @sermon.mp3 %>
+      <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
+      <p><%= simple_format(@sermon.transcript) %></p>
+    </div>
+    <div class="col-3 pl-5">
+      <%= link_to "Download MP3", file_sermon_path(@sermon), class: "sky-btn", style: "margin-bottom: 15px", target: "_self" %>
+      <p id="sermon-downloads-heading">Total Downloads</p>
+      <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>
     </div>
   </div>
 </div>

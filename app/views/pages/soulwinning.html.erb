@@ -1,114 +1,94 @@
 <% provide(:title, "Soul-Winning") %>
 <%= render "shared/banner" %>
 <div class="container">
-  <h1>Soul Winning at Faithful Word Baptist Church</h1>
-  <blockquote class="blockquote">
+  <h4>Soul Winning at Faithful Word Baptist Church</h4>
+  
+  <blockquote class="verse">
     <p class="mb-0">“The fruit of the righteous is a tree of life; and he that winneth souls is wise.”</p>
-    <footer class="blockquote-footer">Proverbs 11:30 <cite title="Source Title">KJV</cite></footer>
+    <small>Proverbs 11:30 KJV</small>
   </blockquote>
+  
   <div class="row">
+    
     <div class="col-4">
-      <div id="list-sw" class="">
-        <ul class="list-group">
-          <li class="list-group-item active">
-            <strong class="display-4">Official<br>Soul-Winning Times</strong>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.wednesday? %>">
-            <span class="my-0">Wednesday <span class="small">-Pastor Anderson</span></span>
-            <span class="badge badge-default badge-pill">5:15 PM</span>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.saturday? %>">
-            <span class="my-0">Saturday <span class="small">-Domonique Davis</span></span>
-            <span class="badge badge-default badge-pill">10:30 AM</span>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
-            <span class="my-0">Sunday <span class="small">-Scott Brooke</span></span>
-            <span class="badge badge-default badge-pill">1:30 AM</span>
-          </li>
-        </ul>
+      <div class="soulwinning-table">
+        <strong class="h5">Official Soul-Winning Times</strong>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.wednesday? %>">
+          <p class="soulwinning-date">Wednesday -Pastor Anderson</p>
+          <p class="soulwinning-time">5:15 PM</p>
+        </div>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.saturday? %>">
+          <p class="soulwinning-date">Saturday -Domonique Davis</p>
+          <p class="soulwinning-time">10:30 AM</p>
+        </div>
+        <div class="soulwinning-body <%= "active" if Time.zone.now.sunday? %>">
+          <p class="soulwinning-date">Sunday -Scott Brooke</p>
+          <p class="soulwinning-time">1:30 AM</p>
+        </div>
       </div>
     </div>
+    
     <div class="col-4">
-      <div id="list-sw" class="">
-        <ul class="list-group">
-          <li class="list-group-item active">
-            <strong class="display-4">Regional<br>Soul-Winning Groups</strong>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.monday? %>">
-            <span class="my-0">Monday <span class="small">-Tyler Baker</span></span>
-            <span>
-              <span class="badge badge-default badge-pill mr-1">6:30 PM</span><span class="badge badge-primary badge-pill">Tempe</span>
-            </span>
-            
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.tuesday? %>">
-            <span class="my-0">Tuesday <span class="small">-Jonathan Shelley</span></span>
-            <span>
-              <span class="badge badge-default badge-pill mr-1">6:00 PM</span><span class="badge badge-primary badge-pill">Tempe</span>
-            </span>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.saturday? %>">
-            <span class="my-0">Saturday <span class="small">-John & Jesse McPhaill</span></span>
-            <span>
-              <span class="badge badge-default badge-pill mr-1">4:45 PM</span><span class="badge badge-primary badge-pill">Phoenix</span>
-            </span>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
-            <span class="my-0">Sunday <span class="small">-Shawn Fairchild</span></span>
-            <span>
-              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-primary badge-pill">Gilbert</span>
-            </span>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
-            <span class="my-0">Sunday <span class="small">-Mike Matteson</span></span>
-            <span>
-              <span class="badge badge-default badge-pill mr-1">2:30 PM</span><span class="badge badge-primary badge-pill">Phoenix</span>
-            </span>
-          </li>
-        </ul>
+      <div class="soulwinning-table">
+        <strong class="h5">Regional Soul-Winning Groups</strong>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.monday? %>">
+          <p class="soulwinning-date">Monday -Tyler Baker</p>
+          <p class="soulwinning-time">6:30 PM Tempe</p>
+        </div>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.tuesday? %>">
+          <p class="soulwinning-date">Tuesday -Jonathan Shelley</p>
+          <p class="soulwinning-time">6:00 PM Tempe</p>
+        </div>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.saturday? %>">
+          <p class="soulwinning-date">Saturday -John & Jesse McPhaill</p>
+          <p class="soulwinning-time">4:45 PM Phoenix</p>
+        </div>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.sunday? %>">
+          <p class="soulwinning-date">Sunday -Shawn Fairchild</p>
+          <p class="soulwinning-time">2:30 PM Gilbert</p>
+        </div>
+        <div class="soulwinning-body <%= "active" if Time.zone.now.sunday? %>">
+          <p class="soulwinning-date">Sunday -Mike Matteson</p>
+          <p class="soulwinning-time">2:30 PM Phoenix</p>
+        </div>
       </div>
     </div>
+    
     <div class="col-4">
-      <div id="list-sw" class="">
-        <ul class="list-group">
-          <li class="list-group-item active">
-            <strong class="display-4">North Phoenix<br>Soul-Winning</strong>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.monday? %>">
-            <span class="my-0">Monday <span class="small">-Charlie Jeffrey</span></span>
-            <span class="badge badge-default badge-pill">6:00 PM</span>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.thursday? %>">
-            <span class="my-0">Thursday <span class="small">-Jonathan Shelley</span></span>
-            <span class="badge badge-default badge-pill">5:15 PM</span>
-          </li>
-          <li class="list-group-item align-items-start flex-column <%= "list-group-item-success" if Time.zone.now.sunday? %>">
-            <span class="my-0">Sunday <span class="small">-Rick Martinez</span></span>
-            <span class="badge badge-default badge-pill">2:15 PM</span>
-          </li>
-        </ul>
+      <div class="soulwinning-table">
+        <strong class="h5">North Phoenix Soul-Winning</strong>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.monday? %>">
+          <p class="soulwinning-date">Monday -Charlie Jeffrey</p>
+          <p class="soulwinning-time">6:00 PM</p>
+        </div>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.thursday? %>">
+          <p class="soulwinning-date">Thursday -Jonathan Shelley</p>
+          <p class="soulwinning-time">5:15 PM</p>
+        </div>
+        <div class="soulwinning-body <%= "active" if Time.zone.now.sunday? %>">
+          <p class="soulwinning-date">Sunday -Rick Martinez</p>
+          <p class="soulwinning-time">2:15 PM</p>
+        </div>
       </div>
     </div>
+    
   </div>
-  <h1>Small Town Soul-Winning Program</h1>
-  <p>
-    Our church spends several hours a week out soul-winning in the greater Phoenix area. In fact, we have official soul-winning times that meet every day of the week in order to make it convenient for people to work soul-winning into their schedule. We are in the process of eventually knocking every door in our county. However, many small towns, or "villages" as the Bible calls them, scattered across Arizona and across America have never had a soul-winning Baptist church in their town. How will these people hear the Gospel? Many people live and die in small towns with no Gospel-preaching church. How shall they hear without a preacher?
-  </p>
-  <p>
-    Every 3 months, our church spends a Saturday knocking every single door in a small town in Arizona preaching the gospel to everyone who will listen. So far we have knocked every door in Gila Bend, Miami, Cordes Lakes, Congress, Strawberry, Kearny, Hayden, Winkelman, Mammoth, Dudleyville, Black Canyon City, and Peach Springs, and have had many, many people saved. Eventually our church will reach every small town in Arizona with the Gospel.
-  </p>
-  <p>
-    In addition, our church holds soul-winning marathons in other states to help get people involved in soul-winning who do not attend a church with an agressive soul-winning program. These events are attended by anywhere from 60-150 people. So far, we have held soul-winning marathons in Detroit, Washington DC, Portland, Atlanta, Los Angeles, Boston, Fort Worth, and San Antonio, and we have marathons plannes for Jacksonville and Minneapolis. The goal is to eventually have a soul-winning marathon in each of the 50 states.
-  </p>
-  <blockquote class="blockquote">
+  
+  <h4>Small Town Soul-Winning Program</h4>
+  <p>Our church spends several hours a week out soul-winning in the greater Phoenix area. In fact, we have official soul-winning times that meet every day of the week in order to make it convenient for people to work soul-winning into their schedule. We are in the process of eventually knocking every door in our county. However, many small towns, or "villages" as the Bible calls them, scattered across Arizona and across America have never had a soul-winning Baptist church in their town. How will these people hear the Gospel? Many people live and die in small towns with no Gospel-preaching church. How shall they hear without a preacher?</p>
+  <p>Every 3 months, our church spends a Saturday knocking every single door in a small town in Arizona preaching the gospel to everyone who will listen. So far we have knocked every door in Gila Bend, Miami, Cordes Lakes, Congress, Strawberry, Kearny, Hayden, Winkelman, Mammoth, Dudleyville, Black Canyon City, and Peach Springs, and have had many, many people saved. Eventually our church will reach every small town in Arizona with the Gospel.</p>
+  <p>In addition, our church holds soul-winning marathons in other states to help get people involved in soul-winning who do not attend a church with an agressive soul-winning program. These events are attended by anywhere from 60-150 people. So far, we have held soul-winning marathons in Detroit, Washington DC, Portland, Atlanta, Los Angeles, Boston, Fort Worth, and San Antonio, and we have marathons plannes for Jacksonville and Minneapolis. The goal is to eventually have a soul-winning marathon in each of the 50 states.</p>
+  
+  <blockquote class="verse">
     <p class="mb-0">“And he said unto them, Let us go into the next towns, that I may preach there also: for therefore came I forth.”</p>
-    <footer class="blockquote-footer">Mark 1:38 <cite title="Source Title">KJV</cite></footer>
+    <small>Mark 1:38 KJV</small>
   </blockquote>
-  <blockquote class="blockquote">
+  <blockquote class="verse">
     <p class="mb-0">“And daily in the temple, and in every house, they ceased not to teach and preach Jesus Christ.”</p>
-    <footer class="blockquote-footer">Acts 5:42 <cite title="Source Title">KJV</cite></footer>
+    <small>Acts 5:42 KJV</small>
   </blockquote>
-  <blockquote class="blockquote">
+  <blockquote class="verse">
     <p class="mb-0">“And he said unto them, Go ye into all the world, and preach the gospel to every creature.”</p>
-    <footer class="blockquote-footer">Mark 16:15 <cite title="Source Title">KJV</cite></footer>
+    <small>Mark 16:15 KJV</small>
   </blockquote>
 </div>

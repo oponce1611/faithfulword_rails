@@ -4,39 +4,19 @@
     <%= render 'shared/side-bar' %>
     <div class="c">
       <h1>Foreign Languages</h1>
-      <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal">New Tongue</button>
-      <% @tongues.each do |tongue| %>
-        <div class="card mb-3">
-          <div class="card-block">
-            <%= link_to foreignlanguage_path(tongue), method: :delete, class: "close" do %>
-              <span aria-hidden="true">&times;</span>
-            <% end %>
-            <h4 class="card-title"><%= link_to  tongue.tongue, foreignlanguage_path(tongue), class: "card-link" %></h4>
-          </div>
-          <ul class="list-group list-group-flush">
-            <% tongue.translations.each do |translation| %>
-              <li class="list-group-item"><%= link_to translation.title, translation_path(tongue, translation), class: "card-link" %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <button type="button" class="sky-btn mb-3" data-toggle="modal" data-target="#exampleModal">New Tongue</button>
+      <%= render partial: 'tongue', collection: @tongues %>
       
       <%= form_for @tongue, url: foreignlanguages_path do |f| %>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
               <div class="modal-body">
-                  <div class="input-group">
-                    <%= f.text_field :tongue, class: "form-control form-control-lg", type: "text", placeholder: "Tongue name", autofocus: true %>
-                    <span class="input-group-btn">
-                      <%= f.submit "Create", class: "btn btn-primary btn-lg" %>
-                    </span>
-                  </div>
+                <div class="d-flex flex-nowrap">
+                  <%= f.text_field :tongue, class: "form-control mr-2", type: "text", placeholder: "Tongue name", autofocus: true %>
+                  <%= f.text_field :flag, class: "form-control w-25 mr-2", type: "text", placeholder: "ISO", autofocus: false %>
+                  <%= f.submit "Create", class: "sky-btn" %>
+                </div>
               </div>
             </div>
           </div>
