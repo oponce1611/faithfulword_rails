@@ -1,0 +1,24 @@
+<%= form_for @event do |f| %>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="modal-title" id="exampleModalLabel">New Event</h5>
+          <div class="form-group">
+              <%= f.label :title %>
+              <%= f.text_field :title, class: "form-control event-title", type: "text", placeholder: "Title of Event", autofocus: true %>
+          </div>
+          <div class="form-group">
+              <%= f.label :date %>
+              <%= f.date_field :date, class: "form-control event-date", type: "date" %>
+          </div>
+          <div class="form-group">
+              <%= f.label :location %>
+              <%= f.text_field :location, class: "form-control event-location", type: "text", placeholder: "Location of Event" %>
+          </div>
+          <%= f.submit "Create", class: "sky-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

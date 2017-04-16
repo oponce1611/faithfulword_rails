@@ -1,3 +1,4 @@
+<%= render 'form' %>
 <% provide(:title, "Preaching") %>
 <%= render "shared/banner" %>
 <div class="container">
@@ -7,16 +8,13 @@
       <p>
         Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.
       </p>
-      <div class="mb-2">
-        <a class="sky-btn" href="https://www.truebornsons.com/donate-to-fwbc/" role="button">DONATE NOW &rsaquo;</a>
-      </div>
-
-      <div class="mb-2">
+      <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn mb-2" %>
+      <br>
+      <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
+      <br>
       <% @years.reverse.each do |year|  %>
-        <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn" %>
+        <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn mb-2" %>
       <% end %>
-      </div>
-      
       <table class="box-table-a">
         <colgroup>
           <col width='13%'>

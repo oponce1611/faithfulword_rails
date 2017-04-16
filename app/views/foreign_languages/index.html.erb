@@ -3,9 +3,11 @@
   <div class="d-flex flex-nowrap">
     <%= render 'shared/side-bar' %>
     <div class="c">
-      <h1>Foreign Languages</h1>
+      <h4>Foreign Languages</h4>
       <button type="button" class="sky-btn mb-3" data-toggle="modal" data-target="#exampleModal">New Tongue</button>
-      <%= render partial: 'tongue', collection: @tongues %>
+      <div class="columns">
+          <%= render partial: 'tongue', collection: @tongues %>
+      </div>
       
       <%= form_for @tongue, url: foreignlanguages_path do |f| %>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">

@@ -1,16 +1,25 @@
 class PreachingController < ApplicationController
   def index
-    year = params[:year].to_i
-    year = Time.current.year if year.nil? || year <= 2005 || year >= Time.current.year
-    
+    @sermon = Sermon.new
     @years = (2006..Time.current.year).to_a
     
-    @sermons = Sermon.where("cast(strftime('%Y', datetime) as int) = ?", year)
+    year = params[:year].to_i
+    year = Time.current.year if year.nil? || year <= 2005 || year >= Time.current.year
+    @sermons = Sermon.where("datetime >= ? and datetime <= ?", "#{year}-01-01 07:00:00", "#{year}-12-31 23:59:59 -0700")
     @sermons = @sermons.order('datetime DESC')
   end
   
   def show
     @sermon = Sermon.friendly.find(params[:id])
+  end
+  
+  def create
+    @sermon = Sermon.new(sermon_params)
+    if @sermon.save
+      redirect_to preaching_path
+    else
+      redirect_to preaching_path
+    end
   end
   
   def edit

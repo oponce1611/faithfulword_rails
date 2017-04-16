@@ -1,13 +1,9 @@
 module PreachingHelper
   
-  def next_month(date)
-    index = @sermons.pluck(:datetime).index(date)
+  def next_month(sermon)
+    index = @sermons.pluck(:datetime).index(sermon.datetime)
     next_date = @sermons.pluck(:datetime)[index - 1]
-    puts next_date.class
-    
-    if !next_date.nil?
-      next_date.month
-    end
+    sermon.datetime.month != next_date.month
   end
  
 end
