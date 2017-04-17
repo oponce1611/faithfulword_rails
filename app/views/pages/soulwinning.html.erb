@@ -13,6 +13,10 @@
     <div class="col-4">
       <div class="soulwinning-table">
         <strong class="h5">Official Soul-Winning Times</strong>
+        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.tuesday? %>">
+          <p class="soulwinning-date">Tuesday (Jonathan Shelley)</p>
+          <p class="soulwinning-time">5:15 PM</p>
+        </div>
         <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.wednesday? %>">
           <p class="soulwinning-date">Wednesday (Pastor Anderson)</p>
           <p class="soulwinning-time">5:15 PM</p>
@@ -35,16 +39,12 @@
           <p class="soulwinning-date">Monday (Tyler Baker)</p>
           <p class="soulwinning-time">6:30 PM Tempe</p>
         </div>
-        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.tuesday? %>">
-          <p class="soulwinning-date">Tuesday (Jonathan Shelley)</p>
-          <p class="soulwinning-time">6:00 PM Tempe</p>
-        </div>
         <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.saturday? %>">
           <p class="soulwinning-date">Saturday (John & Jesse McPhaill)</p>
           <p class="soulwinning-time">4:45 PM Phoenix</p>
         </div>
         <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.sunday? %>">
-          <p class="soulwinning-date">Sunday (Shawn Fairchild)</p>
+          <p class="soulwinning-date">Sunday (Sean Fairchild)</p>
           <p class="soulwinning-time">2:30 PM Gilbert</p>
         </div>
         <div class="soulwinning-body <%= "active" if Time.zone.now.sunday? %>">
@@ -57,10 +57,6 @@
     <div class="col-4">
       <div class="soulwinning-table">
         <strong class="h5">North Phoenix Soul-Winning</strong>
-        <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.monday? %>">
-          <p class="soulwinning-date">Monday (Charlie Jeffrey)</p>
-          <p class="soulwinning-time">6:00 PM</p>
-        </div>
         <div class="soulwinning-body mb-2 <%= "active" if Time.zone.now.thursday? %>">
           <p class="soulwinning-date">Thursday (Jonathan Shelley)</p>
           <p class="soulwinning-time">5:15 PM</p>
