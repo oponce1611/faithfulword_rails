@@ -20,7 +20,7 @@ gem 'stripe'
 gem 'friendly_id', '~> 5.1'
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 group :development do

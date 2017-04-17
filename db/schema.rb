@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170412182039) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "location"
@@ -24,10 +27,10 @@ ActiveRecord::Schema.define(version: 20170412182039) do
     t.string   "sluggable_type", limit: 50
     t.string   "scope"
     t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
   create_table "languages", force: :cascade do |t|
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170412182039) do
     t.datetime "updated_at", null: false
     t.string   "slug"
     t.string   "flag"
-    t.index ["slug"], name: "index_languages_on_slug", unique: true
+    t.index ["slug"], name: "index_languages_on_slug", unique: true, using: :btree
   end
 
   create_table "sermons", force: :cascade do |t|
@@ -46,15 +49,15 @@ ActiveRecord::Schema.define(version: 20170412182039) do
     t.text     "mp3"
     t.text     "ytube_id"
     t.text     "scloud"
-    t.boolean  "fire_hard"
+    t.boolean  "fire_hard",  default: false
     t.string   "location"
     t.text     "transcript"
     t.string   "format"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "slug"
     t.integer  "dl_count",   default: 0
-    t.index ["slug"], name: "index_sermons_on_slug", unique: true
+    t.index ["slug"], name: "index_sermons_on_slug", unique: true, using: :btree
   end
 
   create_table "translations", force: :cascade do |t|
@@ -66,8 +69,8 @@ ActiveRecord::Schema.define(version: 20170412182039) do
     t.datetime "updated_at",  null: false
     t.integer  "language_id"
     t.string   "slug"
-    t.index ["language_id"], name: "index_translations_on_language_id"
-    t.index ["slug"], name: "index_translations_on_slug", unique: true
+    t.index ["language_id"], name: "index_translations_on_language_id", using: :btree
+    t.index ["slug"], name: "index_translations_on_slug", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
