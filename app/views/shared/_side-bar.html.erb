@@ -1,7 +1,9 @@
 <div class="side-column" align="center">
-  <%= link_to ourpastor_path, class: "browse-side-image "  do %>
-    <%= image_tag 'pastor.jpg', class: "d-block mx-auto" if current_page?(root_path) %>
-    <p>Pastor Steven L. Anderson</p>
+  <% if current_page?(root_path) %>
+    <%= link_to(ourpastor_path, class: "browse-side-image ") do %>
+      <%= image_tag 'pastor.jpg', class: "d-block mx-auto"%>
+      <p>Pastor Steven L. Anderson</p>
+    <% end %>
   <% end %>
   <div class="browse-side-column">
     <ul class="browse-categories-side">

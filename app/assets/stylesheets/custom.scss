@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 
 a {
+  color: blue;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
@@ -54,14 +55,15 @@ a:hover {
   BIBLE VERSE STYLING
 ----------------------*/
 .verse p {
+  font-family: Georgia;
   font-weight: bold;
-  color: #a10004;
-  
+  margin: 0;
 }
 
-.verse small {;
-  color: #a10004;
-  text-transform: uppercase;
+.verse p:last-child {;
+  font-family: Georgia;
+  text-align: right;
+  font-weight: bold;
 }
 /*--------
   MASONRY
@@ -177,7 +179,7 @@ a:hover {
   background: linear-gradient(#f8fafd, #bed0ee);
   border: 1px solid #a0b1dc;
   border-radius: 3px;
-  padding: 5px 8px;
+  padding: 8px;
   margin: 0px;
 }
 

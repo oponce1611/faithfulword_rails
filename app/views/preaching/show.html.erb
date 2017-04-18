@@ -1,7 +1,8 @@
+<%= render 'update_form' %>
 <%= render 'shared/banner' %>
 <div class="row">
   <div id="right-border" class="col-9 pr-5">
-    <h4><%= image_tag 'fire.gif' %> <%= @sermon.title %></h4>
+    <h4><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>
     <p><%= @sermon.datetime.strftime("%A %B %-d, %Y %l:%M %p %Z") %></p>
     <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
     <%= ytube_embed(@sermon.ytube_id, 720, 405) unless @sermon.ytube_id.blank? %>
@@ -9,6 +10,7 @@
     <p><%= simple_format(@sermon.transcript) %></p>
   </div>
   <div class="col-3 pl-5">
+    <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
     <%= link_to "Download MP3", file_sermon_path(@sermon), class: "sky-btn", style: "margin-bottom: 15px", target: "_self" %>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>

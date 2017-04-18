@@ -39,4 +39,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-aws', '~> 1.1'
+gem 'aws-sdk', '~> 2.9', '>= 2.9.7'
+gem 'aws-sdk-rails'
 gem 'dotenv', '~> 2.2'
