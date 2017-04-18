@@ -28,12 +28,10 @@ class PreachingController < ApplicationController
   
   def update
     @sermon = Sermon.friendly.find(params[:id])
-     respond_to do |format|
-      if @sermon.update(sermon_params)
-        format.html { redirect_to preaching_path }
-      else
-        format.html { render :edit }
-      end
+    if @sermon.update(sermon_params)
+      redirect_to sermon_path(@sermon)
+    else
+      render :edit
     end
   end
   

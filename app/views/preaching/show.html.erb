@@ -2,12 +2,10 @@
 <div class="container">
   <div class="row">
     <div id="right-border" class="col-9 pr-5">
-      <h4><%= @sermon.title %></h4>
-      <%= @sermon.datetime %>
-      <p><%= @sermon.datetime.strftime("%A %B %d, %Y %l:%M %p %Z") %></p>
+      <h4><%= image_tag 'fire.gif' %> <%= @sermon.title %></h4>
+      <p><%= @sermon.datetime.strftime("%A %B %-d, %Y %l:%M %p %Z") %></p>
       <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
       <%= ytube_embed(@sermon.ytube_id, 720, 405) unless @sermon.ytube_id.blank? %>
-      <%= @sermon.mp3 %>
       <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
       <p><%= simple_format(@sermon.transcript) %></p>
     </div>
