@@ -29,6 +29,8 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'aws-sdk', '~> 2.9', '>= 2.9.7'
+  gem 'aws-sdk-rails'
 end
 
 group :production do
@@ -39,6 +41,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-aws', '~> 1.1'
-gem 'aws-sdk', '~> 2.9', '>= 2.9.7'
-gem 'aws-sdk-rails'
 gem 'dotenv', '~> 2.2'
