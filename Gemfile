@@ -18,9 +18,9 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'best_in_place', '~> 3.1'
 gem 'stripe'
 gem 'friendly_id', '~> 5.1'
+gem 'pg'
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'pg'
 end
 
 group :development do
@@ -32,7 +32,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
