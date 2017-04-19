@@ -20,4 +20,10 @@
   <div class="bar-side">
     <%= link_to "Events", events_path, class: "top-btn" %>
   </div>
+  <%= form_tag do %>
+  <div class="form-inline">
+    <%= search_field_tag 'Search', nil, class: 'form-control form-control-sm bar-search d-inline-block' %>
+    <%= submit_tag 'Search', class: 'yellow-btn d-inline-block' %>
+  </div>
+  <% end %>
 </div>
