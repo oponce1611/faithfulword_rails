@@ -19,6 +19,9 @@ class PagesController < ApplicationController
     render "events.html.erb"
   end
   
+  def live
+  end
+  
   def location
     render "location.html.erb"
   end

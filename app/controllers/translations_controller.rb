@@ -21,7 +21,7 @@ class TranslationsController < ApplicationController
     if @translation.update(translation_params)
       redirect_to translation_path(@translation.language, @translation)
     else
-      render 'edit'
+      redirect_to translation_path(@translation.language, @translation)
     end
   end
   
@@ -33,6 +33,10 @@ class TranslationsController < ApplicationController
   
   private
   def translation_params
-    params.require(:translation).permit(:title, :body, :published, :video_id, :language_id)
+    params.require(:translation).permit(:title,
+                                        :body,
+                                        :published,
+                                        :video_id,
+                                        :language_id)
   end
 end

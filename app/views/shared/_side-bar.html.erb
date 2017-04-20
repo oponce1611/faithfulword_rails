@@ -8,6 +8,9 @@
   <div class="browse-side-column">
     <ul class="browse-categories-side">
       <li>
+        <%= link_to "Watch Services Live", live_path, class: "browse-link#{" active-s" if current_page?(live_path)}" %>
+      </li>
+      <li>
         <%= link_to "Doctrinal Statement", doctrinalstatement_path, class: "browse-link#{" active-s" if current_page?(doctrinalstatement_path)}" %>
       </li>
       <li>

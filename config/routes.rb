@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/biblememory' => 'pages#biblememory'
   get '/churchdirectory' => 'pages#churchdirectory'
   get '/doctrinalstatement' => 'pages#doctrinalstatement'
+  get '/live' => 'pages#live'
   get '/location' => 'pages#location'
   get '/malawi' => 'pages#malawi'
   get '/ourpastor' => 'pages#ourpastor'

@@ -9,7 +9,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to events_path
     else
-      format.html { render :new }
+      redirect_to events_path
     end
   end
   
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
     if @event.update(event_params)
       redirect_to events_path
     else
-      format.html { render :edit }
+      redirect_to events_path
     end
   end
 

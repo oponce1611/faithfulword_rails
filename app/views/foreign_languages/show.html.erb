@@ -1,58 +1,19 @@
+<% provide(:title, @tongue.tongue) %>
+<%= render 'translations/new_form' %>
+<%= render "shared/banner" %>
 <% image_size = 370 %>
-<div class="container">
-  
-  <div class="d-flex justify-content-end">
-    <div class="d-inline-flex mr-auto">
-      <h1><%= @tongue.tongue %></h1>
-    </div>
-    <div class="d-inline-flex mb-3">
-      <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#exampleModal">New Item</button>
-    </div>
-    <div class="d-inline-flex mb-3">
-      <%= link_to 'Back', foreignlanguages_path, class: "btn btn-primary" %>
-    </div>
-  </div>
-  <% @tongue.translations.each do |translation|%>
-    <div class="card", style="width: <%= image_size + 2 %>px">
-      <%= image_tag "MARCHING-TO-ZION.jpg", class: "card-img-top", style: "width: #{image_size}px" %>
-      <div class="card-block">
-        <h4 class="card-title"><%= link_to translation.title, translation_path(translation.language, translation), class: "card-link" %></h4>
-      </div>
-    </div>
-  <% end %>
-  
-  <%= form_for @translation do |f| %>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-              <div class="form-group">
-                <%= f.text_field :title, class: "form-control", type: "text", placeholder: "Title", autofocus: true %>
-              </div>
-              <div class="form-group">
-                <%= f.date_field :published, class: "form-control", type: "date" %>
-              </div>
-              <div class="form-group">
-    						<div class="input-group">
-    							<span class="input-group-addon" id="basic-addon3">https://www.youtube.com/watch?v=</span>
-    							<%= f.text_field :video_id, class: "form-control", type: "text" %>
-    						</div>
-              </div>
-              <div class="form-group">
-                <span class="form-value-cover"><%= @translation.language.tongue %></span>
-              </div>
-              <div class="form-group">
-                <%= f.text_area :body, class: "form-control", type: "text", placeholder: "Body" %>
-              </div>
-                <%= f.submit "Create", class: "btn btn-primary" %>
-          </div>
+<div class="d-flex flex-nowrap">
+  <%= render "shared/side-bar" %>
+  <div>
+    <h4><%= @tongue.tongue %></h4>
+    <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">New Translation</button>
+    <% @tongue.translations.each do |translation|%>
+      <div class="card", style="width: <%= image_size + 2 %>px">
+        <%= image_tag "MARCHING-TO-ZION.jpg", class: "card-img-top", style: "width: #{image_size}px" %>
+        <div class="card-block">
+          <h4 class="card-title"><%= link_to translation.title, translation_path(translation.language, translation), class: "card-link" %></h4>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

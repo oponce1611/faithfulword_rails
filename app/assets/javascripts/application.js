@@ -20,24 +20,16 @@
 //= require custom
 //= require_tree .
 
-$(function(){
+//$(function() {
+//  $("#sermon_search input").keyup(function() {
+//    $.get($("#sermon_search").attr("action"), $("#sermon_search").serialize(), null, "script");
+//    return false;
+//  });
+//});
 
-  $('#masonry-grid').masonry({
-    itemSelector: '.grid-item',
-    isFitWidth: true,
-  });
-  
-  jQuery(".best_in_place").best_in_place();
-  
-  
-  $(document).ready(function() {
-    $("#txtDate").keyup(function(){
-      if ($(this).val().length == 2){
-        $(this).val($(this).val() + "/");
-      }
-      else if ($(this).val().length == 5){
-        $(this).val($(this).val() + "/");
-      }
-    });
+$(function() {
+  $("#sermon_search").submit(function() {
+    $.get(this.action, $(this).serialize(), null, "script");
+    return false;
   });
 });

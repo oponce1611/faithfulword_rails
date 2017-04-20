@@ -14,9 +14,7 @@ class ForeignLanguagesController < ApplicationController
     if @tongue.save
       redirect_to foreignlanguages_path
     else
-      @tongues = Language.all
-      @tongue = Language.new
-      render 'index'
+      redirect_to foreignlanguages_path
     end
   end
   

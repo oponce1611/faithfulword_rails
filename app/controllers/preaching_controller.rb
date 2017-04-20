@@ -1,12 +1,12 @@
 class PreachingController < ApplicationController
   def index
     @sermon = Sermon.new
+    if !params[:search].blank?
+      @sermons = Sermon.search(params[:search]).sorted
+    else
+      @sermons = Sermon.year(get_year(params[:year])).sorted
+    end
     @years = (2006..Time.current.year).to_a
-    
-    year = params[:year].to_i
-    year = Time.current.year if year.nil? || year <= 2005 || year >= Time.current.year
-    @sermons = Sermon.where("datetime >= ? and datetime <= ?", "#{year}-01-01 07:00:00", "#{year}-12-31 23:59:59 -0700")
-    @sermons = @sermons.order('datetime DESC')
   end
   
   def show
@@ -31,12 +31,14 @@ class PreachingController < ApplicationController
     if @sermon.update(sermon_params)
       redirect_to sermon_path(@sermon)
     else
-      render :edit
+      redirect_to sermon_path(@sermon)
     end
   end
   
   def destroy
-    
+    @sermon = Sermon.friendly.find(params[:id])
+    @sermon.destroy
+    redirect_to preaching_path
   end
   
   def file
@@ -59,5 +61,13 @@ class PreachingController < ApplicationController
                                   :location,
                                   :transcript,
                                   :format)
+  end
+  
+  def get_year(year)
+    if year.nil? || year.to_i <= 2005 || year.to_i >= Time.current.year
+      Time.current.year
+    else
+      year.to_i
+    end
   end
 end

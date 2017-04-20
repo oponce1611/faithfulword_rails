@@ -22,5 +22,4 @@ class SermonUploader < CarrierWave::Uploader::Base
     file_name = date + "_" + title
     file_name
   end
-
 end

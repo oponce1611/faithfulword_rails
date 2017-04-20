@@ -1,5 +1,5 @@
-<%= render 'new_form' %>
 <% provide(:title, "Preaching") %>
+<%= render 'new_form' %>
 <%= render "shared/banner" %>
 <h4>Sermons from Faithful Word Baptist Church</h4>
 <p>
@@ -8,28 +8,24 @@
 <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn mb-2" %>
 <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
 <br>
-<% @years.reverse.each do |year|  %>
-  <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn mb-2" %>
-<% end %>
-<table class="box-table-a">
-  <colgroup>
-    <col width='13%'>
-    <col width='55%'>
-    <col width="22%">
-    <col width="10%">
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Sermon Title</th>
-      <th>Preacher</th>
-      <th>Links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render :partial => 'sermon', :collection => @sermons %>
-  </tbody>
-</table>
+<div class="d-flex flex-row">
+  <div class="mr-auto">
+    <% @years.reverse.each do |year|  %>
+      <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn mb-2" %>
+    <% end %>
+  </div>
+  <%= form_tag preaching_path, :method => 'get', :id => "sermon_search"  do %>
+  <div class="form-inline">
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag 'Search', :name => nil %>
+  </div>
+  <% end %>
+</div>
+
+<div id="sermons">
+  <%= render 'sermons' %>
+</div>
+
 <br>
 <h4>More great preaching:</h4>
 <a href="http://www.hardpreaching.com/" target="_blank">hardpreaching.com</a>
