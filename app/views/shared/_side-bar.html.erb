@@ -21,10 +21,10 @@
         <%= link_to "Church Directory", churchdirectory_path, class: "browse-link#{" active-s" if current_page?(churchdirectory_path)}" %>
       </li>
       <li>
-        <%= link_to "Pictures", "https://get.google.com/albumarchive/117089279522537034856", class: "browse-link" %>
+        <%= link_to "Pictures", "https://get.google.com/albumarchive/117089279522537034856", class: "browse-link", target: '_blank' %>
       </li>
       <li>
-        <%= link_to "Instagram", "http://www.instagram.com/faithfulwordbaptist", class: "browse-link" %>
+        <%= link_to "Instagram", "http://www.instagram.com/faithfulwordbaptist", class: "browse-link", target: '_blank' %>
       </li>
       <li>
         <%= link_to "Hymns", "", class: "browse-link"%>
@@ -41,13 +41,13 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "Botswana", "http://www.fwbcbotswana.com", class: "browse-link" %>
+        <%= link_to "Botswana", "http://www.fwbcbotswana.com", class: "browse-link", target: '_blank' %>
       </li>
       <li>
         <%= link_to "Malawi", malawi_path, class: "browse-link#{" active-s" if current_page?(malawi_path)}" %>
       </li>
       <li>
-        <%= link_to "Donate", "http://www.truebornsons.com/donate-to-fwbc", class: "browse-link" %>
+        <%= link_to "Donate", "http://www.truebornsons.com/donate-to-fwbc", class: "browse-link", target: '_blank' %>
       </li>
     </ul>
   </div>

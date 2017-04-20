@@ -7,35 +7,40 @@
 </p>
 <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn mb-2" %>
 <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
-<br>
 <div class="d-flex flex-row">
+  
   <div class="mr-auto">
     <% @years.reverse.each do |year|  %>
       <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn mb-2" %>
     <% end %>
   </div>
+  
   <%= form_tag preaching_path, :method => 'get', :id => "sermon_search"  do %>
-  <div class="form-inline">
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag 'Search', :name => nil %>
-  </div>
+    <div class="form-inline">
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag 'Search', :name => nil %>
+    </div>
   <% end %>
+  
 </div>
 
-<div id="sermons">
+<div id="sermons" class="mb-2">
   <%= render 'sermons' %>
 </div>
 
-<br>
-<h4>More great preaching:</h4>
-<a href="http://www.hardpreaching.com/" target="_blank">hardpreaching.com</a>
-<h4>Other Links</h4>
-<a href="http://www.kjvprophecy.com/" target="_blank">KJV Prophecy</a><br>
-<a href="http://www.repentanceblacklist.com/" target="_blank">The Repentance Blackslist</a><br>
-<a href="http://www.truebornsons.com/" target="_blank">The True Born Sons Of Liberty</a><br>
-<a href="http://www.wordoftruthbaptist.org/" target="_blank">Word of Truth Baptist Church</a><br>
-<a href="http://www.veritybaptist.com/" target="_blank">Verity Baptist Church</a><br>
-<a href="http://stedfastbaptistkjv.org/" target="_blank">Stedfast Baptist Church</a><br>
-<a href="http://www.afterthetribulation.com/" target="_blank">After the Tribulation - Film</a><br>
-<a href="http://www.teachallnations.net/">Teach All Nations</a><br>
-<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://faithfulwordbaptist.org/page5.html" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com';" /></a>
+<div class="d-flex flex-column">
+  <h4>More great preaching:</h4>
+  <%= link_to 'hardpreaching.com', 'http://www.hardpreaching.com/', target: '_blank' %>
+  <h4>Other Links:</h4>
+  <%= link_to 'KJV Prophecy', 'http://www.kjvprophecy.com/',target: '_blank' %>
+  <%= link_to 'The Repentance Blackslist', 'http://www.repentanceblacklist.com/',target: '_blank' %>
+  <%= link_to 'The True Born Sons Of Liberty', 'http://www.truebornsons.com/',target: '_blank' %>
+  <%= link_to 'Word of Truth Baptist Church', 'http://www.wordoftruthbaptist.org/',target: '_blank' %>
+  <%= link_to 'Verity Baptist Church', 'http://www.veritybaptist.com/',target: '_blank' %>
+  <%= link_to 'Stedfast Baptist Church', 'http://stedfastbaptistkjv.org/',target: '_blank' %>
+  <%= link_to 'After the Tribulation - Film', 'http://www.afterthetribulation.com/',target: '_blank' %>
+  <%= link_to 'Teach All Nations', 'http://www.teachallnations.net/',target: '_blank' %>
+  <%= link_to 'http://www3.clustrmaps.com/counter/maps.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsLink' do %>
+    <%= image_tag 'http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsImg' %>
+  <% end %>
+</div>

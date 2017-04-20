@@ -14,7 +14,10 @@ a {
           user-select: none;
 margin: 0px;
 }
-
+p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
 a:hover {
   text-decoration: none;
   color: #FF0000;
@@ -375,7 +378,13 @@ li {
 .soulwinning-table {
   background-color: #ccc;
   border-radius: 5px;
-  padding: 1px 9px 9px 9px;
+  padding: 9px 9px 9px 9px;
+}
+
+.soulwinning-table strong {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
 }
 
 .soulwinning-body {
@@ -423,4 +432,33 @@ CHURCH SERVICE TIMES
   font-weight: bold;
   margin: 0;
   
+}
+
+/*-----------------------
+ CHURCH DIRECTORY STYLING
+-------------------------*/
+.church-table {
+  width: 293px;
+  background: #ccc;
+  border-radius: 5px;
+  padding: 9px 9px 9px 9px;
+  margin-bottom: 10px;
+}
+.church-table strong{
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.church-table p {
+  margin: 0;
+}
+
+.church-table a {
+  font-size: 13px;
+}
+
+.church-body {
+  background: #fff;
+  border-radius: 5px;
+  padding: 9px;
 }

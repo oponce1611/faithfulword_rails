@@ -7,110 +7,82 @@
     <h5>Instructions on how to find the best church in your area:</h5>
       <p>
         1. Visit the Independent Baptist Church Locator known as
-        <a href="http://militarygetsaved.tripod.com/findchurch.html">Military Get Saved</a>.
+        <%= link_to 'Military Get Saved', 'http://militarygetsaved.tripod.com/findchurch.html' %>
       </p>
       <p>
         2. Click on your state in the left hand sidebar.
       </p>
       <p>
-        3. Press <kbd>control</kbd>+F (PC) or command+F (MAC) feature to search the page for the word "soul." This will help you find the churches that are advertising soul-winning. These will usually be the best churches. (If you are having trouble using the "find" feature, it is usually in the "edit" menu.)
+        3. Press <kbd>Ctrl</kbd>+<kbd>F</kbd> (PC) or <kbd>Cmd</kbd>+<kbd>F</kbd> (MAC) feature to search the page for the word "soul". This will help you find the churches that are advertising soul-winning. These will usually be the best churches. (If you are having trouble using the "find" feature, it is usually in the "edit" menu.)
       </p>
       <p>
-        4. Physically attend (not call) all the soul-winning churches in your area until you decide on the best one.
+        4. <b>Physically attend</b> (not call) all the soul-winning churches in your area until you decide on the best one.
       </p>
     <h4>List of a few outstanding churches here:</h4>
-    <div class="d-flex flex-wrap">
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Faithful Word Baptist Church</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">2741 W Southern Ave #14<br>Tempe, AZ 85282</li>
-              <li class="list-group-item">(602)454-0263</li>
-              <li class="list-group-item">Pastor Steven L Anderson</li>
-            </ul>
-            <div class="card-block">
-              <a href="http://www.faithfulwordbaptist.org/" class="card-link">faithfulwordbaptist.org</a>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Word of Truth Baptist Church</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">8154 E Florentine Rd. Suite A<br>Prescott Valley, AZ 86314</li>
-              <li class="list-group-item">(928) 362-0558</li>
-              <li class="list-group-item">Pastor David Berzins</li>
-            </ul>
-            <div class="card-block">
-              <a href="http://www.wordoftruthbaptist.org/" class="card-link">wordoftruthbaptist.org</a>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Verity Baptist Church</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">4153 Northgate Blvd, Suite #1<br>Sacramento, CA 95834</li>
-              <li class="list-group-item">(916) 792-2050</li>
-              <li class="list-group-item">Pastor Roger Jimenez</li>
-            </ul>
-            <div class="card-block">
-              <a href="https://www.veritybaptist.com/" class="card-link">veritybaptist.com</a>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Mountainview Baptist Church</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">PO Box 266<br>Custer, SD 57730</li>
-              <li class="list-group-item">(605) 673-2498</li>
-              <li class="list-group-item">Pastor Matt Furse</li>
-            </ul>
-            <div class="card-block">
-              <a href="http://mountainviewbaptistcuster.com/" class="card-link">mountainviewbaptistcuster.com</a>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Stedfast Baptist Church</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">5840 Jacksboro Hwy #A<br>Fort Worth, TX 76114</li>
-              <li class="list-group-item">480) 438-0375</li>
-              <li class="list-group-item">Pastor Donnie Romero</li>
-            </ul>
-            <div class="card-block">
-              <a href="http://www.stedfastbaptistkjv.org/" class="card-link">stedfastbaptistkjv.org</a>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Old Path Baptist Church</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">2590 Mount Olive Rd<br>Adkins, TX 78101</li>
-              <li class="list-group-item">(224)619-6896</li>
-              <li class="list-group-item">Pastor Manly Perry</li>
-            </ul>
-            <div class="card-block">
-              <a href="http://www.oldpathtxb.church/" class="card-link">oldpathtxb.church</a>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem;">
-            <div class="card-block">
-              <h4 class="card-title">Faithful Word Baptist Church (North)</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">12020 N 35th Ave,<br>Phoenix, AZ 85029</li>
-              <li class="list-group-item">(602)456-1049</li>
-              <li class="list-group-item">Pastor Steven L Anderson</li>
-            </ul>
-            <div class="card-block">
-              <a href="http://fwbcnorth.org/" class="card-link">fwbcnorth.org</a>
-            </div>
-          </div>
+    <div class="d-flex justify-content-between flex-wrap">
+      <div class="church-table">
+        <strong>Faithful Word Baptist Church</strong>
+        <div class="church-body">
+          <p>2741 W Southern Ave #14<br>Tempe, AZ 85282</p>
+          <p><%= number_to_phone(6024540263, area_code: true) %></p>
+          <p>Pastor Steven L Anderson</p>
+          <%= link_to 'faithfulwordbaptist.org', 'http://www.faithfulwordbaptist.org/', target: '_blank' %>
+        </div>
+      </div>
+      <div class="church-table">
+        <strong>Word of Truth Baptist Church</strong>
+        <div class="church-body">
+          <p>8154 E Florentine Rd. Suite A<br>Prescott Valley, AZ 86314</p>
+          <p><%= number_to_phone(9283620558, area_code: true) %></p>
+          <p>Pastor David Berzins</p>
+          <%= link_to 'wordoftruthbaptist.org', 'http://www.wordoftruthbaptist.org/', target: '_blank' %>
+        </div>
+      </div>
+      <div class="church-table">
+        <strong>Verity Baptist Church</strong>
+        <div class="church-body">
+          <p>4153 Northgate Blvd, Suite #1<br>Sacramento, CA 95834</p>
+          <p><%= number_to_phone(9167922050, area_code: true) %></p>
+          <p>Pastor Roger Jimenez</p>
+          <%= link_to 'veritybaptist.com', 'https://www.veritybaptist.com/', target: '_blank' %>
+        </div>
+      </div>
+      <div class="church-table">
+        <strong>Mountainview Baptist Church</strong>
+        <div class="church-body">
+          <p>PO Box 266<br>Custer, SD 57730</p>
+          <p><%= number_to_phone(6056732498, area_code: true) %></p>
+          <p>Pastor Matt Furse</p>
+          <%= link_to 'mountainviewbaptistcuster.com', 'http://mountainviewbaptistcuster.com/', target: '_blank' %>
+        </div>
+      </div>
+      <div class="church-table">
+        <strong>Stedfast Baptist Church</strong>
+        <div class="church-body">
+          <p>5840 Jacksboro Hwy #A<br>Fort Worth, TX 76114</p>
+          <p><%= number_to_phone(4804380375, area_code: true) %></p>
+          <p>Pastor Donnie Romero</p>
+          <%= link_to 'stedfastbaptistkjv.org', 'http://www.stedfastbaptistkjv.org/', target: '_blank' %>
+        </div>
+      </div>
+      <div class="church-table">
+        <strong>Old Path Baptist Church</strong>
+        <div class="church-body">
+          <p>2590 Mount Olive Rd<br>Adkins, TX 78101</p>
+          <p><%= number_to_phone(2246196896, area_code: true) %></p>
+          <p>Pastor Manly Perry</p>
+          <%= link_to 'oldpathtxb.church', 'http://www.oldpathtxb.church/', target: '_blank' %>
+        </div>
+      </div>
+      <div class="church-table">
+        <strong>Faithful Word Baptist Church (North)</strong>
+        <div class="church-body">
+          <p>12020 N 35th Ave,<br>Phoenix, AZ 85029</p>
+          <p><%= number_to_phone(6024561049, area_code: true) %></p>
+          <p>Pastor Steven L Anderson</p>
+          <%= link_to 'fwbcnorth.org', 'http://fwbcnorth.org/', target: '_blank' %>
+        </div>
+      </div>
     </div>
     
     <blockquote class="verse">
