@@ -12,7 +12,21 @@
   </div>
   <div class="col-3 pl-5">
     <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
-    <%= link_to "Download MP3", file_sermon_path(@sermon), class: "sky-btn", style: "margin-bottom: 15px", target: "_self" %>
+    <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
+    <script>
+      $(".download").on("click", function() {
+          $.ajax({
+              url: "/download",
+              data: {id: $(this).attr("id")},
+              success: function(response, status) {
+                    console.log(status);
+              },
+              error: function(data) {
+                  alert("Sorry, there was an error!");
+              }
+          });
+      });
+    </script>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>
   </div>

@@ -41,13 +41,20 @@ class PreachingController < ApplicationController
     redirect_to preaching_path
   end
   
-  def file
+  def download
     @sermon = Sermon.friendly.find(params[:id])
-    file = open(@sermon.mp3.url)
     @sermon.dl_count += 1
     @sermon.save
-    send_file file, filename: File.basename(@sermon.mp3.url), type: "audio/mpeg", disposition: 'attachment'
+    render :nothing => true
   end
+  
+  #def file
+  #  @sermon = Sermon.friendly.find(params[:id])
+  #  file = open(@sermon.mp3.url)
+  #  @sermon.dl_count += 1
+  #  @sermon.save
+  #  send_file file, filename: File.basename(@sermon.mp3.url), type: "audio/mpeg", disposition: 'attachment'
+  #end
   private
   
   def sermon_params

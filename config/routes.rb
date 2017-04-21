@@ -30,9 +30,9 @@ Rails.application.routes.draw do
   get '/service' => 'pages#service'
   get '/soulwinning' => 'pages#soulwinning'
   get '/termsandconditions' => 'pages#termsandconditions'
+  get '/download' => 'preaching#download'
   
   get '/:id' => 'preaching#show', as: "sermon"
   get '/:id/edit' => 'preaching#edit', as: "edit_sermon"
-  get '/:id/file' => 'preaching#file', as: "file_sermon"
   resources :sermons, :controller => 'preaching', except: [:show, :index]
 end

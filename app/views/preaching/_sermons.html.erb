@@ -26,7 +26,7 @@
         <td><%= sermon.preacher %></td>
         <td>
           <div>
-            <%= link_to file_sermon_path(sermon), target: "_self" do %>
+            <%= link_to sermon.mp3.url, class: "download", download: '', id: sermon.id do %>
               <%= image_tag "icons/mp3_16x16.gif"%>
             <% end %>
             <% if !sermon.ytube_id.blank? %>
