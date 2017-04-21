@@ -1,29 +1,15 @@
 <div class="bar">
-  <div class="bar-side">
     <%= link_to "Preaching", preaching_path, class: "top-btn" %>
-  </div>
-  <div class="bar-side">
     <%= link_to "Soul Winning", soulwinning_path, class: "top-btn" %>
-  </div>
-  <div class="bar-side">
     <%= link_to "Our Pastor", ourpastor_path, class: "top-btn" %>
-  </div>
-  <div class="bar-side">
     <%= link_to "Service Times", service_path, class: "top-btn" %>
-  </div>
-  <div class="bar-side">
     <%= link_to "Location", location_path, class: "top-btn" %>
-  </div>
-  <div class="bar-side">
     <%= link_to "Bible Memory", biblememory_path, class: "top-btn" %>
-  </div>
-  <div class="bar-side">
     <%= link_to "Events", events_path, class: "top-btn" %>
-  </div>
   <%= form_tag do %>
-  <div class="form-inline">
-    <%= search_field_tag 'Search', nil, class: 'form-control form-control-sm bar-search d-inline-block' %>
-    <%= submit_tag 'Search', class: 'yellow-btn d-inline-block' %>
-  </div>
+    <div class="form-inline">
+      <%= search_field_tag 'Search', nil, class: 'form-control form-control-sm bar-search d-inline-block' %>
+      <%= submit_tag 'Search', class: 'yellow-btn d-inline-block' %>
+    </div>
   <% end %>
 </div>

@@ -1,6 +1,5 @@
 <% provide(:title, @sermon.title) %>
 <%= render 'update_form' %>
-<%= render 'shared/banner' %>
 <div class="row">
   <div id="right-border" class="col-9 pr-5">
     <h4><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>

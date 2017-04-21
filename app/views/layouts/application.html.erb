@@ -9,10 +9,13 @@
   </head>
   <body>
     <%= render 'layouts/top_banner' %>
-    <div class="container">
-      <%= render 'layouts/navigation' %>
-      <%= yield %>
-      <%= render 'layouts/footer' %>
+    <div id="central">
+      <%= render('layouts/navigation') %>
+      <%= !current_page?(root_path) ? render('shared/banner') : render('shared/carousel') %>
+      <div class="p-4">
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
     </div>
   </body>
 </html>

@@ -1,12 +1,13 @@
 class PreachingController < ApplicationController
   def index
     @sermon = Sermon.new
+    @years = (2006..Time.current.year).to_a
+    @total_dl = Sermon.sum(:dl_count)
     if !params[:search].blank?
       @sermons = Sermon.search(params[:search]).sorted
     else
       @sermons = Sermon.year(get_year(params[:year])).sorted
     end
-    @years = (2006..Time.current.year).to_a
   end
   
   def show

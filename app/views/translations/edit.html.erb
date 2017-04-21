@@ -1,36 +1,36 @@
 <div class="container">
-	<%= form_for @translation, :method => :put, url: update_translation_path(@translation) do |f| %>
-		<div class="form-group">
-				<h3><%= f.label :title %></h3>
-				<div class="row">
-					<div class="col-4">
-						<%= f.text_field :title, class: "form-control", type: "text", placeholder: "Title of Event", autofocus: true %>
-					</div>
-				</div>
-		</div>
-		<div class="form-group">
-				<h3><%= f.label :published %></h3>
-				<div class="row">
-					<div class="col-3">
-						<%= f.date_field :published, class: "form-control", type: "date" %>
-					</div>
-				</div>
-		</div>
-		<div class="form-group">
-				<h3><%= f.label :video_id %></h3>
-				<div class="row">
-					<div class="col-6">
-						<div class="input-group">
-							<span class="input-group-addon" id="basic-addon3">https://www.youtube.com/watch?v=</span>
-							<%= f.text_field :video_id, class: "form-control", type: "text" %>
-						</div>
-					</div>
-				</div>
-		</div>
-		<div class="form-group">
-				<h3><%= f.label :body %></h3>
-				<%= f.text_area :body, class: "form-control", type: "text", placeholder: "Body", rows: 20 %>
-		</div>
-		<%= f.submit "Update", class: "btn btn-primary" %>
-	<% end %>
+  <%= form_for @translation, :method => :put, url: update_translation_path(@translation) do |f| %>
+    <div class="form-group">
+        <h3><%= f.label :title %></h3>
+        <div class="row">
+          <div class="col-4">
+            <%= f.text_field :title, class: "form-control", type: "text", placeholder: "Title of Event", autofocus: true %>
+          </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <h3><%= f.label :published %></h3>
+        <div class="row">
+          <div class="col-3">
+            <%= f.date_field :published, class: "form-control", type: "date" %>
+          </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <h3><%= f.label :video_id %></h3>
+        <div class="row">
+          <div class="col-6">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon3">https://www.youtube.com/watch?v=</span>
+              <%= f.text_field :video_id, class: "form-control", type: "text" %>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <h3><%= f.label :body %></h3>
+        <%= f.text_area :body, class: "form-control", type: "text", placeholder: "Body", rows: 20 %>
+    </div>
+    <%= f.submit "Update", class: "btn btn-primary" %>
+  <% end %>
 </div>

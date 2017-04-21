@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 
+#central {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    position: relative;
+    width: 1000px;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+#central-top {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: 1000px;
+    text-align: left;
+}
 a {
   color: blue;
   font-weight: bold;
   text-decoration: none;
-  display: inline-block;
   text-align: left;
   white-space: nowrap;
   vertical-align: middle;
@@ -12,7 +27,11 @@ a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-margin: 0px;
+  margin: 0px;
+}
+a:focus {
+  text-decoration: none;
+  color: blue;
 }
 p {
   margin-bottom: 10px;
@@ -118,37 +137,6 @@ a:hover {
 /*---------
   BUTTONS
 -----------*/
-.top-btn {
-  color: blue;
-  font-size: 17px;
-  line-height: 17px;
-  text-align: center;
-  background: linear-gradient(#f2f2f2, #dddddd);
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  /*border-right: 1px solid #999;*/
-  padding: 8px 8px;
-  margin: 0px;
-  /*border-color: #0275d8;*/
-}
-
-
-.top-btn:hover {
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 39%, rgba(240,240,240,1) 89%, rgba(212,212,212,1) 100%);
-  border-top: 0px;
-  padding-top: 9px;
-  border-left: 0px;
-  padding-left: 9px;
-}
-
-.top-btn:active {
-  background: linear-gradient(rgba(153,153,153,1) 0%, rgba(214,214,214,1) 19%, rgba(252,252,252,1) 100%);
-  border-top: 0px;
-  padding-top: 9px;
-  border-left: 0px;
-  padding-left: 9px;
-}
-
 .yellow-btn {
   color: #994800;
   font-size: 10px;
@@ -173,17 +161,18 @@ a:hover {
 
 .sky-btn {
   color: #039;
-  font-family: Arial;
+  display: inline-block;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 1;
   text-decoration: none;
   text-align: center;
   background: linear-gradient(#f8fafd, #bed0ee);
   border: 1px solid #a0b1dc;
   border-radius: 3px;
-  padding: 8px;
+  padding: 5px 10px;
   margin: 0px;
+  cursor: pointer;
 }
 
 .sky-btn:hover {
@@ -202,11 +191,11 @@ a:hover {
  GREY NAVBAR
    ------------------   */
 .bar {
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex; 
   height: 36px;
   background: linear-gradient(#f2f2f2, #dddddd);
   border: 1px solid #999;
+  width: 1000px;
+  font-size: 0;
 }
 
 .bar-side {
@@ -217,6 +206,36 @@ a:hover {
 
 .bar-search {
   margin: 3.25px;
+}
+
+.top-btn {
+  color: blue;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  background: linear-gradient(#f2f2f2, #dddddd);
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #999;
+  padding: 8px 8px;
+  margin: 0px;
+}
+
+.top-btn:hover {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 39%, rgba(240,240,240,1) 89%, rgba(212,212,212,1) 100%);
+  border-top: 0px;
+  padding-top: 9px;
+  border-left: 0px;
+  padding-left: 9px;
+}
+
+.top-btn:active {
+  background: linear-gradient(rgba(153,153,153,1) 0%, rgba(214,214,214,1) 19%, rgba(252,252,252,1) 100%);
+  border-top: 0px;
+  padding-top: 9px;
+  border-left: 0px;
+  padding-left: 9px;
 }
 
 /*.bar-side:last-child {
@@ -250,6 +269,7 @@ a:hover {
 .browse-categories-side {
   margin: 0;
   padding: 0;
+  flex-direction: column;
 }
 
 .browse-category-top-level {
@@ -302,7 +322,6 @@ a:hover {
 }
 ul {
   display: flex;
-  flex-direction: column;
   list-style: none;
 }
 
@@ -443,6 +462,7 @@ CHURCH SERVICE TIMES
   border-radius: 5px;
   padding: 9px 9px 9px 9px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 .church-table strong{
   line-height: 18px;

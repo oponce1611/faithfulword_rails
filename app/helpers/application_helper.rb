@@ -16,6 +16,6 @@ module ApplicationHelper
                 :width => x,
                 :height => y,
                 :frameborder => 0,
-                :style => "border: solid 4px #0275d8")
+                :style => "border: solid 1px #ccc")
   end
 end
