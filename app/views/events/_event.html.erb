@@ -1,11 +1,9 @@
-<div class="" id="event_<%= event.id %>">
-  <div class="">
-    <h4 class="card-title"><%= event.title %></h4>
-    <h6 class="card-subtitle mb-2 text-muted"><%= event.date.strftime("%A %B %d") %></h6>
-    <p><%= event.location %></p>
-    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myupdateevent_<%= event.id %>">Edit</button>
-    <%= link_to 'Delete', event, method: :delete, class: "btn btn-primary btn-sm", remote: true %>
-  </div>
+<div id="event_<%= event.id %>">
+  <h4><%= event.title %></h4>
+  <h6><%= event.date.strftime("%A %B %d") %></h6>
+  <h6><%= event.location %></h6>
+  <!--<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myupdateevent_<%= event.id %>">Edit</button>
+  <%= link_to 'Delete', event, method: :delete, class: "btn btn-primary btn-sm", remote: true %>-->
 </div>
 
 <%= form_for event, :method => :put, remote: true do |f| %>
