@@ -26,10 +26,3 @@
 //    return false;
 //  });
 //});
-
-$(function() {
-  $("#sermon_search").submit(function() {
-    $.get(this.action, $(this).serialize(), null, "script");
-    return false;
-  });
-});

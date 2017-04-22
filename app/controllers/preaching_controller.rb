@@ -1,5 +1,5 @@
 class PreachingController < ApplicationController
-  before_action :require_user, except: [:index, :show]
+  before_action :require_user, except: [:index, :show, :download]
   def index
     @sermon = Sermon.new
     @years = (2006..Time.current.year).to_a

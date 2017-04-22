@@ -14,21 +14,16 @@
     <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
   <% end %>
 </div>
-<div class="d-flex flex-row">
-  
-  <div class="mr-auto">
+<div class="d-flex align-items-start">
+  <div class="d-flex">
     <% @years.reverse.each do |year|  %>
-      <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn mb-2" %>
+      <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn" %>
     <% end %>
   </div>
-  
-  <%= form_tag preaching_path, :method => 'get', :id => "sermon_search"  do %>
-    <div class="form-inline">
-      <%= text_field_tag :search, params[:search] %>
+  <%= form_tag preaching_path, :method => 'get', :id => "sermon_search", class: 'form-inline' do %>
+      <%= text_field_tag :search, params[:search], autocomplete: "off" %>
       <%= submit_tag 'Search', :name => nil %>
-    </div>
   <% end %>
-  
 </div>
 
 <div id="sermons" class="mb-2">
@@ -63,5 +58,12 @@
               alert("Sorry, there was an error!");
           }
       });
+  });
+  
+  $(function() {
+    $("#sermon_search").submit(function() {
+      $.get(this.action, $(this).serialize(), null, "script");
+      return false;
+    });
   });
 </script>
