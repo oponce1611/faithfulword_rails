@@ -46,17 +46,17 @@
     <%= image_tag 'http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsImg' %>
   <% end %>
 </div>
-            <script>
-      $(".download").on("click", function() {
-          $.ajax({
-              url: "/download",
-              data: {id: $(this).attr("id")},
-              success: function(response, status) {
-                    console.log(status);
-              },
-              error: function(data) {
-                  alert("Sorry, there was an error!");
-              }
-          });
+<script>
+  $(".download").on("click", function() {
+      $.ajax({
+          url: "/download",
+          data: {id: $(this).attr("id")},
+          success: function(response, status) {
+                console.log(status);
+          },
+          error: function(data) {
+              alert("Sorry, there was an error!");
+          }
       });
-    </script>
+  });
+</script>
