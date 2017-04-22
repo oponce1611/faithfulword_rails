@@ -14,8 +14,8 @@
       <%= !current_page?(root_path) ? render('shared/banner') : render('shared/carousel') %>
       <div class="px-4 pt-4">
         <%= yield %>
-        <%= render 'layouts/footer' %>
       </div>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
