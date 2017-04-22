@@ -110,13 +110,16 @@ a:hover {
 .centered { margin: 0 auto; }
 
 .text-silent {
-  font-family: Arial;
   color: white;
   font-size: 12px;
-  line-height: 12px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  line-height: 1;
+  margin: auto 0;
   opacity: 0.7;
+}
+
+.text-silent:hover {
+  color: white;
+  opacity: 1.0;
 }
 
 /*.video-container {
@@ -168,15 +171,16 @@ a:hover {
 
 .yellow-btn {
   color: #994800;
+  font-weight: bold;
   font-size: 10px;
-  line-height: 10px;
+  line-height: 1;
   text-decoration: none;
   text-align: center;
   background: linear-gradient(#fff9c1, #fed81c);
   border: 1px solid #ecc101;
   border-radius: 3px;
   padding: 5px 8px;
-  margin: 0px;
+  margin: 0px 0 0 0;
 }
 
 .yellow-btn:focus {
@@ -508,4 +512,19 @@ LOCATION PAGE
 #map {
   height: 400px;
   width: 100%;
+}
+
+/*-----------
+ADMIN STYLING
+-------------*/
+#admin {
+  margin: 0;
+  position: absolute;
+  display: block;
+  line-height: 1;
+  left: 50%;
+  top: 5px;
+  color: white;
+  font-weight: 800;
+  opacity: .7;
 }

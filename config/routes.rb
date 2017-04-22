@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resources :charges
   
   resources :events, except: [:new, :edit, :show]
+  get '/secretlogin'=>                'sessions#new'
+  post '/secretlogin'=>               'sessions#create'
+  delete '/logout'=>                  'sessions#destroy'
   
   get '/audiobible' =>                'pages#audiobible'
   get '/biblememory' =>               'pages#biblememory'

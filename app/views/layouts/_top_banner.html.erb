@@ -1,10 +1,9 @@
-<div class="bg-inverse py-1">
+<div class="<%= admin? ? "bg-danger" : "bg-inverse"%> py-1">
   <div id="central-top">
-    <div class="d-flex align-items-start">
-      <%= link_to 'Faithful Word Baptist Church | Tempe, Arizona', root_path, class: "mr-auto text-silent" %>
-      <%= link_to "https://www.truebornsons.com/donate-to-fwbc/", class: "yellow-btn", target: "_blank" do %>
-        DONATE &rsaquo;
-      <% end %>
+    <div class="d-flex justify-content-between">
+        <%= link_to 'Faithful Word Baptist Church | Tempe, Arizona', root_path, class: "text-silent" %>
+        <%= content_tag(:p, 'ADMIN', id: 'admin') if admin? %>
+        <%= admin? ? link_to('LOGOUT', logout_path, method: :delete, class: "yellow-btn") : link_to('DONATE', "https://www.truebornsons.com/donate-to-fwbc/", class: "yellow-btn", target: "_blank") %>
     </div>
   </div>
 </div>

@@ -1,5 +1,8 @@
 <% provide(:title, "Preaching") %>
-<%= render 'new_form' %>
+<% if admin? %>
+  <%= render 'new_form' %>
+<% end %>
+
 <h4>Sermons from Faithful Word Baptist Church</h4>
 <p>
   Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.
@@ -7,7 +10,9 @@
 <h5><%= number_with_delimiter(@total_dl + 13000000) %> Sermons Downloaded</h5>
 <div class="mb-2">
   <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn" %>
-  <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
+  <% if admin? %>
+    <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
+  <% end %>
 </div>
 <div class="d-flex flex-row">
   

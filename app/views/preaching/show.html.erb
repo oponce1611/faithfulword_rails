@@ -1,5 +1,8 @@
 <% provide(:title, @sermon.title) %>
-<%= render 'update_form' %>
+<% if admin? %>
+  <%= render 'update_form' %>
+<% end %>
+
 <div class="d-flex">
   <div id="right-border" class="pr-4" style="width: 758px">
     <h4><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>
@@ -10,7 +13,9 @@
     <p><%= simple_format(@sermon.transcript) %></p>
   </div>
   <div class="pl-4">
-    <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
+    <% if admin? %>
+      <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
+    <% end %>
     <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>

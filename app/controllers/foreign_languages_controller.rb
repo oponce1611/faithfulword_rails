@@ -1,4 +1,5 @@
 class ForeignLanguagesController < ApplicationController
+  before_action :require_user, except: [:index, :show]
   def index
     @tongues = Language.all
     @tongue = Language.new
@@ -35,6 +36,7 @@ class ForeignLanguagesController < ApplicationController
   
   private
   def tongue_params
-    params.require(:language).permit(:tongue, :flag)
+    params.require(:language).permit(:tongue,
+                                     :flag)
   end
 end

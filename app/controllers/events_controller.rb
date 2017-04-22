@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :require_user, except: [:index]
   def index
     @events = Event.sorted.upcoming
     @event = Event.new
@@ -34,6 +35,8 @@ class EventsController < ApplicationController
   
   private
   def event_params
-    params.require(:event).permit(:title, :location, :date)
+    params.require(:event).permit(:title,
+                                  :location,
+                                  :date)
   end
 end

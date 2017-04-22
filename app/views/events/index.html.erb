@@ -1,11 +1,16 @@
 <% provide(:title, "Events") %>
-<%= render 'new_form' %>
+<% if admin? %>
+  <%= render 'new_form' %>
+<% end %>
+
 <h4>Events at Faithful Word Baptist Church</h4>
 <p>
   Please note: <b>All</b> activities are <b>always</b> free of charge, including food, prizes, supplies, etc. Please feel free to invite family and friends to any church-sponsored activity!
 </p>
 <p>Upcoming 2017 Events</p>
-<button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">New Event</button>
+<% if admin? %>
+  <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">New Event</button>
+<% end %>
 <div id="container-event">
   <%= render partial: @events, spacer_template: 'event_spacer' %>
 </div>

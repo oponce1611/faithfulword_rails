@@ -1,4 +1,5 @@
 class TranslationsController < ApplicationController
+  before_action :require_user, except: [:show]
   def show
     @translation = Translation.friendly.find(params[:id])
   end
