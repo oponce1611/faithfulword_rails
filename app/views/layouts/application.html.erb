@@ -12,7 +12,7 @@
     <div id="central">
       <%= render('layouts/navigation') %>
       <%= !current_page?(root_path) ? render('shared/banner') : render('shared/carousel') %>
-      <div class="p-4">
+      <div class="px-4 pt-4">
         <%= yield %>
         <%= render 'layouts/footer' %>
       </div>

@@ -1,32 +1,33 @@
 <% provide(:title, @sermon.title) %>
 <%= render 'update_form' %>
-<div class="row">
-  <div id="right-border" class="col-9 pr-5">
+<div class="d-flex">
+  <div id="right-border" class="pr-4" style="width: 758px">
     <h4><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>
     <p><%= @sermon.datetime.strftime("%A %B %-d, %Y %l:%M %p %Z") %></p>
     <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
-    <%= ytube_embed(@sermon.ytube_id, 720, 405) unless @sermon.ytube_id.blank? %>
+    <%= ytube_embed(@sermon.ytube_id, 733, 9 * 733 / 16) unless @sermon.ytube_id.blank? %>
     <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
     <p><%= simple_format(@sermon.transcript) %></p>
   </div>
-  <div class="col-3 pl-5">
+  <div class="pl-4">
     <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
     <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
-    <script>
-      $(".download").on("click", function() {
-          $.ajax({
-              url: "/download",
-              data: {id: $(this).attr("id")},
-              success: function(response, status) {
-                    console.log(status);
-              },
-              error: function(data) {
-                  alert("Sorry, there was an error!");
-              }
-          });
-      });
-    </script>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>
   </div>
 </div>
+
+<script>
+  $(".download").on("click", function() {
+    $.ajax({
+      url: "/download",
+      data: {id: $(this).attr("id")},
+      success: function(response, status) {
+            console.log(status);
+      },
+      error: function(data) {
+          alert("Sorry, there was an error!");
+      }
+    });
+  });
+</script>

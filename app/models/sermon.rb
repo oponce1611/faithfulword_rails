@@ -13,7 +13,8 @@ class Sermon < ApplicationRecord
   
   def self.search(search)
     if search
-      where("title LIKE ?", "%#{search}%")
+      #where("title LIKE ?", "%#{search}%")
+      where('title ILIKE ? OR preacher ILIKE ?', "%#{search}%", "%#{search}%")
     else
       scoped
     end
