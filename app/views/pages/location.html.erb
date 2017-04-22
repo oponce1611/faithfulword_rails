@@ -1,18 +1,13 @@
 <% provide(:title, "Location") %>
-<style>
-   #map {
-    height: 400px;
-    width: 100%;
-   }
-</style>
 <h4>Location</h4>
-<p><strong>
+<p><b>
   2741 W Southern Ave, Suite #14
   <br>
   Tempe, AZ 85282
-</strong></p>
+</b></p>
 <p>We are located on the SE corner of Southern Avenue and 48th Street.</p>
 <div id="map"></div>
+
 <script>
   function initMap() {
     var church = {lat: 33.391656, lng: -111.977686};
@@ -25,19 +20,18 @@
       zoomControl: true,
       center: church
     });
-    var contentString = '<h1>Faithful Word Baptist Church</h1>';
-
-var infowindow = new google.maps.InfoWindow({
-  content: contentString
-});
+    var contentString = '<h1 class="mb-0">Faithful Word Baptist Church</h1>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
     var marker = new google.maps.Marker({
       position: church,
       map: map,
       title: "Faithful Word Baptist Church"
     });
     marker.addListener('click', function() {
-infowindow.open(map, marker);
-});
+      infowindow.open(map, marker);
+    });
   }
 </script>
   

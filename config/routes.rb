@@ -16,21 +16,22 @@ Rails.application.routes.draw do
   
   resources :events, except: [:new, :edit, :show]
   
-  get '/audiobible' => 'pages#audiobible'
-  get '/biblememory' => 'pages#biblememory'
-  get '/churchdirectory' => 'pages#churchdirectory'
-  get '/doctrinalstatement' => 'pages#doctrinalstatement'
-  get '/live' => 'pages#live'
-  get '/location' => 'pages#location'
-  get '/malawi' => 'pages#malawi'
-  get '/ourpastor' => 'pages#ourpastor'
-  get '/privacyandterms' => 'pages#privacyandterms'
-  get '/psalms' => 'pages#psalms'
-  get '/radio' => 'pages#radio'
-  get '/service' => 'pages#service'
-  get '/soulwinning' => 'pages#soulwinning'
-  get '/termsandconditions' => 'pages#termsandconditions'
-  get '/download' => 'preaching#download'
+  get '/audiobible' =>                'pages#audiobible'
+  get '/biblememory' =>               'pages#biblememory'
+  get '/churchdirectory' =>           'pages#churchdirectory'
+  get '/doctrinalstatement' =>        'pages#doctrinalstatement'
+  get '/hymns' =>                     'pages#hymns'
+  get '/live' =>                      'pages#live'
+  get '/location' =>                  'pages#location'
+  get '/malawi' =>                    'pages#malawi'
+  get '/ourpastor' =>                 'pages#ourpastor'
+  get '/privacyandterms' =>           'pages#privacyandterms'
+  get '/psalms' =>                    'pages#psalms'
+  get '/radio' =>                     'pages#radio'
+  get '/service' =>                   'pages#service'
+  get '/soulwinning' =>               'pages#soulwinning'
+  get '/termsandconditions' =>        'pages#termsandconditions'
+  get '/download' =>                  'preaching#download'
   
   get '/:id' => 'preaching#show', as: "sermon"
   get '/:id/edit' => 'preaching#edit', as: "edit_sermon"

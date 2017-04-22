@@ -138,6 +138,34 @@ a:hover {
 /*---------
   BUTTONS
 -----------*/
+.search-btn {
+  color: #994800;
+  font-size: 10px;
+  line-height: 10px;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#fff9c1, #fed81c);
+  border: 1px solid #ecc101;
+  border-radius: 3px;
+  padding: 5px 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.search-btn:hover {
+  background: linear-gradient(#fff, #fed925);
+  text-decoration: none;
+}
+
+.search-btn:focus {
+  text-decoration: none;
+}
+
+.search-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#ffeb81, #fffbda);
+}
+
 .yellow-btn {
   color: #994800;
   font-size: 10px;
@@ -206,7 +234,8 @@ a:hover {
 }
 
 .bar-search {
-  margin: 3.25px;
+  margin: 4.5px;
+  width: 100%;
 }
 
 .top-btn {
@@ -252,6 +281,7 @@ a:hover {
    ------------------   */
 .browse-side-image p{
   margin: 10px 0;
+  text-align: center;
 }
 
 .browse-side-image img{
@@ -259,44 +289,33 @@ a:hover {
 }
 
 .browse-side-column {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
   border: 1px solid #999;
   border-radius: 5px;
-  background-color: #eaeaea;
-  width: 190px;
   padding-top: 6px;
   padding-bottom: 6px;
-}
-
-.browse-categories-side {
   margin: 0;
-  padding: 0;
-  flex-direction: column;
-}
-
-.browse-category-top-level {
-   /* padding-left: 11px;*/
-}
-
-.browse-category-top-level:hover {
-  /*background-color: #ccc;*/
 }
 
 .browse-category-top-level:active {
   background-color: #AFAFAF;
 }
 
-.active-s {
-  background-color: #AFAFAF;
+.browse-link {
+  font-size: 12px;
+  width: 100%;
+  padding-left: 11px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  line-height: 16px;
+  font-weight: bold;
 }
 
-.browse-link {
-    font-size: 12px;
-    width: 100%;
-    padding-left: 11px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    line-height: 16px;
-    font-weight: bold;
+.browse-link.active {
+  background-color: #AFAFAF;
 }
 
 .browse-link:hover {
@@ -304,13 +323,13 @@ a:hover {
 }
 
 .browse-sub-link {
-    font-size: 12px;
-    width: 100%;
-    padding-left: 31px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    line-height: 16px;
-    font-weight: bold;
+  font-size: 12px;
+  width: 100%;
+  padding-left: 31px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  line-height: 16px;
+  font-weight: bold;
 }
 
 .side-column {
@@ -320,14 +339,6 @@ a:hover {
 .body-column {
   width: 900px;
   margin-top: 5px;
-}
-ul {
-  display: flex;
-  list-style: none;
-}
-
-li {
-  display: flex;
 }
 
 /* ------------------
@@ -489,4 +500,12 @@ WELCOME PAGE
 ------------*/
 #welcome-title {
   font-size: 27.4px;
+}
+
+/*-----------
+LOCATION PAGE
+-------------*/
+#map {
+  height: 400px;
+  width: 100%;
 }

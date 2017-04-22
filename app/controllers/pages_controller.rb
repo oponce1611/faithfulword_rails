@@ -15,11 +15,12 @@ class PagesController < ApplicationController
     render "doctrinalstatement.html.erb"
   end
   
-  def events
-    render "events.html.erb"
+  def hymns
+    render "hymns.html.erb"
   end
   
   def live
+    render 'live.html.erb'
   end
   
   def location
