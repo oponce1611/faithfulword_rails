@@ -180,7 +180,8 @@ a:hover {
   border: 1px solid #ecc101;
   border-radius: 3px;
   padding: 5px 8px;
-  margin: 0px 0 0 0;
+  margin: 0;
+  cursor: pointer;
 }
 
 .yellow-btn:hover{
@@ -366,7 +367,7 @@ a:hover {
   margin-bottom: 5px;
 }
 
-#sermon-downloads-number {
+#sermon-downlofads-number {
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
@@ -577,4 +578,16 @@ OUR PASTOR
 ----------*/
 .ourpastor p{
   line-height: 1.15;
+}
+
+.bar2-search {
+  width: 100%;
+  margin: 4px 0 4px 0;
+}
+
+.form-control-small {
+  height: 22px;
+  font-size: 12px;
+  margin-right: 4px;
+  width: 100%;
 }
