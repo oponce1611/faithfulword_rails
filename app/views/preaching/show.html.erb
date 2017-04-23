@@ -10,6 +10,7 @@
     <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
     <%= ytube_embed(@sermon.ytube_id, 733, 9 * 733 / 16) unless @sermon.ytube_id.blank? %>
     <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
+    <h6><%= 'Transcript' if @sermon.transcript %></h6>
     <p><%= simple_format(@sermon.transcript) %></p>
     <%= @sermon.mp3  if admin?%>
   </div>
