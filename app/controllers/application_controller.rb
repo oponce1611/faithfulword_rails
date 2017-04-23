@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
   
   def require_user
-    if !admin
+    if !admin?
       redirect_to root_path
     end
   end

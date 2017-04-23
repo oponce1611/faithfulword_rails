@@ -183,6 +183,11 @@ a:hover {
   margin: 0px 0 0 0;
 }
 
+.yellow-btn:hover{
+  color: #7f3b03;
+   background: linear-gradient(#fff, #fed81c);
+}
+
 .yellow-btn:focus {
   text-decoration: none;
 }
@@ -209,7 +214,8 @@ a:hover {
 }
 
 .sky-btn:hover {
-  background: linear-gradient(#f8fafd, #a0b1dc);
+  background: linear-gradient(#fff, #d4e3f9);
+  color: #01011e;
 }
 
 .sky-btn:focus {
@@ -527,4 +533,42 @@ ADMIN STYLING
   color: white;
   font-weight: 800;
   opacity: .7;
+}
+
+#login {
+  margin: 10% auto 0 auto;
+  border: 1px solid #999;
+  width: 350px;
+  padding: 24px;
+  background-color: white;
+}
+
+.login-btn {
+  color: #039;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#f8fafd, #bed0ee);
+  border: 1px solid #a0b1dc;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background: linear-gradient(#fff, #d4e3f9);
+}
+
+.login-btn:focus {
+  text-decoration: none;
+}
+
+.login-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#c3d0e9, #ecf1fa);
 }

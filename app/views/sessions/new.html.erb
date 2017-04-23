@@ -1,12 +1,12 @@
-<div class="p-4 mx-auto" style='border: 1px solid black; width: 400px'>
-  <h4 style="text-align: center">Login</h4>
+<div id="login">
+  <h4 style="text-align: center">Administrator</h4>
   <%= form_for :session, url: secretlogin_path, method: 'POST' do |f| %>
     <div class="form-group">
-      <%= f.text_field :user, class: "form-control", type: "text", placeholder: "User", value: 'Admin' %>
+      <%= f.text_field :user, class: "form-control", type: "text", placeholder: "Username", value: 'Admin' %>
     </div>
     <div class="form-group">
       <%= f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "Password", autofocus: true %>
     </div>
-    <%= f.submit "Login", class: "sky-btn" %>
+    <%= f.submit "Login", class: "login-btn" %>
   <% end %>
 </div>
