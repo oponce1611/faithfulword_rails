@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require best_in_place
 //= require turbolinks
+//= require tether
 //= require bootstrap
 //= require masonry/jquery.masonry
-//= require tether.min
 //= require custom
 //= require_tree .
 
@@ -26,3 +26,7 @@
 //    return false;
 //  });
 //});
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

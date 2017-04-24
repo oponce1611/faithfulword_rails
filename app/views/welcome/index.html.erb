@@ -12,7 +12,7 @@
     <b>Baptist</b>
     <b>church</b>.</p>
     <p>Faithful Word Baptist Church is a young, family-integrated church. We would love to get to know you personally at one of our services!</p>
-    <p><%= image_tag 'new_sml_27x13.gif', style:"margin-right: 5px;" %>Pastor Anderson's materials have now been translated into <%= link_to "over 115 languages!", foreignlanguages_path %></p>
+    <p><%= image_tag 'new_sml_27x13.gif', style:"margin-right: 5px;" %>Pastor Anderson's materials have now been translated into <%= link_to "over 115 languages!", foreignlanguages_path, "data-toggle" => "tooltip", "data-placement" => "top", title: "Foreign Languages" %></p>
     <p><%= image_tag 'new_sml_27x13.gif', style:"margin-right: 5px;" %>Take a video tour of our church building:</p>
     <div align="center">
       <%= ytube_embed("0GKOq2EMeBs", 560, 315) %>
