@@ -7,9 +7,9 @@ class TranslationsController < ApplicationController
   def create
     @translation = Translation.new(translation_params)
     if @translation.save
-      redirect_to translation_path(@translation.language, @translation)
+      redirect_to foreignlanguage_path(@translation.language)
     else
-      redirect_to @translation
+      redirect_to foreignlanguage_path(@translation.language)
     end
   end
   

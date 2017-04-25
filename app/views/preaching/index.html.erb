@@ -21,14 +21,30 @@
     <% end %>
   </div>
   <%= form_tag preaching_path, :method => 'get', :id => "sermon_search", class: 'd-flex bar2-search' do %>
-    <%= text_field_tag :search, params[:search], autocomplete: "off", class: 'form-control form-control-small' %>
+    <%= text_field_tag :search, params[:search], autocomplete: "off", class: 'form-control form-control-small', placeholder: "Search for Sermon" %>
     <%= submit_tag 'Search', :name => nil, class: 'yellow-btn' %>
   <% end %>
 </div>
 
-<div id="sermons" class="mb-2">
-  <%= render 'sermons' %>
-</div>
+<table class="box-table-a">
+  <colgroup>
+    <col width='13%'>
+    <col width='55%'>
+    <col width="22%">
+    <col width="10%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Sermon Title</th>
+      <th>Preacher</th>
+      <th>Links</th>
+    </tr>
+  </thead>
+  <tbody id="sermons">
+    <%= render 'sermons' %>
+  </tbody>
+</table>
 
 <div class="d-flex flex-column">
   <h4>More great preaching:</h4>

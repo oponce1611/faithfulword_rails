@@ -1,35 +1,11 @@
-<div class="container">
-  <div class="d-flex justify-content-end">
-    <div class="d-inline-flex mr-auto">
-      <h1><%= @translation.title %></h1>
-    </div>
-    <div class="d-inline-flex mb-3">
-      <%= link_to "Edit", edit_translation_path(@translation.language, @translation), class: "btn btn-primary mr-1" %>
-    </div>
-    <div class="d-inline-flex mb-3">
-      <%= link_to "Delete", "", class: "btn btn-danger mr-1" %>
-    </div>
-    <div class="d-inline-flex mb-3">
-      <%= link_to @translation.language.tongue, foreignlanguage_path(@translation.language), class: "btn btn-gold" %>
-    </div>
+<h4><%= @translation.title %></h4>
+<%#= link_to "Edit", edit_translation_path(@translation.language, @translation), class: "btn btn-primary mr-1" %>
+<%#= link_to "Delete", "", class: "btn btn-danger mr-1" %>
+<h6 class="text-muted"><%= @translation.published.strftime("%A %B %d, %Y")%></h6>
+<% if !@translation.video_id.blank? %>
+  <div class="mb-2">
+  <%= ytube_embed(@translation.video_id, 720, 405) %>
   </div>
-  <% if !@translation.published.nil? %>
-    <h5 class="text-muted"><%= @translation.published.strftime("%A %B %d, %Y")%></h5>
-  <% end %>
-  <% if !@translation.video_id.nil? %>
-    <div class="video-container mb-4">
-      <iframe id="ytplayer" type="text/html"
-          width="720" height="405"
-          src="https://www.youtube.com/embed/<%= @translation.video_id %>?enablejsapi=1"
-          frameborder="0"
-          style="border: solid 4px #0275d8"
-          allowfullscreen>
-      </iframe>
-    </div>
-  <% end %>
-  <% if !@translation.body.nil? %>
-  <h5>Transcript:</h5>
-  <hr>
-    <p><%= @translation.body %></p>
-  <% end %>
-</div>
+<% end %>
+<h5>Transcript:</h5>
+<p><%= simple_format(@translation.body) %></p>

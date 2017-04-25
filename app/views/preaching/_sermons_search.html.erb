@@ -1,9 +1,4 @@
 <% @sermons.each do |sermon| %>
-  <% if next_month(sermon) %> 
-  <tr>
-    <td colspan="4"> <h5 class="mb-0"><%= sermon.datetime.strftime(" %B %Y") %></h5></td>
-  </tr>
-  <% end %>
   <tr>
     <td><%= sermon.datetime.strftime("%m/%d/%y, %a %p")%></td>
     <td><%= image_tag 'fire.gif', style: "padding-right: 8px" if sermon.fire_hard %><%= link_to sermon.title, sermon_path(sermon) %></td>

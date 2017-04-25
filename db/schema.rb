@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422171648) do
+ActiveRecord::Schema.define(version: 20170424223524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20170422171648) do
     t.datetime "updated_at",                 null: false
     t.string   "slug"
     t.integer  "dl_count",   default: 0
+    t.index ["datetime"], name: "index_sermons_on_datetime", using: :btree
     t.index ["slug"], name: "index_sermons_on_slug", unique: true, using: :btree
     t.index ["title"], name: "index_sermons_on_title", using: :btree
   end
