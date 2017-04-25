@@ -29,7 +29,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'aws-sdk', '~> 2.9', '>= 2.9.7'
+  gem 'aws-sdk'
   gem 'aws-sdk-rails'
 end
 
@@ -44,3 +44,5 @@ gem 'carrierwave-aws', '~> 1.1'
 gem 'dotenv', '~> 2.2'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'

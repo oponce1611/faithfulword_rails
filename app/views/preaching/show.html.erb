@@ -11,13 +11,16 @@
     <%= ytube_embed(@sermon.ytube_id, 733, 9 * 733 / 16) unless @sermon.ytube_id.blank? %>
     <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
     <h6><%= 'Transcript' if @sermon.transcript %></h6>
-    <p><%= simple_format(@sermon.transcript) %></p>
+    <p><%= markdown(@sermon.transcript) %></p>
     <%= @sermon.mp3  if admin?%>
   </div>
   <div class="pl-4">
     <% if admin? %>
       <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
     <% end %>
+    
+    <%#= s3.bucket('faithfulword').object(@sermon.mp3.file.filename).public_url %>
+    <%#= link_to 'AWS Download',  Aws::S3::Object.url_for(@sermon.mp3.file.filename, BUCKET, :authenticated => false) %>
     <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>

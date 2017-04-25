@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   
   get '/preaching' => 'preaching#index'
-  resources :foreignlanguages, :controller => 'foreign_languages'
+  get '/audiobible' => 'audio_bible#index'
   
+  resources :foreignlanguages, :controller => 'foreign_languages'
   get 'foreignlanguages/:foreignlanguage_id/:id/edit' => 'translations#edit', as: "edit_translation"
   get 'foreignlanguages/:foreignlanguage_id/:id' => 'translations#show', as: "translation"
   resources :translations, only: [:create, :destroy] do
@@ -15,11 +16,11 @@ Rails.application.routes.draw do
   resources :charges
   
   resources :events, except: [:new, :edit, :show]
+  
   get '/secretlogin'=>                'sessions#new'
   post '/secretlogin'=>               'sessions#create'
   delete '/logout'=>                  'sessions#destroy'
   
-  get '/audiobible' =>                'pages#audiobible'
   get '/biblememory' =>               'pages#biblememory'
   get '/churchdirectory' =>           'pages#churchdirectory'
   get '/doctrinalstatement' =>        'pages#doctrinalstatement'

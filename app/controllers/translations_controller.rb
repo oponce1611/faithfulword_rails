@@ -20,9 +20,9 @@ class TranslationsController < ApplicationController
   def update
     @translation = Translation.friendly.find(params[:id])
     if @translation.update(translation_params)
-      redirect_to translation_path(@translation.language, @translation)
+      redirect_to :back
     else
-      redirect_to translation_path(@translation.language, @translation)
+      redirect_to :bacl
     end
   end
   

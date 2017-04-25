@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424223524) do
+ActiveRecord::Schema.define(version: 20170425182811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "total_chapters"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "chapters", force: :cascade do |t|
+    t.integer  "book_id"
+    t.integer  "chapter"
+    t.text     "mp3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_chapters_on_book_id", using: :btree
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title"
