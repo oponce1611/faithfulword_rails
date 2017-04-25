@@ -1,11 +1,13 @@
 <% provide(:title, "Audio Bible") %>
+<% number = "#{number_with_precision(Book.sum(:total_chapters) / 260.0 *100, precision: 0)}%" %>
 <div class="d-flex flex-nowrap">
   <%= render "shared/side-bar" %>
   <div>
-    <h4>Audio Bible</h4>
+    <h4>The King James Bible read by Domonique Davis of FWBC!</h4>
       <p>This is a work in progress. Check back for more chapters of the Bible being constantly added!</p>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 4%">4%</div>
+      
+      <div class="progress mb-2">
+        <div class="progress-bar" role="progressbar" style="width: <%= number %>"><%= number %></div>
       </div>
       
       <% @books.each do |book| %>
