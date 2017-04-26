@@ -227,6 +227,35 @@ a:hover {
   text-decoration: none;
   background: linear-gradient(#c3d0e9, #ecf1fa);
 }
+
+.red-btn {
+  color: #7c0000;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#fdd5d5, #ff5959);
+  border: 1px solid #fc4c4c;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.red-btn:hover {
+  background: linear-gradient(#fde4e4, #ff7a7a);
+}
+
+.red-btn:focus {
+  text-decoration: none;
+}
+
+.red-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#ff2b2b, #fdd5d5);
+}
  /* ------------------
  GREY NAVBAR
    ------------------   */
