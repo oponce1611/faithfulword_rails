@@ -592,3 +592,23 @@ OUR PASTOR
   width: 100%;
   padding: 1px 4px;
 }
+
+
+/*------------
+RADIO STYLING
+-------------*/
+
+.radio-schedule p {
+  margin: 0;
+}
+
+.radio-schedule h5:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+}
+
+.radio-schedule h6 {
+  font-weight: 800;
+}

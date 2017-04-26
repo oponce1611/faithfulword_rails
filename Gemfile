@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.0.1'
-gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -46,3 +45,4 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
+gem 'passenger', '~> 5.0', '>= 5.0.30'
