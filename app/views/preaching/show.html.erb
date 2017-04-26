@@ -16,11 +16,9 @@
   </div>
   <div class="pl-4">
     <% if admin? %>
-      <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
+      <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button><br>
+      <%= link_to 'Destroy',  "/sermons/#{@sermon.id}",  method: :delete, data: { confirm: 'Are you sure?' }, class: "sky-btn mb-2" %>
     <% end %>
-    
-    <%#= s3.bucket('faithfulword').object(@sermon.mp3.file.filename).public_url %>
-    <%#= link_to 'AWS Download',  Aws::S3::Object.url_for(@sermon.mp3.file.filename, BUCKET, :authenticated => false) %>
     <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>
