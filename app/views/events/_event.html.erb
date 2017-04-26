@@ -1,0 +1,52 @@
+<div id="event_<%= event.id %>">
+  <h6 class='mb-0'><%= event.title %></h6>
+  <p class='mb-0'><%= event.date.strftime("%A %B %d") %></p>
+  <p class='mb-0'><%= event.location %></p>
+  <!--<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myupdateevent_<%= event.id %>">Edit</button>
+  <%= link_to 'Delete', event, method: :delete, class: "btn btn-primary btn-sm", remote: true %>-->
+</div>
+
+<%= form_for event, :method => :put, remote: true do |f| %>
+  <div class="modal fade" id="myupdateevent_<%= event.id %>" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <div class="col-2 col-form-label text-right">
+              <%= f.label :title %>
+            </div>
+            <div class="col-10">
+              <%= f.text_field :title, class: "form-control", type: "text", placeholder: "Title of Event", autofocus: true %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label text-right">
+              <%= f.label :date %>
+            </div>
+            <div class="col-10">
+              <%= f.date_field :date, class: "form-control", type: "date" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label text-right">
+              <%= f.label :location %>
+            </div>
+            <div class="col-10">
+              <%= f.text_field :location, class: "form-control", type: "text", placeholder: "Location of Event" %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Update", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

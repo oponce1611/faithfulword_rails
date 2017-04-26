@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+#central {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    position: relative;
+    width: 1000px;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+#central-top {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: 1000px;
+    text-align: left;
+}
+a {
+  color: blue;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0px;
+}
+a:focus {
+  text-decoration: none;
+  color: blue;
+}
+p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+a:hover {
+  text-decoration: none;
+  color: #FF0000;
+}
+
+#slider-header {
+  color: white;
+  position: absolute;
+  bottom: 30%;
+  left: 1%;
+  right: 1%;
+  z-index: 1;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #999;
+  outline: 10px solid #eaeaea;
+}
+
+.banner-border {
+  border-top: 11px solid white;
+  border-left: 11px solid white;
+  border-bottom: 11px solid #eaeaea;
+  border-right: 11px solid #eaeaea;
+  outline: 1px solid #999;
+}
+
+#list-sw {
+  padding-bottom: 37px;
+}
+#events-pad {
+  padding-bottom: 20px;
+}
+
+/*--------------------
+  BIBLE VERSE STYLING
+----------------------*/
+.verse p {
+  font-family: Georgia;
+  font-weight: bold;
+  margin: 0;
+}
+
+.verse p:last-child {;
+  font-family: Georgia;
+  text-align: right;
+  font-weight: bold;
+}
+/*--------
+  MASONRY
+----------*/
+#masonry-grid {
+  margin: 0 auto;
+}
+.grid-item {
+  width: 220px;
+  margin: 20px;
+}
+
+#masonry-chapter {
+  margin: 0 0;
+}
+.chapter-item {
+  margin: 1px;
+}
+
+
+.centered { margin: 0 auto; }
+
+.text-silent {
+  color: white;
+  font-size: 12px;
+  line-height: 1;
+  margin: auto 0;
+  opacity: 0.7;
+}
+
+.text-silent:hover {
+  color: white;
+  opacity: 1.0;
+}
+
+/*.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}*/
+
+/*---------
+  BUTTONS
+-----------*/
+.search-btn {
+  color: #994800;
+  font-size: 10px;
+  line-height: 10px;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#fff9c1, #fed81c);
+  border: 1px solid #ecc101;
+  border-radius: 3px;
+  padding: 5px 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.search-btn:hover {
+  background: linear-gradient(#fff, #fed925);
+  text-decoration: none;
+}
+
+.search-btn:focus {
+  text-decoration: none;
+}
+
+.search-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#ffeb81, #fffbda);
+}
+
+.yellow-btn {
+  color: #994800;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#fff9c1, #fed81c);
+  border: 1px solid #ecc101;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.yellow-btn:hover{
+  color: #7f3b03;
+   background: linear-gradient(#fff, #fed81c);
+}
+
+.yellow-btn:focus {
+  text-decoration: none;
+}
+
+.yellow-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#ffeb81, #fffbda);
+}
+
+.sky-btn {
+  color: #039;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#f8fafd, #bed0ee);
+  border: 1px solid #a0b1dc;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.sky-btn:hover {
+  background: linear-gradient(#fff, #d4e3f9);
+  color: #01011e;
+}
+
+.sky-btn:focus {
+  text-decoration: none;
+}
+
+.sky-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#c3d0e9, #ecf1fa);
+}
+ /* ------------------
+ GREY NAVBAR
+   ------------------   */
+.bar {
+  height: 36px;
+  background: linear-gradient(#f2f2f2, #dddddd);
+  border: 1px solid #999;
+  width: 1000px;
+  font-size: 0;
+}
+
+.bar-side {
+  border-right: 1px solid #999;
+  display: inline-block;
+  margin: 0px;
+}
+
+.bar-search {
+  margin: 4.5px;
+  width: 100%;
+}
+
+.top-btn {
+  color: blue;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  background: linear-gradient(#f2f2f2, #dddddd);
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #999;
+  padding: 8px 8px;
+  margin: 0px;
+}
+
+.top-btn:hover {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 39%, rgba(240,240,240,1) 89%, rgba(212,212,212,1) 100%);
+  border-top: 0px;
+  padding-top: 9px;
+  border-left: 0px;
+  padding-left: 9px;
+}
+
+.top-btn:active {
+  background: linear-gradient(rgba(153,153,153,1) 0%, rgba(214,214,214,1) 19%, rgba(252,252,252,1) 100%);
+  border-top: 0px;
+  padding-top: 9px;
+  border-left: 0px;
+  padding-left: 9px;
+}
+
+/*.bar-side:last-child {
+  color: red;
+  border-right: 0px;
+  display: inline-block;
+  margin: 0px;
+} 
+*/
+
+/* ------------------
+  SIDE COLUMN
+   ------------------   */
+.browse-side-image p{
+  margin: 10px 0;
+  text-align: center;
+}
+
+.browse-side-image img{
+  border: 1px solid #999;
+}
+
+.browse-side-column {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0;
+}
+
+.browse-category-top-level:active {
+  background-color: #AFAFAF;
+}
+
+.browse-link {
+  font-size: 12px;
+  width: 100%;
+  padding-left: 11px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.browse-link.active {
+  background-color: #AFAFAF;
+}
+
+.browse-link:hover {
+  background-color: #ccc;
+}
+
+.browse-sub-link {
+  font-size: 12px;
+  width: 100%;
+  padding-left: 31px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.side-column {
+  margin-right: 20px;
+}
+
+.body-column {
+  width: 900px;
+  margin-top: 5px;
+}
+
+/* ------------------
+ PREACHING SHOW PAGE
+   ------------------   */
+#right-border {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#sermon-downloads-heading {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+#sermon-downloads-number {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+
+/* ------------------
+ STYLING FOR PREACHING TABLE 
+   ------------------   */
+
+.box-table-a {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.box-table-a thead
+{
+  color: #039;
+  border: 1px solid #b9c9fe; 
+  border-top: 4px solid #aabcfe;
+}
+
+.box-table-a th {
+  font-size: 13px;
+  font-weight: bold;
+  background: #b9c9fe;
+  padding: 3px 8px;
+}
+
+.box-table-a td
+{
+  color: #669;
+  background: #e8edff; 
+  border: 1px solid #b9c9fe; 
+  padding: 3px 8px;
+}
+
+.box-table-a tr:hover td
+{
+  background: #d0dafd;
+  color: #339;
+}
+
+/*-----------------
+  SOULWINNING PAGE
+--------------------*/
+.soulwinning-table {
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 9px 9px 9px 9px;
+}
+
+.soulwinning-table strong {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.soulwinning-body {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 9px;
+}
+
+.soulwinning-body.active {
+  border: 2px solid #03c;
+}
+
+
+.soulwinning-date {
+  color: #03c;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 5px;
+}
+
+.soulwinning-time {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+/*--------------------
+FOREIGN LANGUAGES LIST
+----------------------*/
+.columns {
+  column-gap: 20px;
+  column-count: 5;
+}
+.columns ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------
+CHURCH SERVICE TIMES
+-----------------*/
+.service-heading {
+  font-weight: bold;
+  margin: 0;
+  
+}
+
+/*-----------------------
+ CHURCH DIRECTORY STYLING
+-------------------------*/
+.church-table {
+  width: 293px;
+  background: #ccc;
+  border-radius: 5px;
+  padding: 9px 9px 9px 9px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.church-table strong{
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.church-table p {
+  margin: 0;
+}
+
+.church-table a {
+  font-size: 13px;
+}
+
+.church-body {
+  background: #fff;
+  border-radius: 5px;
+  padding: 9px;
+}
+
+/*----------
+WELCOME PAGE
+------------*/
+#welcome-title {
+  font-size: 27.4px;
+}
+
+/*-----------
+LOCATION PAGE
+-------------*/
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/*-----------
+ADMIN STYLING
+-------------*/
+#admin {
+  margin: 0;
+  position: absolute;
+  display: block;
+  line-height: 1;
+  left: 50%;
+  top: 5px;
+  color: white;
+  font-weight: 800;
+  opacity: .7;
+}
+
+#login {
+  margin: 10% auto 0 auto;
+  border: 1px solid #999;
+  width: 350px;
+  padding: 24px;
+  background-color: white;
+}
+
+.login-btn {
+  color: #039;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(#f8fafd, #bed0ee);
+  border: 1px solid #a0b1dc;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background: linear-gradient(#fff, #d4e3f9);
+}
+
+.login-btn:focus {
+  text-decoration: none;
+}
+
+.login-btn:active {
+  text-decoration: none;
+  background: linear-gradient(#c3d0e9, #ecf1fa);
+}
+/*--------
+OUR PASTOR
+----------*/
+.ourpastor p{
+  line-height: 1.15;
+}
+
+.bar2-search {
+  width: 100%;
+  margin: 4px 0 4px 0;
+}
+
+.form-control-small {
+  height: 22px;
+  font-size: 12px;
+  margin-right: 4px;
+  width: 100%;
+  padding: 1px 4px;
+}
+
+
+/*------------
+RADIO STYLING
+-------------*/
+
+.radio-schedule p {
+  margin: 0;
+}
+
+.radio-schedule h5:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+}
+
+.radio-schedule h6 {
+  font-weight: 800;
+}

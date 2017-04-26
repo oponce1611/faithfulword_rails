@@ -1,0 +1,16 @@
+<% provide(:title, "Foreign Languages") %>
+<% if admin? %>
+  <%= render 'new_form' %>
+<% end %>
+<div class="d-flex flex-nowrap">
+  <%= render 'shared/side-bar' %>
+  <div>
+    <h4>Foreign Languages</h4>
+    <% if admin? %>
+      <button class="sky-btn mb-3" data-toggle="modal" data-target="#exampleModal">New Tongue</button>
+    <% end %>
+    <div class="columns">
+      <%= render partial: 'tongue', collection: @tongues %>
+    </div>
+  </div>
+</div>

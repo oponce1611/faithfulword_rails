@@ -1,0 +1,26 @@
+<% provide(:title, "Live") %>
+<div class="d-flex flex-nowrap">
+  <%= render "shared/side-bar" %>
+  <div>
+    <h4>YouTube Live</h4>
+    <p>Live streaming video of our services can be viewed using the embedded YouTube players below. If you are on this page at a scheduled service time, and the embedded player is not working, click here to view the live feed.</p>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="d-flex flex-wrap">
+      <div class="mr-auto">
+        <div class="g-ytsubscribe" data-channel="sanderson1611" data-layout="full" data-count="default"></div>
+        <br>
+        <%= ytube_embed 'VLM8PSL1TkU', 440, 260 %>
+      </div>
+      <div>
+        <div class="g-ytsubscribe" data-channelid="UCTh8KEvQAwMuJI0_zwdqVIg" data-layout="full" data-count="default"></div>
+        <br>
+        <%= ytube_embed '0jyGhuQn8VQ', 440, 260 %>
+      </div>
+      <div>
+        <div class="g-ytsubscribe" data-channel="sanderson1769" data-layout="full" data-count="default"></div>
+        <br>
+        <%= ytube_embed '0H9gnM0rzF0', 440, 260 %>
+      </div>
+    </div>
+  </div>
+</div>

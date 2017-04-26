@@ -1,0 +1,24 @@
+<% provide(:title, "Audio Bible") %>
+<% number = number_to_percentage(Book.sum(:total_chapters) / 260.0 *100, precision: 0) %>
+<div class="d-flex flex-nowrap">
+  <%= render "shared/side-bar" %>
+  <div>
+    <h4>The King James Bible read by Domonique Davis of FWBC!</h4>
+      <p>This is a work in progress. Check back for more chapters of the Bible being constantly added!</p>
+      
+      <div class="progress mb-2">
+        <div class="progress-bar" role="progressbar" style="width: <%= number %>"><%= number %></div>
+      </div>
+      
+      <% @books.each do |book| %>
+      <div>
+        <h6><%= book.title%> <small>-<%= book.total_chapters%> chapters</small></h6>
+      </div>
+      <% end %>
+      
+      <blockquote class="verse">
+        <p>“For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.”</p>
+        <p>Hebrews 4:12</p>
+      </blockquote>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<% provide(:title, @tongue.tongue) %>
+<%= render('translations/new_form') if admin? %>
+<div class="d-flex flex-nowrap">
+  <%= render "shared/side-bar" %>
+  <div>
+    <h4><%= @tongue.tongue %></h4>
+    <% if admin? %>
+      <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">New Translation</button>
+    <% end %>
+    <% @tongue.translations.each do |translation|%>
+      <h4 class="card-title"><%= link_to translation.title, translation_path(translation.language, translation), class: "card-link" %></h4>
+    <% end %>
+  </div>
+</div>

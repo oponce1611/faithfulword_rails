@@ -1,0 +1,62 @@
+<%= form_for @sermon, url: "/sermons/#{@sermon.id}", method: :patch do |f| %>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="modal-title" id="exampleModalLabel">Update Sermon</h5>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <%= f.label :datetime %>
+                <%= f.datetime_local_field :datetime, class: "form-control form-control-sm" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :title %>
+                <%= f.text_field :title, class: "form-control form-control-sm", type: "text", placeholder: "Title of Sermon", autofocus: true %>
+              </div>
+              <div class="form-group">
+                <%= f.label :preacher %>
+                <%= f.text_field :preacher, class: "form-control form-control-sm", type: "text", placeholder: "Preacher" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :mp3 %>
+                <%= f.file_field :mp3, class: "form-control-file" %>
+              </div>
+              <%= f.label :ytube_id, "YouTube ID" %>
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon">www.youtube.com/watch?v=</span>
+                <%= f.text_field :ytube_id, class: "form-control" %>
+              </div>
+              <br>
+              <div class="form-group">
+                <%= f.label :scloud, "Soundcloud URL" %>
+                <%= f.text_field :scloud, class: "form-control form-control-sm", placeholder: "Soundcloud URL" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :location %>
+                <%= f.text_field :location, class: "form-control form-control-sm", type: "text", placeholder: "Location" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :format %>
+                <%= f.select :format, ['Preaching', 'Documentary', 'Series'], {}, class: "form-control form-control-sm" %>
+              </div>
+              <div class="form-check">
+                <%= f.label :fire_hard do %>
+                  <%= f.check_box :fire_hard %>
+                  <%= image_tag 'fire.gif' %> Hard
+                <% end %>
+              </div>
+            <%= f.submit "Update", class: "sky-btn" %>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <%= f.label :transcript %>
+                <%= f.text_area :transcript, class: "form-control form-control-sm", rows: 35 %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<%= form_for @translation do |f| %>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <h5>New <%= @translation.language.tongue %> Translation</h5>
+            <div class="form-group">
+              <%= f.text_field :title, class: "form-control form-control-sm", type: "text", placeholder: "Title", autofocus: true %>
+            </div>
+            <div class="form-group">
+              <%= f.date_field :published, class: "form-control form-control-sm", type: "date" %>
+            </div>
+            <div class="form-group">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="basic-addon3">www.youtube.com/watch?v=</span>
+                <%= f.text_field :video_id, class: "form-control form-control-sm", type: "text" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.text_area :body, class: "form-control form-control-sm", type: "text", placeholder: "Transript", rows: 20 %>
+            </div>
+              <%= f.hidden_field(:language_id, :value => @translation.language.id) %>
+              <%= f.submit "Create", class: "sky-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

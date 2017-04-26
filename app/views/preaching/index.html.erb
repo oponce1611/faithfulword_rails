@@ -1,0 +1,85 @@
+<% provide(:title, "Preaching") %>
+<% if admin? %>
+  <%= render 'new_form' %>
+<% end %>
+
+<h4>Sermons from Faithful Word Baptist Church</h4>
+<p>
+  Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.
+</p>
+<h5><%= number_with_delimiter(@total_dl + 13000000) %> Sermons Downloaded</h5>
+<div class="mb-2">
+  <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn" %>
+  <% if admin? %>
+    <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
+  <% end %>
+</div>
+<div class="d-flex align-items-center">
+  <div class="d-flex">
+    <% @years.reverse.each do |year|  %>
+      <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn", style: 'margin-right: 4px' %>
+    <% end %>
+  </div>
+  <%= form_tag preaching_path, :method => 'get', :id => "sermon_search", class: 'd-flex bar2-search' do %>
+    <%= text_field_tag :search, params[:search], autocomplete: "off", class: 'form-control form-control-small', placeholder: "Search for Sermon" %>
+    <%= submit_tag 'Search', :name => nil, class: 'yellow-btn' %>
+  <% end %>
+</div>
+
+<table class="box-table-a">
+  <colgroup>
+    <col width='13%'>
+    <col width='55%'>
+    <col width="22%">
+    <col width="10%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Sermon Title</th>
+      <th>Preacher</th>
+      <th>Links</th>
+    </tr>
+  </thead>
+  <tbody id="sermons">
+    <%= render 'sermons' %>
+  </tbody>
+</table>
+
+<div class="d-flex flex-column">
+  <h4>More great preaching:</h4>
+  <%= link_to 'hardpreaching.com', 'http://www.hardpreaching.com/', target: '_blank' %>
+  <h4>Other Links:</h4>
+  <%= link_to 'KJV Prophecy', 'http://www.kjvprophecy.com/',target: '_blank' %>
+  <%= link_to 'The Repentance Blackslist', 'http://www.repentanceblacklist.com/',target: '_blank' %>
+  <%= link_to 'The True Born Sons Of Liberty', 'http://www.truebornsons.com/',target: '_blank' %>
+  <%= link_to 'Word of Truth Baptist Church', 'http://www.wordoftruthbaptist.org/',target: '_blank' %>
+  <%= link_to 'Verity Baptist Church', 'http://www.veritybaptist.com/',target: '_blank' %>
+  <%= link_to 'Stedfast Baptist Church', 'http://stedfastbaptistkjv.org/',target: '_blank' %>
+  <%= link_to 'After the Tribulation - Film', 'http://www.afterthetribulation.com/',target: '_blank' %>
+  <%= link_to 'Teach All Nations', 'http://www.teachallnations.net/',target: '_blank' %>
+  <%= link_to 'http://www3.clustrmaps.com/counter/maps.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsLink' do %>
+    <%= image_tag 'http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsImg' %>
+  <% end %>
+</div>
+<script>
+  $(".download").on("click", function() {
+      $.ajax({
+          url: "/download",
+          data: {id: $(this).attr("id")},
+          success: function(response, status) {
+                console.log(status);
+          },
+          error: function(data) {
+              alert("Sorry, there was an error!");
+          }
+      });
+  });
+  
+  $(function() {
+    $("#sermon_search").submit(function() {
+      $.get(this.action, $(this).serialize(), null, "script");
+      return false;
+    });
+  });
+</script>

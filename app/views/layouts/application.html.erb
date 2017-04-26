@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render 'application/favicon' %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <%= render 'layouts/top_banner' %>
+    <div id="central">
+      <%= render('layouts/navigation') %>
+      <%= !current_page?(root_path) ? render('shared/banner') : render('shared/carousel') %>
+      <div class="px-4 pt-4">
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>

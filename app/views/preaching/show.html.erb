@@ -1,0 +1,43 @@
+<% provide(:title, @sermon.title) %>
+<% if admin? %>
+  <%= render 'update_form' %>
+<% end %>
+
+<div class="d-flex">
+  <div id="right-border" class="pr-4" style="width: 758px">
+    <h4><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>
+    <p><%= @sermon.datetime.strftime("%A %B %-d, %Y %l:%M %p %Z") %></p>
+    <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
+    <%= ytube_embed(@sermon.ytube_id, 733, 9 * 733 / 16) unless @sermon.ytube_id.blank? %>
+    <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
+    <h6><%= 'Transcript' unless @sermon.transcript.blank? %></h6>
+    <p><%= markdown(@sermon.transcript) unless @sermon.transcript.blank? %></p>
+    <%= @sermon.mp3  if admin?%>
+  </div>
+  <div class="pl-4">
+    <% if admin? %>
+      <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button>
+    <% end %>
+    
+    <%#= s3.bucket('faithfulword').object(@sermon.mp3.file.filename).public_url %>
+    <%#= link_to 'AWS Download',  Aws::S3::Object.url_for(@sermon.mp3.file.filename, BUCKET, :authenticated => false) %>
+    <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
+    <p id="sermon-downloads-heading">Total Downloads</p>
+    <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>
+  </div>
+</div>
+
+<script>
+  $(".download").on("click", function() {
+    $.ajax({
+      url: "/download",
+      data: {id: $(this).attr("id")},
+      success: function(response, status) {
+            console.log(status);
+      },
+      error: function(data) {
+          alert("Sorry, there was an error!");
+      }
+    });
+  });
+</script>

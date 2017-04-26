@@ -1,0 +1,13 @@
+<div class="bar d-flex">
+  <%= link_to "Preaching", preaching_path, class: "top-btn" %>
+  <%= link_to "Soul Winning", soulwinning_path, class: "top-btn" %>
+  <%= link_to "Our Pastor", ourpastor_path, class: "top-btn" %>
+  <%= link_to "Service Times", service_path, class: "top-btn" %>
+  <%= link_to "Location", location_path, class: "top-btn" %>
+  <%= link_to "Bible Memory", biblememory_path, class: "top-btn" %>
+  <%= link_to "Events", events_path, class: "top-btn" %>
+  <%= form_tag preaching_path, :method => :get, class: "d-flex bar-search" do %>
+    <%= text_field_tag :search, params[:search], placeholder: 'Search Sermon',class: 'form-control form-control-sm', style: 'margin-right: 4.5px' %>
+    <%= image_submit_tag 'search_icon.svg', class: 'search-btn' %>
+  <% end %>
+</div>

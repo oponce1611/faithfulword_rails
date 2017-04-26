@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  database: faithfulword_development
+  pool: 5
+  timeout: 5000
+test:
+  adapter: postgresql
+  database: faithfulword_test
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: faithfulword_production
+  pool: 5
+  host: localhost
+  username: osmar
+  password: iwasfreeborn
+  timeout: 5000
