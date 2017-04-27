@@ -19,7 +19,9 @@ class PreachingController < ApplicationController
     @sermon = Sermon.new(sermon_params)
     if @sermon.save
       redirect_to preaching_path
+      flash[:alert] = "Successfully Uploaded Sermon"
     else
+      flash[:error] = "Error"
       redirect_to preaching_path
     end
   end
@@ -31,8 +33,10 @@ class PreachingController < ApplicationController
   def update
     @sermon = Sermon.friendly.find(params[:id])
     if @sermon.update(sermon_params)
+      flash[:alert] = "Successfully Updated Sermon"
       redirect_to sermon_path(@sermon)
     else
+      flash[:alert] = "Error"
       redirect_to sermon_path(@sermon)
     end
   end
@@ -40,6 +44,7 @@ class PreachingController < ApplicationController
   def destroy
     @sermon = Sermon.friendly.find(params[:id])
     @sermon.destroy
+    flash[:alert] = "Successfully Deleted Sermon"
     redirect_to preaching_path
   end
   

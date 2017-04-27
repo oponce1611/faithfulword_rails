@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require best_in_place
 //= require cocoon
+//= require gritter
 //= require turbolinks
 //= require tether
 //= require bootstrap
