@@ -18,7 +18,6 @@
 //= require turbolinks
 //= require tether
 //= require bootstrap
-//= require masonry/jquery.masonry
 //= require custom
 //= require_tree .
 
