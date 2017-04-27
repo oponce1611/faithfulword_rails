@@ -6,7 +6,7 @@
   <% end %>
   <tr>
     <td><%= sermon.datetime.strftime("%m/%d/%y, %a %p")%></td>
-    <td><%= image_tag('new_sml_27x13.gif', style: "padding-right: 5px") if sermon.created_at >= Time.zone.now - 20.days %><%= image_tag('fire.gif', style: "padding-right: 8px") if sermon.fire_hard %><%= link_to sermon.title, sermon_path(sermon) %></td>
+    <td><%= image_tag('new_sml_27x13.gif', style: "padding-right: 5px") if sermon.created_at >= Time.zone.now - 5.days %><%= image_tag('fire.gif', style: "padding-right: 8px") if sermon.fire_hard %><%= link_to sermon.title, sermon_path(sermon) %></td>
     <td><%= sermon.preacher %></td>
     <td>
       <div>
