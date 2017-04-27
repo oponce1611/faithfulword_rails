@@ -8,6 +8,7 @@ class Sermon < ApplicationRecord
   validates :datetime, presence: true
   validates :preacher, presence: true
   
+  scope :recent, -> {order('created_at DESC')}
   scope :sorted, -> {order('datetime DESC')}
   scope :year, -> (year) {where("datetime >= ? and datetime <= ?", "#{year}-01-01 07:00:00", "#{year}-12-31 23:59:59 -0700")}
   

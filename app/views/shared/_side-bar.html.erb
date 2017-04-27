@@ -5,7 +5,7 @@
       <p>Pastor Steven L. Anderson</p>
     <% end %>
   <% end %>
-  <div class="browse-side-column">
+  <div class="browse-side-column mb-2">
     <%= link_to "Watch Services Live", live_path, class: "browse-link#{" active" if current_page?(live_path)}" %>
     <%= link_to "Doctrinal Statement", doctrinalstatement_path, class: "browse-link#{" active" if current_page?(doctrinalstatement_path)}" %>
     <%= link_to "Foreign Languages", foreignlanguages_path, class: "browse-link#{" active" if current_page?(foreignlanguages_path)}" %>
@@ -22,4 +22,11 @@
     <%= link_to "Malawi", malawi_path, class: "browse-link#{" active" if current_page?(malawi_path)}" %>
     <%= link_to "Donate", "http://www.truebornsons.com/donate-to-fwbc", class: "browse-link", target: '_blank' %>
   </div>
+  
+  <div class="browse-side-column browse-recent">
+  <% Sermon.sorted.limit(5).each do |sermon| %>
+    <%= link_to sermon.title, sermon_path(sermon), class: "browse-link" %>
+  <% end %>
+  </div>
+  
 </div>
