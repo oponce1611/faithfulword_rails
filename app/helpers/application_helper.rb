@@ -11,7 +11,7 @@ module ApplicationHelper
   def ytube_embed(id, x, y)
     content_tag(:iframe,
                 '',
-                :src => "https://www.youtube.com/embed/#{id}?enablejsapi=1",
+                :src => "https://www.youtube.com/embed/#{id}",
                 :id => "ytplayer",
                 :width => x,
                 :height => y,

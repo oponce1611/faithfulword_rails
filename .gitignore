@@ -19,3 +19,4 @@
 /config/secrets.yml
 /config/initializers/carrierwave.rb
 .c9
+.env
