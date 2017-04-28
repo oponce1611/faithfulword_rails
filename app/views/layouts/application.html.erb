@@ -11,7 +11,7 @@
     <%= render 'layouts/top_banner' %>
     <div id="central">
       <%= render('layouts/navigation') %>
-      <%= !current_page?(root_path) ? render('shared/banner') : render('shared/carousel') %>
+      <%= !current_page?(root_path) ? render('shared/banner') : render('shared/owl_carousel') %>
       <div class="px-4 pt-4">
         <%= yield %>
       </div>

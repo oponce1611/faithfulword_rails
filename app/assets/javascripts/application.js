@@ -15,6 +15,8 @@
 //= require best_in_place
 //= require cocoon
 //= require gritter
+//= require jquery-fileupload/basic
+//= require owl.carousel
 //= require turbolinks
 //= require tether
 //= require bootstrap
