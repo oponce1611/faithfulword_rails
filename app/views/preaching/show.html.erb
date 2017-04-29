@@ -5,19 +5,40 @@
 
 <div class="d-flex">
   <div id="right-border" class="pr-4" style="width: 758px">
-    <h4><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>
-    <p><%= @sermon.datetime.strftime("%A %B %-d, %Y %l:%M %p %Z") %></p>
-    <p>Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
-    <%= ytube_embed(@sermon.ytube_id, 733, 9 * 733 / 16) unless @sermon.ytube_id.blank? %>
-    <%= audio_tag(@sermon.mp3, autoplay: false, controls: true) %><br>
-    <h6><%= 'Transcript' unless @sermon.transcript.blank? %></h6>
-    <p><%= markdown(@sermon.transcript) unless @sermon.transcript.blank? %></p>
-    <%= @sermon.mp3  if admin?%>
-  </div>
-  <div class="pl-4">
+    <div style="height: 64px">
+      <h4 style="font-size: 24px; margin-bottom: 4px; line-height: 1"><%= image_tag 'fire.gif' if @sermon.fire_hard %> <%= @sermon.title %></h4>
+      <p style="font-size: 16px; margin-bottom: 4px; line-height: 1"><%= @sermon.datetime.strftime("%A %B %-d, %Y %l:%M %p %Z") %></p>
+      <p style="font-size: 16px; margin-bottom: 0; line-height: 1">Preached by <%= @sermon.preacher %> at <%= @sermon.location %></p>
+    </div>
+    <% unless @sermon.mp3.blank? %>
+      <hr>
+
+      <%= audio_tag(@sermon.mp3.url, autoplay: false,) %>
+    <% end %>
+    
+    <% unless @sermon.ytube_id.blank? %>
+      <hr>
+      <%= ytube_embed(@sermon.ytube_id, 733, 9 * 733 / 16) %>
+    <% end %>
+    
+    <% unless @sermon.transcript.blank? %>
+      <hr>
+      <h6>Transcript</h6>
+      <p><%= markdown(@sermon.transcript) %></p>
+    <% end %>
+    
     <% if admin? %>
-      <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button><br>
-      <%= link_to 'Destroy',  "/sermons/#{@sermon.id}",  method: :delete, data: { confirm: 'Are you sure?' }, class: "red-btn mb-2" %>
+      <hr>
+      <%= link_to(@sermon.mp3, @sermon.mp3.url, target: '_blank') %>
+    <% end %>
+  </div>
+  <div class="pl-4" style="width: 194px">
+    <% if admin? %>
+      <div style="height: 64px">
+        <button type="button" class="sky-btn mb-2" data-toggle="modal" data-target="#exampleModal">Update Sermon</button><br>
+        <%= link_to 'Destroy',  "/sermons/#{@sermon.id}",  method: :delete, data: { confirm: 'Are you sure?' }, class: "red-btn" %>
+      </div>
+      <hr>
     <% end %>
     <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
     <p id="sermon-downloads-heading">Total Downloads</p>
@@ -37,5 +58,10 @@
           alert("Sorry, there was an error!");
       }
     });
+  });
+</script>
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
   });
 </script>

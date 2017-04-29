@@ -245,10 +245,12 @@ a:hover {
 }
 
 .red-btn:hover {
+  color: #7c0000;
   background: linear-gradient(#fde4e4, #ff7a7a);
 }
 
 .red-btn:focus {
+  color: #7c0000;
   text-decoration: none;
 }
 
@@ -412,36 +414,46 @@ a:hover {
  STYLING FOR PREACHING TABLE 
    ------------------   */
 
-.box-table-a {
+.sermon-table {
   font-size: 12px;
   text-align: left;
   width: 100%;
   border-collapse: collapse;
 }
 
-.box-table-a thead
+.sermon-table thead
 {
   color: #039;
   border: 1px solid #b9c9fe; 
   border-top: 4px solid #aabcfe;
 }
 
-.box-table-a th {
+.sermon-table th {
   font-size: 13px;
   font-weight: bold;
   background: #b9c9fe;
   padding: 3px 8px;
 }
 
-.box-table-a td
+.sermon-table td
 {
   color: #669;
-  background: #e8edff; 
+  line-height: 1;
+  vertical-align: middle !important;
+  /*background: #e8edff; */
+  /*background: #eee; */
   border: 1px solid #b9c9fe; 
-  padding: 3px 8px;
+  padding: 3px 7px;
+}
+.sermon-table tr {
+  background: #e8edff;
 }
 
-.box-table-a tr:hover td
+.sermon-table-month {
+  background: #e8edff !important;
+}
+
+.sermon-table tr:hover td
 {
   background: #d0dafd;
   color: #339;

@@ -1,7 +1,7 @@
 <% @sermons.each do |sermon| %>
   <% if next_month(sermon) %> 
-  <tr>
-    <td colspan="4"> <h5 class="mb-0"><%= sermon.datetime.strftime(" %B %Y") %></h5></td>
+  <tr class="sermon-table-month">
+    <td colspan="4"><h5 class="mb-0"><%= sermon.datetime.strftime(" %B %Y") %></h5></td>
   </tr>
   <% end %>
   <tr>
@@ -9,20 +9,26 @@
     <td><%= image_tag('new_sml_27x13.gif', style: "padding-right: 5px") if sermon.created_at >= Time.zone.now - 5.days %><%= image_tag('fire.gif', style: "padding-right: 8px") if sermon.fire_hard %><%= link_to sermon.title, sermon_path(sermon) %></td>
     <td><%= sermon.preacher %></td>
     <td>
-      <div>
-        <%= link_to sermon.mp3.url, class: "download", download: '', id: sermon.id do %>
-          <%= image_tag "icons/mp3_16x16.gif"%>
-        <% end %>
-        <% if !sermon.ytube_id.blank? %>
-          <%= link_to "https://www.youtube.com/watch?v=#{sermon.ytube_id}" do %>
-            <%= image_tag "icons/ytube_16x16.gif"%>
+      <div class="d-flex justify-content-between">
+        <div style="width: 16px">
+          <%= link_to sermon.mp3.url, class: "download", download: '', id: sermon.id do %>
+            <%= image_tag "icons/mp3_16x16.gif"%>
           <% end %>
-        <% end %>
-        <% if !sermon.scloud.blank? %>
-          <%= link_to "#{sermon.scloud}" do %>
-            <%= image_tag "icons/soundcloud_16x16.gif"%>
+        </div>
+        <div style="width: 16px">
+          <% if !sermon.ytube_id.blank? %>
+            <%= link_to "https://www.youtube.com/watch?v=#{sermon.ytube_id}" do %>
+              <%= image_tag "icons/ytube_16x16.gif"%>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
+        <div style="width: 16px">
+          <% if !sermon.scloud.blank? %>
+            <%= link_to "#{sermon.scloud}" do %>
+              <%= image_tag "icons/soundcloud_16x16.gif"%>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </td>
   </tr>
