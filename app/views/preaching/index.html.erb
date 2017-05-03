@@ -45,7 +45,9 @@
     <%= render 'sermons' %>
   </tbody>
 </table>
-
+<div class="mt-2" id="spinner" style="display: none">
+  <%= image_tag 'load.gif', class: "d-block mx-auto", width: 64 %>
+</div>
 <div class="d-flex flex-column">
   <h4>More great preaching:</h4>
   <%= link_to 'hardpreaching.com', 'http://www.hardpreaching.com/', target: '_blank' %>
@@ -75,10 +77,12 @@
           }
       });
   });
-  
   $(function() {
     $("#sermon_search").submit(function() {
-      $.get(this.action, $(this).serialize(), null, "script");
+      $('#sermons').hide();
+      $('#spinner').show();
+      console.log( $(this).serialize() );
+      $.get(this.action, $(this).serialize(), function(){$('#sermons').show(); $('#spinner').hide();}, "script");
       return false;
     });
   });
