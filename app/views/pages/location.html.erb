@@ -1,8 +1,7 @@
 <% provide(:title, "Location") %>
 <h4>Location</h4>
 <p><b>
-  2741 W Southern Ave, Suite #14
-  <br>
+  2741 W Southern Ave, Suite #14<br>
   Tempe, AZ 85282
 </b></p>
 <p>We are located on the SE corner of Southern Avenue and 48th Street.</p>
@@ -28,6 +27,9 @@
       position: church,
       map: map,
       title: "Faithful Word Baptist Church"
+    });
+    $(document).ready(function() {
+      infowindow.open(map, marker);
     });
     marker.addListener('click', function() {
       infowindow.open(map, marker);
