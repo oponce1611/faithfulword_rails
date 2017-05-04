@@ -4,8 +4,12 @@ class PreachingController < ApplicationController
     @sermon = Sermon.new
     @years = (2006..Time.current.year).to_a
     @total_dl = Sermon.sum(:dl_count)
-    if !params[:search].blank?
-      @sermons = Sermon.search(params[:search]).sorted
+    if !params[:search].nil?
+      if params[:search].blank?
+        @sermons = []
+      else
+        @sermons = Sermon.search(params[:search]).sorted
+      end
     else
       @sermons = Sermon.year(get_year(params[:year])).sorted
     end
@@ -14,7 +18,7 @@ class PreachingController < ApplicationController
   def show
     @sermon = Sermon.friendly.find(params[:id])
   end
-  
+
   def create
     @sermon = Sermon.new(sermon_params)
     if @sermon.save

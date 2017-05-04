@@ -16,8 +16,9 @@
 </div>
 <div class="d-flex align-items-center">
   <div class="d-flex">
-    <% @years.reverse.each do |year|  %>
-      <%= link_to "#{year}", preaching_path(year: year), class: "yellow-btn", style: 'margin-right: 4px' %>
+    <% @years.reverse.each do |year| %>
+      <button class="yellow-btn" style="margin-right: 4px" id="year" action="/preaching"><%= year %></button>
+      <%#= link_to "#{year}", preaching_path(year: year), class: "yellow-btn", style: 'margin-right: 4px' %>
     <% end %>
   </div>
   <%= form_tag preaching_path, :method => 'get', :id => "sermon_search", class: 'd-flex bar2-search' do %>
@@ -26,7 +27,7 @@
   <% end %>
 </div>
 
-<table class="sermon-table">
+<table class="sermon-table mb-2">
   <colgroup>
     <col width='13%'>
     <col width='57%'>
@@ -45,6 +46,10 @@
     <%= render 'sermons' %>
   </tbody>
 </table>
+
+<div id="noResults" align="middle">
+</div>
+
 <div class="mt-2" id="spinner" style="display: none">
   <%= image_tag 'load.gif', class: "d-block mx-auto", width: 64 %>
 </div>
@@ -80,10 +85,20 @@
   $(function() {
     $("#sermon_search").submit(function() {
       $('#sermons').hide();
+      $('#noResults').hide();
       $('#spinner').show();
-      console.log( $(this).serialize() );
-      $.get(this.action, $(this).serialize(), function(){$('#sermons').show(); $('#spinner').hide();}, "script");
+      console.log($(this).serialize());
+      $.get(this.action, $(this).serialize(), function(){$('#spinner').hide(); $('#sermons').show();$('#noResults').show();}, "script");
       return false;
+    });
+  });
+  
+  $(function() {
+    $("button").click(function() {
+      $('#sermons').hide();
+      $('#noResults').hide();
+      $('#spinner').show();
+      $.get(this.action, {year: $(this).text()}, function(){$('#spinner').hide(); $('#sermons').show();$('#noResults').show();$('input:text').val('');}, "script");
     });
   });
 </script>
