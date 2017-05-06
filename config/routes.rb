@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   get '/service' =>                   'pages#service'
   get '/soulwinning' =>               'pages#soulwinning'
   get '/termsandconditions' =>        'pages#termsandconditions'
-  get '/download' =>                  'preaching#download'
+  post '/download' =>                 'preaching#download'
   
   get '/:id' => 'preaching#show', as: "sermon"
   get '/:id/edit' => 'preaching#edit', as: "edit_sermon"
