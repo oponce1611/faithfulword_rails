@@ -1,21 +1,18 @@
 module ApplicationHelper
   def full_title(page_title = '')
     base_title = "Faithful Word Baptist Church - Tempe, AZ"
-    if page_title.empty?
-      base_title
-    else
-      page_title + " | " + base_title
-    end
+    page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
   
-  def ytube_embed(id, x, y)
+  def ytube_embed(id, width, height)
     content_tag(:iframe,
                 '',
-                :src => "https://www.youtube.com/embed/#{id}",
+                :src => "https://www.youtube.com/embed/#{id}?color=white",
                 :id => "ytplayer",
-                :width => x,
-                :height => y,
+                :width => width,
+                :height => height,
                 :frameborder => 0,
+                :color => "white",
                 :style => "border: solid 1px #ccc")
   end
   
