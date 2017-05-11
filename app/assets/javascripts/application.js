@@ -4,6 +4,7 @@
 //= require cocoon
 //= require gritter
 //= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
 //= require owl.carousel
 //= require audio.min
 //= require turbolinks

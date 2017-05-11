@@ -1,5 +1,4 @@
 <% if flash[:alert] %>
-  <%=  %>
   <%= js extend_gritter(:fade_in_speed => 0), add_gritter(flash[:alert], title: "Faithful Word Baptist Church")  %>
 <% elsif flash[:error] %>
   <%= js add_gritter(flash[:error], title: "Faithful Word Baptist Church") %>

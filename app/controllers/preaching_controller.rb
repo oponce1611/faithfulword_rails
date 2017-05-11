@@ -22,7 +22,8 @@ class PreachingController < ApplicationController
   def create
     @sermon = Sermon.new(sermon_params)
     if @sermon.save
-      redirect_to preaching_path
+      @sermon = Sermon.new
+      @sermons = Sermon.year(get_year(params[:year])).sorted
       flash[:alert] = "Successfully Uploaded Sermon"
     else
       flash[:error] = "Error"

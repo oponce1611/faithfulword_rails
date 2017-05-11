@@ -1,0 +1,61 @@
+<%= form_for @sermon, url: sermons_path, method: 'POST', :html => {id: "Blabla"} do |f| %>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <%= f.label :datetime %>
+        <%= f.datetime_local_field :datetime, class: "form-control form-control-sm", autofocus: true  %>
+      </div>
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control form-control-sm", type: "text", placeholder: "Title of Sermon" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :preacher %>
+        <%= f.text_field :preacher, class: "form-control form-control-sm", type: "text", placeholder: "Preacher", value: "Pastor Anderson" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :mp3 %>
+        <%= f.file_field :mp3, class: "form-control-file" %>
+      </div>
+      <script id="template-upload" type="text/x-tmpl">
+        <div class="upload">
+          <h6 class="my-1">{%=o.name%}</h6>
+          <div class="progress"><div class="bar" style="width: 0%"></div></div>
+        </div>
+      </script>
+      <%= f.label :ytube_id, "YouTube ID" %>
+      <div class="input-group input-group-sm">
+        <span class="input-group-addon">www.youtube.com/watch?v=</span>
+        <%= f.text_field :ytube_id, class: "form-control form-control-sm" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.label :scloud, "Soundcloud URL" %>
+        <%= f.text_field :scloud, class: "form-control form-control-sm", placeholder: "Soundcloud URL" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :location %>
+        <%= f.text_field :location, class: "form-control form-control-sm", type: "text", placeholder: "Location", value: "Faithful Word Baptist Church" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :format %>
+        <%= f.select :format, ['Preaching', 'Documentary', 'Series'], {}, class: "form-control form-control-sm" %>
+      </div>
+      <div class="form-check">
+        <%= f.label :fire_hard do %>
+          <%= f.check_box :fire_hard %>
+          <%= image_tag 'fire.gif' %> Hard
+        <% end %>
+      </div>
+    <%#= f.submit "Upload", class: "sky-btn", id: "up_btn" %>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <%= f.label :transcript %>
+        <%= f.text_area :transcript, class: "form-control form-control-sm", rows: 35 %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<button class="sky-btn" id="up_btn">Upload</button>
+<div id="upload-box"></div>

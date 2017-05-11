@@ -1,7 +1,5 @@
 <% provide(:title, "Preaching") %>
-<% if admin? %>
-  <%= render 'new_form' %>
-<% end %>
+<%= render 'new_form' %>
 
 <h4>Sermons from Faithful Word Baptist Church</h4>
 <p>
@@ -11,7 +9,7 @@
 <div class="mb-2">
   <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn" %>
   <% if admin? %>
-    <button type="button" class="sky-btn" data-toggle="modal" data-target="#exampleModal">Upload Sermon</button>
+    <button type="button" class="sky-btn" data-toggle="modal" data-target="#sForm">Upload Sermon</button>
   <% end %>
 </div>
 <div class="d-flex justify-content-center">
@@ -62,7 +60,7 @@
   <%= link_to 'After the Tribulation - Film', 'http://www.afterthetribulation.com/',target: '_blank' %>
   <%= link_to 'Teach All Nations', 'http://www.teachallnations.net/',target: '_blank' %>
   <%= link_to 'http://www3.clustrmaps.com/counter/maps.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsLink' do %>
-    <%= image_tag 'http://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsImg' %>
+    <%= image_tag 'https://www3.clustrmaps.com/counter/index2.php?url=http://faithfulwordbaptist.org/page5.html', id: 'clustrMapsImg' %>
   <% end %>
 </div>
 <script>
@@ -114,6 +112,31 @@
         $('input:text').val('');
       });
       return false;
+    });
+  });
+  
+  $(function(){
+    $('#Blabla').fileupload({
+      dataType: "script",
+      add: function(e, data){
+        data.context = $(tmpl("template-upload", data.files[0]));
+        $('#upload-box').append(data.context);
+        $("#up_btn").off('click').on('click', function () {
+            data.submit();
+        });
+      },
+      progress: function(e, data){
+        if(data.context) {
+          progress = parseInt(data.loaded / data.total * 100, 10);
+          data.context.find('.bar').css('width', progress + '%');
+        }
+      },
+      done: function (e, data) {
+        console.log("done");
+      },
+      fail: function (data) {
+        alert("Fail!");
+      }
     });
   });
 </script>
