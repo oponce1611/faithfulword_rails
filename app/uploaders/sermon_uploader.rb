@@ -4,6 +4,14 @@ class SermonUploader < CarrierWave::Uploader::Base
     "Sermons/#{model.format}"
   end
   
+  def move_to_cache
+    true
+  end
+
+  def move_to_store
+    true
+  end
+  
   def extension_whitelist
     %w(mp3)
   end
