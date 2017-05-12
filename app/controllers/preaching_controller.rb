@@ -1,5 +1,7 @@
 class PreachingController < ApplicationController
   before_action :require_user, except: [:index, :show, :download]
+  before_action :set_s3_direct_post, only: [:index ,:new, :edit, :create, :update]
+
   def index
     @sermon = Sermon.new
     @years = (2006..Time.current.year).to_a
@@ -18,15 +20,19 @@ class PreachingController < ApplicationController
   def show
     @sermon = Sermon.friendly.find(params[:id])
   end
-
+  
+  def new
+    @sermon = Sermon.new(key: params[:key])
+    puts @sermon.class
+  end
+  
   def create
     @sermon = Sermon.new(sermon_params)
     if @sermon.save
-      @sermon = Sermon.new
-      @sermons = Sermon.year(get_year(params[:year])).sorted
       flash[:alert] = "Successfully Uploaded Sermon"
+      redirect_to preaching_path
     else
-      flash[:error] = "Error"
+      flash[:error] = @sermon.errors.full_messages
       redirect_to preaching_path
     end
   end
@@ -48,6 +54,7 @@ class PreachingController < ApplicationController
   
   def destroy
     @sermon = Sermon.friendly.find(params[:id])
+    S3_BUCKET.object(@sermon.mp3.sub("//faithfulword.s3-us-west-1.amazonaws.com/","")).delete
     @sermon.destroy
     flash[:alert] = "Successfully Deleted Sermon"
     redirect_to preaching_path
@@ -71,15 +78,21 @@ class PreachingController < ApplicationController
   
   def sermon_params
     params.require(:sermon).permit(:title,
+                                  :key,
+                                  :mp3,
                                   :preacher,
                                   :datetime,
-                                  :mp3,
                                   :ytube_id,
                                   :scloud,
                                   :fire_hard,
                                   :location,
                                   :transcript,
-                                  :format)
+                                  :format
+                                  )
+  end
+  
+  def set_s3_direct_post
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "Sermons/Preaching/${filename}", success_action_status: '201', acl: 'public-read')
   end
   
   def get_year(year)

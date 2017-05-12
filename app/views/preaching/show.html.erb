@@ -13,7 +13,7 @@
     <% unless @sermon.mp3.blank? %>
       <hr>
 
-      <%= audio_tag(@sermon.mp3.url, autoplay: false,) %>
+      <%= audio_tag(@sermon.mp3, autoplay: false,) %>
     <% end %>
     
     <% unless @sermon.ytube_id.blank? %>
@@ -29,7 +29,7 @@
     
     <% if admin? %>
       <hr>
-      <%= link_to(@sermon.mp3, @sermon.mp3.url, target: '_blank') %>
+      <%= link_to(@sermon.mp3, @sermon.mp3, target: '_blank') %>
     <% end %>
   </div>
   <div class="pl-4" style="width: 194px">
@@ -40,25 +40,30 @@
       </div>
       <hr>
     <% end %>
-    <%= link_to "Download MP3", @sermon.mp3.url, class: "sky-btn mb-2 download", download: '', id: @sermon.id %>
+    <%= link_to @sermon.mp3, class: "sky-btn mb-2 download", download: '', id: @sermon.id do %>
+     Download MP3 | <%= number_to_human_size(@sermon.size) %>
+    <% end %>
     <p id="sermon-downloads-heading">Total Downloads</p>
     <p id="sermon-downloads-number" ><%= number_with_delimiter(@sermon.dl_count) %></p>
   </div>
 </div>
 
 <script>
-  $(".download").on("click", function() {
+$(function(){
+  $(".download").click(function() {
     $.ajax({
+      method: 'POST',
       url: "/download",
-      data: {id: $(this).attr("id")},
-      success: function(response, status) {
-            console.log(status);
-      },
-      error: function(data) {
-          alert("Sorry, there was an error!");
-      }
+      data: {id: $(this).attr("id")}
+    })
+    .done(function(response, status) {
+      console.log(status);
+    })
+    .fail(function(data) {
+      alert("Sorry, there was an error!");
     });
   });
+})
 </script>
 <script>
   audiojs.events.ready(function() {

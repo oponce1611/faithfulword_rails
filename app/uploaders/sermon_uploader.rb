@@ -1,24 +1,17 @@
 class SermonUploader < CarrierWave::Uploader::Base
-  storage :aws
+  include CarrierWaveDirect::Uploader
+  
   def store_dir
-    "Sermons/#{model.format}"
+    "Sermons/Preaching"
   end
-  
-  def move_to_cache
-    true
-  end
-
-  def move_to_store
-    true
-  end
-  
+  alias_method :extension_white_list, :extension_whitelist
   def extension_whitelist
     %w(mp3)
   end
   
-  def filename
-    "#{rename(model.title, model.datetime)}.#{file.extension}" if original_filename.present?
-  end
+  #def filename
+    #"#{rename(model.title, model.datetime)}.#{file.extension}" if original_filename.present?
+  #end
   
   protected
   

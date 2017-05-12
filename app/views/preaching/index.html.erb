@@ -2,21 +2,22 @@
 <%= render 'new_form' %>
 
 <h4>Sermons from Faithful Word Baptist Church</h4>
-<p>
-  Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.
-</p>
+<p>Are you tired of boring preaching? Check back in the future for more independent, fundamental, King James Bible Only Baptist preaching.</p>
 <h5><%= number_with_delimiter(@total_dl + 13000000) %> Sermons Downloaded</h5>
+
 <div class="mb-2">
   <%= link_to 'DONATE NOW', 'https://www.truebornsons.com/donate-to-fwbc/', class: "sky-btn" %>
   <% if admin? %>
     <button type="button" class="sky-btn" data-toggle="modal" data-target="#sForm">Upload Sermon</button>
   <% end %>
 </div>
+
 <div class="d-flex justify-content-center">
   <% @years.reverse.each do |year| %>
     <button class="yellow-btn y-btn" style="margin-right: 4px" id="year"><%= year %></button>
   <% end %>
 </div>
+
 <div class="d-flex align-items-center">
   <%= form_tag preaching_path, :method => 'get', :id => "sermon_search", class: 'd-flex bar2-search' do %>
     <%= text_field_tag :search, params[:search], autocomplete: "off", class: 'form-control form-control-small', placeholder: "Search for Sermon" %>
@@ -112,31 +113,6 @@
         $('input:text').val('');
       });
       return false;
-    });
-  });
-  
-  $(function(){
-    $('#Blabla').fileupload({
-      dataType: "script",
-      add: function(e, data){
-        data.context = $(tmpl("template-upload", data.files[0]));
-        $('#upload-box').append(data.context);
-        $("#up_btn").off('click').on('click', function () {
-            data.submit();
-        });
-      },
-      progress: function(e, data){
-        if(data.context) {
-          progress = parseInt(data.loaded / data.total * 100, 10);
-          data.context.find('.bar').css('width', progress + '%');
-        }
-      },
-      done: function (e, data) {
-        console.log("done");
-      },
-      fail: function (data) {
-        alert("Fail!");
-      }
     });
   });
 </script>

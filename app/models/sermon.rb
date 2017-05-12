@@ -1,9 +1,7 @@
 class Sermon < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
-  
-  mount_uploader :mp3, SermonUploader
-  
+
   validates :title, presence: true
   validates :datetime, presence: true
   validates :preacher, presence: true
@@ -14,10 +12,13 @@ class Sermon < ApplicationRecord
   
   def self.search(search)
     if search
-      #where("title LIKE ?", "%#{search}%")
       where('title ILIKE ?', "%#{search}%")
     else
       scoped
     end
+  end
+  
+  def size
+    S3_BUCKET.object(self.mp3.sub("//faithfulword.s3-us-west-1.amazonaws.com/","")).size if S3_BUCKET.object(self.mp3.sub("//faithfulword.s3-us-west-1.amazonaws.com/","")).exists? 
   end
 end

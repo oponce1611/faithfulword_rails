@@ -781,3 +781,17 @@ GRITTER CSS ALERTS
   width:220px;
   float:right;
 }
+
+.progress {
+  max-width: 600px;
+  margin:    0.2em 0 0.2em 0;
+  border: 1px solid #999;
+  display: none;
+}
+
+.progress .load-bar {
+  height:  20px;
+  padding-left: 0.2em;
+  color:   white;
+  display: none;
+}

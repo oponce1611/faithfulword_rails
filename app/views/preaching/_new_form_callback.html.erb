@@ -1,6 +1,10 @@
-<%= form_for @sermon, url: sermons_path, method: 'POST', :html => {id: "Blabla"} do |f| %>
+<%= form_for @sermon, url: sermons_path, method: 'POST',  html: { class: 'directUpload', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } } do |f| %>
   <div class="row">
     <div class="col-6">
+      <div class="form-group">
+        <%= f.label :mp3 %>
+        <%= f.file_field :mp3, class: "directField"%>
+      </div>
       <div class="form-group">
         <%= f.label :datetime %>
         <%= f.datetime_local_field :datetime, class: "form-control form-control-sm", autofocus: true  %>
@@ -13,16 +17,6 @@
         <%= f.label :preacher %>
         <%= f.text_field :preacher, class: "form-control form-control-sm", type: "text", placeholder: "Preacher", value: "Pastor Anderson" %>
       </div>
-      <div class="form-group">
-        <%= f.label :mp3 %>
-        <%= f.file_field :mp3, class: "form-control-file" %>
-      </div>
-      <script id="template-upload" type="text/x-tmpl">
-        <div class="upload">
-          <h6 class="my-1">{%=o.name%}</h6>
-          <div class="progress"><div class="bar" style="width: 0%"></div></div>
-        </div>
-      </script>
       <%= f.label :ytube_id, "YouTube ID" %>
       <div class="input-group input-group-sm">
         <span class="input-group-addon">www.youtube.com/watch?v=</span>
@@ -47,7 +41,7 @@
           <%= image_tag 'fire.gif' %> Hard
         <% end %>
       </div>
-    <%#= f.submit "Upload", class: "sky-btn", id: "up_btn" %>
+    <%= f.submit "Upload", class: "sky-btn", id: "up_btn" %>
     </div>
     <div class="col-6">
       <div class="form-group">
@@ -57,5 +51,55 @@
     </div>
   </div>
 <% end %>
-<button class="sky-btn" id="up_btn">Upload</button>
-<div id="upload-box"></div>
+<script>
+  $(function() {
+      var fileInput    = $('.directField');
+      var form         = $(fileInput.parents('form:first'));
+      var submitButton = form.find('input[type="submit"]');
+      var progressBar  = $("<div class='load-bar'></div>");
+      var barContainer = $("<div class='progress'></div>").append(progressBar);
+      fileInput.after(barContainer);
+      $('.directUpload').fileupload({
+      fileInput:       fileInput,
+      url:             form.data('url'),
+      type:            'POST',
+      autoUpload:       true,
+      formData:         form.data('form-data'),
+      paramName:        'file', // S3 does not like nested name fields i.e. name="user[avatar_url]"
+      dataType:         'XML',  // S3 returns XML if success_action_status is set to 201
+      replaceFileInput: false,
+      progressall: function (e, data) {
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        progressBar.css('width', progress + '%')
+      },
+      start: function (e) {
+        submitButton.prop('disabled', true);
+        barContainer.show();
+        progressBar.
+          css('background', 'green').
+          css('display', 'block').
+          css('width', '0%').
+          text("Loading...");
+      },
+      done: function(e, data) {
+        submitButton.prop('disabled', false);
+        progressBar.text("Uploading done");
+
+        // extract key and generate URL from response
+        var key   = $(data.jqXHR.responseXML).find("Key").text();
+        var url   = '//' + form.data('host') + '/' + key;
+
+        // create hidden field
+        var input = $("<input />", { type:'hidden', name: fileInput.attr('name'), value: url })
+        form.append(input);
+      },
+      fail: function(e, data) {
+        submitButton.prop('disabled', false);
+
+        progressBar.
+          css("background", "red").
+          text("Failed");
+      }
+    });
+  });
+</script>
