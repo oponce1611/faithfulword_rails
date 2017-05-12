@@ -18,10 +18,6 @@
                 <%= f.label :preacher %>
                 <%= f.text_field :preacher, class: "form-control form-control-sm", type: "text", placeholder: "Preacher" %>
               </div>
-              <div class="form-group">
-                <%= f.label :mp3 %>
-                <%= f.file_field :mp3, class: "form-control-file" %>
-              </div>
               <%= f.label :ytube_id, "YouTube ID" %>
               <div class="input-group input-group-sm">
                 <span class="input-group-addon">www.youtube.com/watch?v=</span>
@@ -35,6 +31,10 @@
               <div class="form-group">
                 <%= f.label :location %>
                 <%= f.text_field :location, class: "form-control form-control-sm", type: "text", placeholder: "Location" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :mp3 %>
+                <%= f.text_field :mp3, class: "form-control form-control-sm", type: "text" %>
               </div>
               <div class="form-group">
                 <%= f.label :format %>
