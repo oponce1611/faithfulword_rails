@@ -78,7 +78,6 @@ class PreachingController < ApplicationController
   
   def sermon_params
     params.require(:sermon).permit(:title,
-                                  :key,
                                   :mp3,
                                   :preacher,
                                   :datetime,
