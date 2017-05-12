@@ -1,6 +1,6 @@
 class PreachingController < ApplicationController
   before_action :require_user, except: [:index, :show, :download]
-  before_action :set_s3_direct_post, only: [:index ,:new, :edit, :create, :update]
+  before_action :set_s3_direct_post, only: [:index ,:new, :edit, :create, :update, :show]
 
   def index
     @sermon = Sermon.new

@@ -6,7 +6,7 @@
         <%= form_for @sermon, url: sermons_path, method: 'POST',  html: { class: 'directUpload', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } } do |f| %>
           <div class="form-group">
             <%= f.label :mp3 %>
-            <%= f.file_field :mp3, class: "directField"%>
+            <%= f.file_field :mp3, class: "directField" %>
           </div>
         <% end %>
         <%= form_for @sermon, url: "/sermons/#{@sermon.id}", method: :patch do |f| %>
