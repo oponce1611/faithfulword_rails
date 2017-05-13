@@ -12,3 +12,9 @@
   </div>
 </div>
 <% end %>
+
+<% if params[:modal] == "open" %>
+  <script>
+    $('#sForm').modal('toggle')
+  </script>
+<% end %>

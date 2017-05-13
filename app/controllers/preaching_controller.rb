@@ -3,15 +3,16 @@ class PreachingController < ApplicationController
   before_action :set_s3_direct_post, only: [:index ,:new, :edit, :create, :update, :show]
 
   def index
-    @sermon = Sermon.new
-    @years = (2006..Time.current.year).to_a
+    if params[:sermon].present?
+      @sermon = Sermon.new(sermon_params)
+    else
+      @sermon = Sermon.new
+    end
     @total_dl = Sermon.sum(:dl_count)
-    if !params[:search].nil?
-      if params[:search].blank?
-        @sermons = []
-      else
-        @sermons = Sermon.search(params[:search]).sorted
-      end
+    if params[:search].present?
+      @sermons = Sermon.search(params[:search]).sorted
+    elsif params[:search] == ""
+      @sermons = []
     else
       @sermons = Sermon.year(get_year(params[:year])).sorted
     end
@@ -33,7 +34,7 @@ class PreachingController < ApplicationController
       redirect_to preaching_path
     else
       flash[:error] = @sermon.errors.full_messages
-      redirect_to preaching_path
+      redirect_to preaching_path(request.parameters.merge(modal: "open"))
     end
   end
   
