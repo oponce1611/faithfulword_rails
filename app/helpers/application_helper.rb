@@ -5,9 +5,14 @@ module ApplicationHelper
   end
   
   def ytube_embed(id, width, height)
+    if id.include? '?'
+      src = id + '&color=white'
+    else
+      src = id +'?color=white'
+    end
     content_tag(:iframe,
                 '',
-                :src => "https://www.youtube.com/embed/#{id}?color=white",
+                :src => "https://www.youtube.com/embed/#{src}",
                 :id => "ytplayer",
                 :width => width,
                 :height => height,
