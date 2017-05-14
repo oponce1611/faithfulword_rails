@@ -29,6 +29,7 @@ gem 'gritter', '~> 1.2'
 gem 'jquery-fileupload-rails', '~> 0.4.7'
 gem 'turnout', '~> 2.4'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

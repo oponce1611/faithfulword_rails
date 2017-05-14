@@ -63,11 +63,11 @@
 
 <h5>Here are a few more resources:</h5>
 <div class="d-flex d-flex flex-column">
-  <p class="mb-0"><%= link_to '"Preaching the entire book of Hebrews from Memory"', Sermon.find(1728).mp3.url, class: "download", download: '', id: 1728 %> Sermon mp3 preached on 3/26/06</p>
-  <p class="mb-0"><%= link_to '"Bible Memorization Techniques"', Sermon.find(1586).mp3.url, class: "download", download: '', id: 1586 %> Sermon mp3 preached on 3/18/07</p>
-  <p class="mb-0"><%= link_to '"Thou Shalt Meditate"', Sermon.find(1233).mp3.url, class: "download", download: '', id: 1233 %> Sermon mp3 preached on 6/14/09</p>
-  <p class="mb-0"><%= link_to '"Bible Memory"', Sermon.find(1002).mp3.url, class: "download", download: '', id: 1002 %> Sermon mp3 preached on 1/2/11</p>
-  <p class="mb-0"><%= link_to '"Psalm 119 (Aleph-He)"', Sermon.find(232).mp3.url, class: "download", download: '', id: 232 %> Sermon mp3 preached on 11/22/15</p>
+  <p class="mb-0"><%= link_to '"Preaching the entire book of Hebrews from Memory"', Sermon.find(1728).mp3, class: "download", download: '', id: 1728 %> Sermon mp3 preached on 3/26/06</p>
+  <p class="mb-0"><%= link_to '"Bible Memorization Techniques"', Sermon.find(1586).mp3, class: "download", download: '', id: 1586 %> Sermon mp3 preached on 3/18/07</p>
+  <p class="mb-0"><%= link_to '"Thou Shalt Meditate"', Sermon.find(1233).mp3, class: "download", download: '', id: 1233 %> Sermon mp3 preached on 6/14/09</p>
+  <p class="mb-0"><%= link_to '"Bible Memory"', Sermon.find(1002).mp3, class: "download", download: '', id: 1002 %> Sermon mp3 preached on 1/2/11</p>
+  <p class="mb-0"><%= link_to '"Psalm 119 (Aleph-He)"', Sermon.find(232).mp3, class: "download", download: '', id: 232 %> Sermon mp3 preached on 11/22/15</p>
   <div>
   <%= link_to "Monthly quoting/reading schedule I use", 'http://www.faithfulwordbaptist.org/schedule.html', target: '_blank'%>
   - <%= link_to 'DOC', '/bible_schedule.docx', download: '' %>
@@ -81,16 +81,17 @@
 
 
 <script>
-  $(".download").on("click", function() {
-      $.ajax({
-          url: "/download",
-          data: {id: $(this).attr("id")},
-          success: function(response, status) {
-                console.log(status);
-          },
-          error: function(data) {
-              alert("Sorry, there was an error!");
-          }
-      });
+   $(".download").click(function() {
+    $.ajax({
+      method: 'POST',
+      url: "/download",
+      data: {id: $(this).attr("id")}
+    })
+    .done(function(response, status) {
+      console.log(status);
+    })
+    .fail(function(data) {
+      alert("Sorry, there was an error!");
+    });
   });
 </script>

@@ -1,9 +1,14 @@
 <%= form_for @sermon, url: sermons_path, method: 'POST',  html: { class: 'directUpload', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } } do |f| %>
   <div class="form-group">
-    <label class="sky-btn">
-      Upload .mp3 <%= f.file_field :mp3, style: 'display: none;', class: "directField" %>
+    <label class="yellow-btn" id="directField-button">
+      <%= image_tag 'UPLOAD-ICON.gif'%> <%= f.file_field :mp3, style: 'display: none;', class: "directField" %>
     </label>
-    <div class="progress mt-3" style="display: none" height="30px"></div>
+    <div class="progress-master-box" style="display: none">
+      <span  class="progress-text" style="position: absolute;margin-top: 9px;margin-left: 9px; font-weight: bold; font-size: 13px">Upload: </span>
+      <div class="progress" style="border: 1px solid #999">
+        <div class='progress-bar' style='height: 30px; border-right: 4px solid #aabcfe; background-color: #b9c9fe'></div>
+      </div>
+    </div>
   </div>
 <% end %>
 <%= form_for @sermon, url: sermons_path, method: 'POST' do |f| %>
@@ -53,7 +58,7 @@
     <div class="col-6">
       <div class="form-group">
         <%= f.label :transcript %>
-        <%= f.text_area :transcript, class: "form-control form-control-sm", rows: 30 %>
+        <%= f.text_area :transcript, class: "form-control form-control-sm", rows: 35 %>
       </div>
     </div>
   </div>
@@ -79,16 +84,18 @@
       replaceFileInput: false,
       progressall: function (e, data) {
         var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('.progress-bar').css('width', progress + '%').text(progress + '%');
+        $('.progress-bar').css('width', progress + '%');
+        $('.progress-text').text("Uploading: " + progress + '%');
       },
       start: function (e) {
         submitButton.prop('disabled', true);
-        $('.progress').show();
-        $('.progress').html("<div class='progress-bar'></div>");
+        $('#directField-button').hide();
+        $('.progress-master-box').show();
       },
       done: function(e, data) {
         submitButton.prop('disabled', false);
-        $('.progress-bar').text("Uploading done");
+        $('.progress-bar').css("border-right", "none").animate({backgroundColor: '#ffff99'}, 150).animate({backgroundColor: '#5cb85c'}, 500);
+        $('.progress-text').text("Uploading Done");
   
         // extract key and generate URL from response
         var key   = $(data.jqXHR.responseXML).find("Key").text();

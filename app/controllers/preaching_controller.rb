@@ -22,11 +22,6 @@ class PreachingController < ApplicationController
     @sermon = Sermon.friendly.find(params[:id])
   end
   
-  def new
-    @sermon = Sermon.new(key: params[:key])
-    puts @sermon.class
-  end
-  
   def create
     @sermon = Sermon.new(sermon_params)
     if @sermon.save
